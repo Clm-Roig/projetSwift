@@ -205,15 +205,21 @@
                                     <constraint firstAttribute="height" constant="300" id="2c6-Fv-ith"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gRf-4A-mMB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="treatmentCell" id="gRf-4A-mMB" customClass="TreatmentTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gRf-4A-mMB" id="Icb-Vn-Hkl">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rra-L4-ALI">
-                                                    <rect key="frame" x="8" y="12" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedicineLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rra-L4-ALI">
+                                                    <rect key="frame" x="8" y="12" width="111" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FrequencyLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFB-tf-KkM">
+                                                    <rect key="frame" x="127" y="12" width="122.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -221,14 +227,20 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Rra-L4-ALI" firstAttribute="centerY" secondItem="Icb-Vn-Hkl" secondAttribute="centerY" id="Uyg-SW-WVC"/>
+                                                <constraint firstItem="qFB-tf-KkM" firstAttribute="centerY" secondItem="Icb-Vn-Hkl" secondAttribute="centerY" id="Z1F-ub-bpP"/>
                                                 <constraint firstItem="Rra-L4-ALI" firstAttribute="leading" secondItem="Icb-Vn-Hkl" secondAttribute="leadingMargin" id="bm9-Nc-YPD"/>
+                                                <constraint firstItem="qFB-tf-KkM" firstAttribute="leading" secondItem="Rra-L4-ALI" secondAttribute="trailing" constant="8" id="ora-6L-blH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="frequencyLabel" destination="qFB-tf-KkM" id="pVw-Vu-hP7"/>
+                                            <outlet property="medicineLabel" destination="Rra-L4-ALI" id="EjF-oo-RR1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="SU1-j3-VWG" id="Aai-8K-dZw"/>
-                                    <outlet property="delegate" destination="SU1-j3-VWG" id="bvk-DD-VDg"/>
+                                    <outlet property="dataSource" destination="SU1-j3-VWG" id="6kH-TO-9eB"/>
+                                    <outlet property="delegate" destination="SU1-j3-VWG" id="Z87-7J-Kb7"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-xV-7pC">
@@ -247,19 +259,24 @@
                             <constraint firstItem="vLX-Lq-QUN" firstAttribute="top" secondItem="Phf-Iq-XWc" secondAttribute="bottom" constant="8" id="1Of-nA-p3P"/>
                             <constraint firstAttribute="trailing" secondItem="vLX-Lq-QUN" secondAttribute="trailing" id="2jM-Nm-j1u"/>
                             <constraint firstAttribute="trailing" secondItem="AzC-si-6zx" secondAttribute="trailing" id="9Ye-jp-NDo"/>
-                            <constraint firstItem="G1Y-xV-7pC" firstAttribute="top" secondItem="AzC-si-6zx" secondAttribute="bottom" constant="8" id="AKk-gI-WvV"/>
+                            <constraint firstItem="G1Y-xV-7pC" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leadingMargin" id="FFS-0P-tbK"/>
                             <constraint firstItem="AzC-si-6zx" firstAttribute="top" secondItem="vLX-Lq-QUN" secondAttribute="bottom" constant="8" id="Hbr-XH-msi"/>
                             <constraint firstItem="AzC-si-6zx" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leading" id="JBo-iK-E6b"/>
                             <constraint firstItem="vLX-Lq-QUN" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leading" id="JMu-aG-Nde"/>
                             <constraint firstItem="AzC-si-6zx" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leading" id="MC3-GV-QBm"/>
+                            <constraint firstItem="G1Y-xV-7pC" firstAttribute="trailing" secondItem="W4A-26-ckg" secondAttribute="trailingMargin" id="N9Q-FU-xZq"/>
                             <constraint firstAttribute="trailing" secondItem="AzC-si-6zx" secondAttribute="trailing" id="OHF-qp-du6"/>
                             <constraint firstItem="G1Y-xV-7pC" firstAttribute="trailing" secondItem="W4A-26-ckg" secondAttribute="trailingMargin" id="dmT-ZX-KlU"/>
                             <constraint firstItem="G1Y-xV-7pC" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leadingMargin" id="ezd-Ir-dcA"/>
                             <constraint firstItem="AzC-si-6zx" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leading" id="ftc-tx-M3A"/>
+                            <constraint firstItem="G1Y-xV-7pC" firstAttribute="top" secondItem="AzC-si-6zx" secondAttribute="bottom" constant="8" id="lQ2-Bq-wth"/>
                             <constraint firstAttribute="trailing" secondItem="AzC-si-6zx" secondAttribute="trailing" id="uvd-Yb-BTQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Traitement" image="medicine-25" id="YSo-eY-cvM"/>
+                    <connections>
+                        <outlet property="treatmentsList" destination="AzC-si-6zx" id="VYd-mf-cA7"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-898" y="642"/>
@@ -385,6 +402,6 @@
         <image name="medicine-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kaf-fJ-zfc"/>
+        <segue reference="oeP-l9-z2J"/>
     </inferredMetricsTieBreakers>
 </document>

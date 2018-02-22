@@ -8,8 +8,12 @@
 
 import UIKit
 
-class TreatmentViewController: UIViewController {
+class TreatmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var treatments: [String] = ["toto","tat"]
 
+    @IBOutlet weak var treatmentsList: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +23,16 @@ class TreatmentViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.treatmentsList.dequeueReusableCell(withIdentifier: "treatmentCell", for: indexPath) as! TreatmentTableViewCell
+        cell.medicineLabel.text = self.treatments[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.treatments.count
     }
     
 
