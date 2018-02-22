@@ -32,7 +32,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="JmX-CK-CZK"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="calendar-25" id="JmX-CK-CZK"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-2106" y="642"/>
@@ -60,7 +60,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ztk-Zm-J8n"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="medicine-25" id="ztk-Zm-J8n"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-1126" y="642"/>
@@ -115,7 +115,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="YSo-eY-cvM"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="exercise-25" id="YSo-eY-cvM"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-111" y="642"/>
@@ -143,7 +143,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qPI-L6-Hlu"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="account-25" id="qPI-L6-Hlu"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="777" y="642"/>
@@ -171,10 +171,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="KjX-Md-eHN"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="info-25" id="KjX-Md-eHN"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1679" y="642"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="account-25" width="25" height="25"/>
+        <image name="calendar-25" width="25" height="25"/>
+        <image name="exercise-25" width="25" height="25"/>
+        <image name="info-25" width="25" height="25"/>
+        <image name="medicine-25" width="25" height="25"/>
+    </resources>
 </document>
