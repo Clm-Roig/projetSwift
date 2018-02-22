@@ -15,6 +15,8 @@
 		E0FCAE9D203EF9A300F04470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FCAE9B203EF9A300F04470 /* LaunchScreen.storyboard */; };
 		E0FCAEA8203EF9A300F04470 /* MonPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEA7203EF9A300F04470 /* MonPkEtMoiTests.swift */; };
 		E0FCAEB3203EF9A300F04470 /* MonPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEB2203EF9A300F04470 /* MonPkEtMoiUITests.swift */; };
+		E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */; };
+		E0FCAEC6203F29B700F04470 /* TreatmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEC5203F29B700F04470 /* TreatmentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E0FCAEAE203EF9A300F04470 /* MonPkEtMoiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonPkEtMoiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FCAEB2203EF9A300F04470 /* MonPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonPkEtMoiUITests.swift; sourceTree = "<group>"; };
 		E0FCAEB4203EF9A300F04470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentViewController.swift; sourceTree = "<group>"; };
+		E0FCAEC5203F29B700F04470 /* TreatmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		E0FCAE8E203EF9A300F04470 /* MonPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
+				E0FCAEC4203F292200F04470 /* Treatment */,
 				E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */,
 				E0FCAE91203EF9A300F04470 /* ViewController.swift */,
 				E0FCAE93203EF9A300F04470 /* Main.storyboard */,
@@ -126,6 +131,15 @@
 				E0FCAEB4203EF9A300F04470 /* Info.plist */,
 			);
 			path = MonPkEtMoiUITests;
+			sourceTree = "<group>";
+		};
+		E0FCAEC4203F292200F04470 /* Treatment */ = {
+			isa = PBXGroup;
+			children = (
+				E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */,
+				E0FCAEC5203F29B700F04470 /* TreatmentTableViewController.swift */,
+			);
+			name = Treatment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FCAEC6203F29B700F04470 /* TreatmentTableViewController.swift in Sources */,
 				E0FCAE92203EF9A300F04470 /* ViewController.swift in Sources */,
 				E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */,
 				E0FCAE98203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld in Sources */,
+				E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
