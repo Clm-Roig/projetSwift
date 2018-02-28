@@ -80,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E05352102046A8080083CA12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		E0FCAE83203EF9A300F04470 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +110,7 @@
 		E0FCAE8E203EF9A300F04470 /* MonPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
+				E05352102046A8080083CA12 /* Models */,
 				E0FCAEC4203F292200F04470 /* Treatment */,
 				E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */,
 				E0FCAE91203EF9A300F04470 /* ViewController.swift */,
@@ -210,6 +218,7 @@
 				TargetAttributes = {
 					E0FCAE8B203EF9A300F04470 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					E0FCAEA2203EF9A300F04470 = {
@@ -434,10 +443,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MonPkEtMoi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Polytech.MonPkEtMoi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -446,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MonPkEtMoi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Polytech.MonPkEtMoi;
@@ -527,6 +539,7 @@
 				E0FCAEB9203EF9A300F04470 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0FCAEBA203EF9A300F04470 /* Build configuration list for PBXNativeTarget "MonPkEtMoiTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +548,7 @@
 				E0FCAEBC203EF9A300F04470 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0FCAEBD203EF9A300F04470 /* Build configuration list for PBXNativeTarget "MonPkEtMoiUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +557,7 @@
 				E0FCAEBF203EF9A300F04470 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

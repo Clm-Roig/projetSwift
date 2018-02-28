@@ -10,7 +10,7 @@ import UIKit
 
 class TreatmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var treatments: [String] = ["toto","tat"]
+    var treatments: [String] = ["toto","tata"]
 
     @IBOutlet weak var treatmentsList: UITableView!
     
