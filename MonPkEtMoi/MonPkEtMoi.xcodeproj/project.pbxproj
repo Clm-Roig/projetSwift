@@ -130,7 +130,7 @@
 				E0FCAEA9203EF9A300F04470 /* Info.plist */,
 			);
 			path = MonPkEtMoiTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		E0FCAEB1203EF9A300F04470 /* MonPkEtMoiUITests */ = {
 			isa = PBXGroup;
