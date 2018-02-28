@@ -355,9 +355,6 @@
                                     <navigationItem title="Ajout Traitement" id="pQe-YZ-XDX">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Retour" width="10" id="b6S-3B-I4C">
                                             <color key="tintColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="SU1-j3-VWG" kind="show" id="oeP-l9-z2J"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -398,7 +395,4 @@
         <image name="info-25" width="25" height="25"/>
         <image name="medicine-25" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="oeP-l9-z2J"/>
-    </inferredMetricsTieBreakers>
 </document>
