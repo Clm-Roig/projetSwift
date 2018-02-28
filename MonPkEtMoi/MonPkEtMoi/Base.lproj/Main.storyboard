@@ -13,7 +13,6 @@
         <!--Agenda-->
         <scene sceneID="Wkt-by-iZE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OIE-Mf-gkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Agenda" id="dlc-UH-WBd" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iDB-dW-Fkf"/>
@@ -35,13 +34,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Agenda" image="calendar-25" id="JmX-CK-CZK"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIE-Mf-gkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2106" y="642"/>
         </scene>
         <!--Exercice-->
         <scene sceneID="bOx-AN-d48">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vde-2Z-H30" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Exercice" id="Oez-nP-rWJ" customClass="ExerciceViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VbQ-v8-IbE"/>
@@ -58,7 +57,7 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Exercices" id="ZC3-qC-4tr">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="ORz-ma-PGu">
+                                        <barButtonItem key="rightBarButtonItem" id="ORz-ma-PGu">
                                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="9gg-zv-cvl">
                                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -73,13 +72,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dK4-Bn-Kth">
-                                <rect key="frame" x="0.0" y="114" width="375" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="X6S-rs-mbA"/>
-                                </constraints>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4It-Zp-Heq">
                                 <rect key="frame" x="16" y="272" width="343" height="28"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -107,6 +99,13 @@
                                     <color key="titleColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dK4-Bn-Kth">
+                                <rect key="frame" x="0.0" y="114" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="X6S-rs-mbA"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -135,10 +134,8 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Exercice" image="exercise-25" id="ztk-Zm-J8n"/>
-                    <connections>
-                        <outlet property="ProgramsList" destination="dK4-Bn-Kth" id="0F4-b1-4fa"/>
-                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vde-2Z-H30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-87.200000000000003" y="641.82908545727139"/>
         </scene>
@@ -172,7 +169,6 @@
         <!--Traitement-->
         <scene sceneID="0fC-Iq-u3G">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mjq-dq-OZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Traitement" id="SU1-j3-VWG" customClass="TreatmentViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Phf-Iq-XWc"/>
@@ -189,7 +185,7 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Traitement" id="cD9-dB-te3">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Xcx-4g-1AP">
+                                        <barButtonItem key="rightBarButtonItem" id="Xcx-4g-1AP">
                                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="IRz-Bm-Xc5">
                                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -278,13 +274,13 @@
                         <outlet property="treatmentsList" destination="AzC-si-6zx" id="VYd-mf-cA7"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjq-dq-OZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-898" y="642"/>
         </scene>
         <!--Profil-->
         <scene sceneID="WT8-qH-5la">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j5h-Ri-rpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Profil" id="B0M-2b-TY7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bh6-i6-lR6"/>
@@ -306,13 +302,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profil" image="account-25" id="qPI-L6-Hlu"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5h-Ri-rpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="777" y="642"/>
         </scene>
         <!--Infos-->
         <scene sceneID="Ufs-GR-8Yk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ARu-eC-eqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Infos" id="e8I-OS-Qj9" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n1L-e7-5f2"/>
@@ -334,13 +330,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="info-25" id="KjX-Md-eHN"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARu-eC-eqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1679" y="642"/>
         </scene>
         <!--Ajout traitement-->
         <scene sceneID="chb-uy-vAc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KE6-FH-SIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Ajout traitement" id="zfc-Im-Rv0" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfW-4M-HyS"/>
@@ -389,6 +385,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Traitement" image="medicine-25" id="6ip-Cu-IeN"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KE6-FH-SIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1118" y="1383"/>
         </scene>
