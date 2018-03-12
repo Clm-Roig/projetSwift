@@ -7,29 +7,34 @@
     </entity>
     <entity name="Evaluation" representedClassName="Evaluation" syncable="YES" codeGenerationType="class">
         <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="isTypeOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EvaluationType" inverseName="defines" inverseEntity="EvaluationType" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Survey" inverseName="gathers" inverseEntity="Survey" syncable="YES"/>
     </entity>
     <entity name="EvaluationType" representedClassName="EvaluationType" syncable="YES" codeGenerationType="class">
         <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="defines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evaluation" inverseName="isTypeOf" inverseEntity="Evaluation" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="isTypeOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventType" inverseName="defines" inverseEntity="EventType" syncable="YES"/>
+        <relationship name="occurs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Survey" inverseName="regroups" inverseEntity="Survey" syncable="YES"/>
     </entity>
     <entity name="EventType" representedClassName="EventType" syncable="YES" codeGenerationType="class">
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="defines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="isTypeOf" inverseEntity="Event" syncable="YES"/>
     </entity>
     <entity name="Exercise" representedClassName="Exercise" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="isContainedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Program" inverseName="contain" inverseEntity="Program" syncable="YES"/>
-        <relationship name="isTypeOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseType" inverseName="define" inverseEntity="ExerciseType" syncable="YES"/>
-    </entity>
-    <entity name="ExerciseType" representedClassName="ExerciseType" syncable="YES" codeGenerationType="class">
-        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="define" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="isTypeOf" inverseEntity="Exercise" syncable="YES"/>
+        <relationship name="composes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Program" inverseName="isComposedBy" inverseEntity="Program" syncable="YES"/>
+        <relationship name="isConcernedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseDone" inverseName="concerns" inverseEntity="ExerciseDone" syncable="YES"/>
+    </entity>
+    <entity name="ExerciseDone" representedClassName="ExerciseDone" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="concerns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="isConcernedBy" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <entity name="Medicine" representedClassName="Medicine" syncable="YES" codeGenerationType="class">
-        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="isLinkedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Treatment" inverseName="need" inverseEntity="Treatment" syncable="YES"/>
     </entity>
@@ -49,42 +54,43 @@
     </entity>
     <entity name="Practitioner" representedClassName="Practitioner" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <relationship name="master" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Specialism" inverseName="isMasteredBy" inverseEntity="Specialism" syncable="YES"/>
-        <relationship name="prescribe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Treatment" inverseName="isPrescribed" inverseEntity="Treatment" syncable="YES"/>
         <relationship name="propose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment" inverseName="proposedBy" inverseEntity="Appointment" syncable="YES"/>
     </entity>
     <entity name="Program" representedClassName="Program" syncable="YES" codeGenerationType="class">
         <attribute name="frequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="contain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="isContainedBy" inverseEntity="Exercise" syncable="YES"/>
+        <relationship name="isComposedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="composes" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <entity name="Specialism" representedClassName="Specialism" syncable="YES" codeGenerationType="class">
         <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="isMasteredBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Practitioner" inverseName="master" inverseEntity="Practitioner" syncable="YES"/>
+        <relationship name="isMasteredBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Practitioner" inverseName="master" inverseEntity="Practitioner" syncable="YES"/>
     </entity>
     <entity name="Survey" representedClassName="Survey" syncable="YES" codeGenerationType="class">
+        <relationship name="gathers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evaluation" inverseName="newRelationship" inverseEntity="Evaluation" syncable="YES"/>
         <relationship name="isAskedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment" inverseName="askFor" inverseEntity="Appointment" syncable="YES"/>
+        <relationship name="regroups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="occurs" inverseEntity="Event" syncable="YES"/>
     </entity>
     <entity name="Treatment" representedClassName="Treatment" syncable="YES" codeGenerationType="class">
         <attribute name="beginningDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="endingDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="frequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="isPrescribed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Practitioner" inverseName="prescribe" inverseEntity="Practitioner" syncable="YES"/>
+        <attribute name="hours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="need" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="isLinkedTo" inverseEntity="Medicine" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Exercise" positionX="-533" positionY="-628" width="128" height="88"/>
-        <element name="Person" positionX="-747" positionY="-387" width="126" height="133"/>
-        <element name="Program" positionX="-558" positionY="-766" width="128" height="73"/>
+        <element name="Appointment" positionX="-315" positionY="-601" width="128" height="88"/>
+        <element name="Evaluation" positionX="142" positionY="-540" width="128" height="88"/>
+        <element name="EvaluationType" positionX="153" positionY="-352" width="128" height="73"/>
+        <element name="Event" positionX="-63" positionY="-699" width="128" height="88"/>
+        <element name="EventType" positionX="117" positionY="-714" width="128" height="88"/>
+        <element name="ExerciseDone" positionX="-585" positionY="-612" width="128" height="88"/>
+        <element name="Medicine" positionX="-9" positionY="-207" width="128" height="73"/>
         <element name="Patient" positionX="-749" positionY="-666" width="128" height="103"/>
-        <element name="Practitioner" positionX="-315" positionY="-364" width="128" height="88"/>
-        <element name="ExerciseType" positionX="-504" positionY="-484" width="128" height="88"/>
-        <element name="Appointment" positionX="-245" positionY="-504" width="128" height="88"/>
-        <element name="Survey" positionX="-56" positionY="-571" width="128" height="58"/>
-        <element name="Event" positionX="-63" positionY="-699" width="128" height="60"/>
-        <element name="EventType" positionX="117" positionY="-714" width="128" height="75"/>
-        <element name="Evaluation" positionX="106" positionY="-573" width="128" height="60"/>
-        <element name="EvaluationType" positionX="259" positionY="-576" width="128" height="60"/>
+        <element name="Person" positionX="-747" positionY="-387" width="126" height="133"/>
+        <element name="Program" positionX="-585" positionY="-766" width="128" height="73"/>
         <element name="Specialism" positionX="-486" positionY="-198" width="128" height="73"/>
-        <element name="Treatment" positionX="-18" positionY="-387" width="128" height="118"/>
-        <element name="Medicine" positionX="-9" positionY="-207" width="128" height="88"/>
+        <element name="Survey" positionX="-56" positionY="-571" width="128" height="88"/>
+        <element name="Treatment" positionX="-65" positionY="-432" width="128" height="118"/>
+        <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="73"/>
+        <element name="Exercise" positionX="-351" positionY="-756" width="128" height="88"/>
     </elements>
 </model>
