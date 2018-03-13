@@ -82,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15723EF12058368800866455 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				15723EEC2058330F00866455 /* RegistrationViewController.swift */,
+			);
+			name = Registration;
+			sourceTree = "<group>";
+		};
 		E05352102046A8080083CA12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +120,7 @@
 		E0FCAE8E203EF9A300F04470 /* MonPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
-				15723EEC2058330F00866455 /* RegistrationViewController.swift */,
+				15723EF12058368800866455 /* Registration */,
 				E05352102046A8080083CA12 /* Models */,
 				E0FCAEC4203F292200F04470 /* Treatment */,
 				E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */,
