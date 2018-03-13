@@ -10,6 +10,9 @@ import UIKit
 
 class AgendaViewController : UIViewController {
     
+    @IBAction func `switch`(_ sender: Any) {
+    }
+    
     override internal func viewDidLoad() {
         
     }
