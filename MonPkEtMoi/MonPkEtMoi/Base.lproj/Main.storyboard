@@ -13,7 +13,7 @@
         <!--Agenda-->
         <scene sceneID="Wkt-by-iZE">
             <objects>
-                <viewController title="Agenda" id="dlc-UH-WBd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AgendaView" title="Agenda" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dlc-UH-WBd" customClass="AgendaViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iDB-dW-Fkf"/>
                         <viewControllerLayoutGuide type="bottom" id="obr-ac-9c4"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15723EED2058330F00866455 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EEC2058330F00866455 /* RegistrationViewController.swift */; };
+		15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EF420583BDC00866455 /* AgendaViewController.swift */; };
 		E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */; };
 		E0FCAE92203EF9A300F04470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE91203EF9A300F04470 /* ViewController.swift */; };
 		E0FCAE95203EF9A300F04470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FCAE93203EF9A300F04470 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		15723EEC2058330F00866455 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		15723EF420583BDC00866455 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		E0FCAE8C203EF9A300F04470 /* MonPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0FCAE91203EF9A300F04470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 			name = Registration;
 			sourceTree = "<group>";
 		};
+		15723EF620583BF900866455 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				15723EF420583BDC00866455 /* AgendaViewController.swift */,
+			);
+			name = Agenda;
+			sourceTree = "<group>";
+		};
 		E05352102046A8080083CA12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 		E0FCAE8E203EF9A300F04470 /* MonPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
+				15723EF620583BF900866455 /* Agenda */,
 				15723EF12058368800866455 /* Registration */,
 				E05352102046A8080083CA12 /* Models */,
 				E0FCAEC4203F292200F04470 /* Treatment */,
@@ -301,6 +312,7 @@
 				E0FCAE92203EF9A300F04470 /* ViewController.swift in Sources */,
 				E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */,
 				E0FCAE98203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld in Sources */,
+				15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */,
 				E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
