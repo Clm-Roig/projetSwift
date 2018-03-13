@@ -404,6 +404,9 @@
                                 <rect key="frame" x="16" y="608" width="343" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Créer compte"/>
+                                <connections>
+                                    <action selector="createAccountButton:" destination="wPf-Fz-f2M" eventType="touchUpInside" id="ShC-M6-GRX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -461,8 +464,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="gMc-6D-ZgJ"/>
                     <connections>
+                        <outlet property="adressTextField" destination="Mbf-lx-1nn" id="5dj-uW-nnL"/>
+                        <outlet property="cityTextField" destination="Khx-Xa-SCQ" id="gdV-JD-ChU"/>
+                        <outlet property="dateBirthDatePicker" destination="0jn-E6-wCC" id="qIW-Pj-Ger"/>
+                        <outlet property="dateBirthTextField" destination="cIF-GJ-JTT" id="ExD-y2-kQK"/>
                         <outlet property="firstNameTextField" destination="rAB-wH-XD3" id="Ynl-Bs-Axq"/>
                         <outlet property="lastNameTextField" destination="pAJ-Eb-kkX" id="L56-5a-qoX"/>
+                        <outlet property="postalCodeTextField" destination="grw-2h-13q" id="UKH-n9-Rpd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrW-kF-0uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
