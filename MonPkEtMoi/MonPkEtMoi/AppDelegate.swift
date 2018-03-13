@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+   
+     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let nav = storyboard.instantiateViewController(withIdentifier: "registrationView")
             self.window?.rootViewController = nav
             UserDefaults.standard.set(true, forKey: "launchedBefore")
+            //TODO : the forKey has to depend on a previous connection
         }
         return true
     }
