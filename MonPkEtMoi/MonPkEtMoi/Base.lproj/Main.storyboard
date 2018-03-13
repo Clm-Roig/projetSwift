@@ -294,7 +294,7 @@
         <!--registrationView-->
         <scene sceneID="DBg-O4-nlW">
             <objects>
-                <viewController storyboardIdentifier="registrationView" title="registrationView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wPf-Fz-f2M" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registrationView" title="registrationView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wPf-Fz-f2M" customClass="RegistrationViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U5B-3w-SRX"/>
                         <viewControllerLayoutGuide type="bottom" id="3XM-JX-3Ug"/>
@@ -448,6 +448,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="gMc-6D-ZgJ"/>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="rAB-wH-XD3" id="Ynl-Bs-Axq"/>
+                        <outlet property="lastNameTextField" destination="pAJ-Eb-kkX" id="L56-5a-qoX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrW-kF-0uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
