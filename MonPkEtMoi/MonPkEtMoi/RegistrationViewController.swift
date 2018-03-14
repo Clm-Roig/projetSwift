@@ -40,14 +40,12 @@ class RegistrationViewController : UIViewController {
     @IBOutlet weak var cityTF: UITextField!
     @IBOutlet weak var postalCodeTF: UITextField!
     
-    
-    
-    
     @IBAction func createAccountButton(_ sender: Any) {
         if( self.lastNameTF.text != "" && self.firstNameTF.text != "" &&
             self.birthDateTF.text != "" && self.addressTF.text != "" &&
             self.cityTF.text != "" && self.postalCodeTF.text != ""
         ) {
+            // Construct a new patient
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
             let newPatient = Patient(context: context)
@@ -59,8 +57,11 @@ class RegistrationViewController : UIViewController {
             newPatient.city = cityTF.text
             newPatient.postalCode = postalCodeTF.text
             
+            // Save the patient
             do {
                 try context.save()
+                
+                // Set UserDefaults variable to true and navigate to Home
                 UserDefaults.standard.set(true, forKey: "patientRegistered")
                 self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
             } catch {
@@ -69,6 +70,15 @@ class RegistrationViewController : UIViewController {
         }
         else {
             print("Empty input(s)")
+            
+            // create the alert
+            let alert = UIAlertController(title: "Formulaire incomplet", message: "Veuillez remplir tous les champs.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
