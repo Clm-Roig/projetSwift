@@ -10,23 +10,31 @@ import UIKit
 
 class RegistrationViewController : UIViewController {
     
-    @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var dateBirthTextField: UITextField!
-    @IBOutlet weak var dateBirthDatePicker: UIDatePicker!
-    @IBOutlet weak var adressTextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var postalCodeTextField: UITextField!
-   
+    @IBOutlet weak var lastNameTF: UITextField!
+    @IBOutlet weak var firstNameTF: UITextField!
+    @IBOutlet weak var birthDateTF: UITextField!
+    @IBOutlet weak var birthDateDP: UIDatePicker!
+    @IBOutlet weak var addressTF: UITextField!
+    @IBOutlet weak var cityTF: UITextField!
+    @IBOutlet weak var postalCodeTF: UITextField!
+    
     @IBAction func createAccountButton(_ sender: Any) {
-        
+        // All TF must not be empty
+        if(self.lastNameTF.text != "" && self.firstNameTF.text != "") {
+
+        }
+        else {
+            
+        }
     }
     
     override internal func viewDidLoad() {
+        super.viewDidLoad();
         
     }
     
     override internal func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning();
         
     }
     
