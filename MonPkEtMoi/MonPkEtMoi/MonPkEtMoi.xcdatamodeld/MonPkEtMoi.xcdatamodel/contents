@@ -42,7 +42,6 @@
         <attribute name="beginningEvaluationHour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="endingEvaluationHour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="timePeparation" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="tmeBetweenEvaluations" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -82,15 +81,15 @@
         <element name="EvaluationType" positionX="153" positionY="-352" width="128" height="73"/>
         <element name="Event" positionX="-63" positionY="-699" width="128" height="88"/>
         <element name="EventType" positionX="117" positionY="-714" width="128" height="88"/>
+        <element name="Exercise" positionX="-351" positionY="-756" width="128" height="88"/>
         <element name="ExerciseDone" positionX="-585" positionY="-612" width="128" height="88"/>
         <element name="Medicine" positionX="-9" positionY="-207" width="128" height="73"/>
-        <element name="Patient" positionX="-749" positionY="-666" width="128" height="103"/>
+        <element name="Patient" positionX="-749" positionY="-666" width="128" height="88"/>
         <element name="Person" positionX="-747" positionY="-387" width="126" height="133"/>
+        <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="73"/>
         <element name="Program" positionX="-585" positionY="-766" width="128" height="73"/>
         <element name="Specialism" positionX="-486" positionY="-198" width="128" height="73"/>
         <element name="Survey" positionX="-56" positionY="-571" width="128" height="88"/>
         <element name="Treatment" positionX="-65" positionY="-432" width="128" height="118"/>
-        <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="73"/>
-        <element name="Exercise" positionX="-351" positionY="-756" width="128" height="88"/>
     </elements>
 </model>
