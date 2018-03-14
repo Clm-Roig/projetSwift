@@ -32,7 +32,6 @@ class RegistrationViewController : UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
         dateFormatter.locale = Locale.init(identifier: "fr_FR")
-        //dateFormatter.timeStyle = DateFormatter.Style.none
         birthDateTF.text = dateFormatter.string(from: sender.date)
     }
     
