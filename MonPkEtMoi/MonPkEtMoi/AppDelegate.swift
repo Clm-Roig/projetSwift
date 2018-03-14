@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let launchedBefore = UserDefaults.standard.bool(forKey:"patientRegistered")
         var nav = UIViewController()
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             nav = storyboard.instantiateViewController(withIdentifier: "registrationView")
         }
         self.window?.rootViewController = nav
+        
         return true
     }
 

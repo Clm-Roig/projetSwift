@@ -48,28 +48,29 @@ class RegistrationViewController : UIViewController {
             self.birthDateTF.text != "" && self.addressTF.text != "" &&
             self.cityTF.text != "" && self.postalCodeTF.text != ""
         ) {
-            // TODO : créer un nouveau patient
-            /*
-            let newPatient: Patient = Patient(context: )
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let newPatient = Patient(context: context)
+            
             newPatient.firstName = firstNameTF.text
             newPatient.lastName = lastNameTF.text
             newPatient.birthDate = birthDateDP.date as NSDate
             newPatient.address = addressTF.text
             newPatient.city = cityTF.text
             newPatient.postalCode = postalCodeTF.text
-             */
-
-            UserDefaults.standard.set(true, forKey: "patientRegistered")
-            self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
+            
+            do {
+                try context.save()
+                UserDefaults.standard.set(true, forKey: "patientRegistered")
+                self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
+            } catch {
+                    print("Failed saving new Patient.")
+            }
         }
         else {
-            print("empty input(s)")
+            print("Empty input(s)")
         }
     }
-    
-    
-    
-    
     
     override internal func viewDidLoad() {
         super.viewDidLoad();
