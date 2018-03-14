@@ -140,7 +140,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Agenda" id="dYh-aF-9SD">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="hkG-pK-AMK">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="EbI-oC-4DR">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="EbI-oC-4DR">
                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
@@ -229,7 +229,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Exercices" id="b4x-AE-9Q7">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Shg-ec-akd">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="4Uz-nH-hM6">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="4Uz-nH-hM6">
                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
@@ -545,7 +545,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Traitement" id="5ab-bZ-uFM">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="phl-Mw-ojP">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="GgB-b1-mow">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="GgB-b1-mow">
                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
@@ -716,7 +716,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profil" id="EIM-j7-CUd">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="WO2-ln-3lL">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Zbx-N8-rZC">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Zbx-N8-rZC">
                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
@@ -725,7 +725,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5h-Ri-rpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4767.1999999999998" y="563.56821589205401"/>
+            <point key="canvasLocation" x="4769" y="591"/>
         </scene>
         <!--Infos-->
         <scene sceneID="Ufs-GR-8Yk">
@@ -873,7 +873,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Informations" id="63G-Sb-3kT">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="MEX-sb-EQz">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="kcM-Tr-2gJ">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="kcM-Tr-2gJ">
                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
@@ -1274,7 +1274,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6a-VL-RYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3828" y="563.56821589205401"/>
+            <point key="canvasLocation" x="3834" y="592"/>
         </scene>
         <!--Nav Info Controller-->
         <scene sceneID="YL1-TQ-GEc">
