@@ -16,21 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let nav = storyboard.instantiateViewController(withIdentifier: "patientRegistered")
-        self.window?.rootViewController = nav
-
         let launchedBefore = UserDefaults.standard.bool(forKey:"patientRegistered")
+        var nav = UIViewController()
         if launchedBefore  {
-            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let nav = storyboard.instantiateViewController(withIdentifier: "homeView")
-            self.window?.rootViewController = nav
+            nav = storyboard.instantiateViewController(withIdentifier: "homeView")
         }
         else {
-            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let nav = storyboard.instantiateViewController(withIdentifier: "patientRegistered")
-            self.window?.rootViewController = nav            
+            nav = storyboard.instantiateViewController(withIdentifier: "registrationView")
         }
- 
+        self.window?.rootViewController = nav
         return true
     }
 

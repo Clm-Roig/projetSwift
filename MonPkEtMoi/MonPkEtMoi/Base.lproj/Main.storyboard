@@ -345,6 +345,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="birthDateTFEditing:" destination="wPf-Fz-f2M" eventType="editingDidBegin" id="wJp-eE-F7J"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbf-lx-1nn" userLabel="addressTF">
                                 <rect key="frame" x="157" y="470" width="202" height="30"/>
@@ -376,6 +379,9 @@
                                     <!--2018-03-13 16:47:04 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr_FR"/>
+                                <connections>
+                                    <action selector="birthDateDPEditing:" destination="wPf-Fz-f2M" eventType="valueChanged" id="G6T-OJ-yYm"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-KT-Xvg">
                                 <rect key="frame" x="16" y="608" width="343" height="41"/>
@@ -455,11 +461,11 @@
             </objects>
             <point key="canvasLocation" x="1142" y="-551"/>
         </scene>
-        <!--Traitement-->
+        <!--treatmentView-->
         <scene sceneID="0fC-Iq-u3G">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjq-dq-OZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Traitement" id="SU1-j3-VWG" customClass="TreatmentViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="treatmentView" id="SU1-j3-VWG" customClass="TreatmentViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Phf-Iq-XWc"/>
                         <viewControllerLayoutGuide type="bottom" id="Lkj-jb-dco"/>
