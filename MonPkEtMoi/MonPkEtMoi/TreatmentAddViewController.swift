@@ -11,8 +11,4 @@ import UIKit
 class TreatmentAddViewController: UIViewController {
 
 
-    @IBAction func backButton(_ sender: Any) {
-        // Go back if pressed
-        navigationController?.popViewController(animated: true)
-    }
 }
