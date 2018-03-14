@@ -10,11 +10,14 @@ import UIKit
 
 class AgendaViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBAction func `switch`(_ sender: Any) {
+    var todoToday: [String] = ["Exercice : marche à pied", "RDV : Docteur Martin"]
+    var hourToday: [String] = ["12h30","14h30"]
+    
+    
+    @IBAction func switchChanged(_ sender: Any) {
     }
-  
+    
     @IBOutlet weak var todoListToday: UITableView!
-    @IBOutlet weak var todoListLater: UITableView!
     
     override internal func viewDidLoad() {
         
@@ -25,19 +28,18 @@ class AgendaViewController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*
-        let cell = self.treatmentsList.dequeueReusableCell(withIdentifier: "treatmentCell", for: indexPath) as! TreatmentTableViewCell
-        cell.medicineLabel.text = self.medicineLabel[indexPath.row]
-        cell.quantityLabel.text = self.quantityLabel[indexPath.row]
-        cell.hoursLabel.text = self.hoursLabel[indexPath.row]
+        
+        let cell = self.todoListToday.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TodoTableViewCell
+        cell.todoTF.text = self.todoToday[indexPath.row]
+        cell.hourTF.text = self.hourToday[indexPath.row]
         return cell
-         */
+ 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection
         section: Int) -> Int {
        
-        //return self.medicineLabel.count
+        return self.todoToday.count
     }
     
     

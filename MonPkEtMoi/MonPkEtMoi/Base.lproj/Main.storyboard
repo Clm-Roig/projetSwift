@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="width" secondItem="1uR-5I-DGN" secondAttribute="height" multiplier="3:2" id="Oew-nm-q5N"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingCell" id="ieP-VK-RGu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoCell" id="ieP-VK-RGu" customClass="TodoTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ieP-VK-RGu" id="cKS-xI-iRK">
@@ -69,6 +69,10 @@
                                                 <constraint firstItem="ih9-11-6Lr" firstAttribute="trailing" secondItem="cKS-xI-iRK" secondAttribute="trailingMargin" id="pwD-2A-Agy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hourTF" destination="ih9-11-6Lr" id="Kyd-AH-5Qa"/>
+                                            <outlet property="todoTF" destination="Wep-3f-pPZ" id="jR3-ov-bfL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -149,14 +153,12 @@
                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="switch:" destination="dlc-UH-WBd" eventType="valueChanged" id="iLb-9R-p1Q"/>
+                                    <action selector="switchChanged:" destination="dlc-UH-WBd" eventType="valueChanged" id="6i0-31-QjA"/>
                                 </connections>
                             </switch>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="switch" destination="EbI-oC-4DR" id="06G-pP-u5e"/>
-                        <outlet property="todoListLater" destination="4uR-vh-912" id="AOx-56-WcI"/>
                         <outlet property="todoListToday" destination="1uR-5I-DGN" id="KQ4-BK-75T"/>
                     </connections>
                 </viewController>
