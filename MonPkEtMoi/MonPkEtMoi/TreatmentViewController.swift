@@ -10,7 +10,9 @@ import UIKit
 
 class TreatmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var treatments: [String] = ["toto","tata"]
+    var medicineLabel: [String] = ["Sinemet LP 100","Modopar 150"]
+    var quantityLabel: [String] = ["2 cuillères à soupe","2 pillules"]
+    var hoursLabel: [String] = ["10h ; 18h","12h"]
 
     @IBOutlet weak var treatmentsList: UITableView!
     
@@ -27,13 +29,27 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.treatmentsList.dequeueReusableCell(withIdentifier: "treatmentCell", for: indexPath) as! TreatmentTableViewCell
-        cell.medicineLabel.text = self.treatments[indexPath.row]
+        cell.medicineLabel.text = self.medicineLabel[indexPath.row]
+        cell.quantityLabel.text = self.quantityLabel[indexPath.row]
+        cell.hoursLabel.text = self.hoursLabel[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.treatments.count
+        return self.medicineLabel.count
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true;
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    
     
 
     /*
