@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="94" width="375" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="13g-Lg-JWW"/>
+                                    <constraint firstAttribute="width" secondItem="1uR-5I-DGN" secondAttribute="height" multiplier="3:2" id="Oew-nm-q5N"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingCell" id="ieP-VK-RGu">
@@ -85,7 +86,7 @@
                                 <rect key="frame" x="0.0" y="374" width="375" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="7nN-pp-oWU"/>
+                                    <constraint firstAttribute="width" secondItem="4uR-vh-912" secondAttribute="height" multiplier="3:2" id="zHB-ZC-BPV"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingCell" id="xWk-eM-DvL">
@@ -170,37 +171,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4It-Zp-Heq">
-                                <rect key="frame" x="16" y="264" width="343" height="50"/>
+                                <rect key="frame" x="16" y="294" width="343" height="50"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Ajouter un programme" image="add-50">
                                     <color key="titleColor" red="0.0" green="0.46274509803921571" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercices effectués" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRs-AP-DX0">
-                                <rect key="frame" x="16" y="322" width="343" height="26.5"/>
+                                <rect key="frame" x="16" y="352" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Vk-Vg-fmn">
-                                <rect key="frame" x="0.0" y="356" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="386" width="375" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Sxz-fm-rVU"/>
+                                    <constraint firstAttribute="width" secondItem="9Vk-Vg-fmn" secondAttribute="height" multiplier="25:12" id="HhS-Vb-c8f"/>
                                 </constraints>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-Cf-rlX">
-                                <rect key="frame" x="16" y="514" width="343" height="50"/>
+                                <rect key="frame" x="16" y="574" width="343" height="50"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Ajouter un exercice" image="add-50">
                                     <color key="titleColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dK4-Bn-Kth">
-                                <rect key="frame" x="0.0" y="106" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="106" width="375" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="X6S-rs-mbA"/>
+                                    <constraint firstAttribute="width" secondItem="dK4-Bn-Kth" secondAttribute="height" multiplier="25:12" id="bsx-LT-jxl"/>
                                 </constraints>
                             </tableView>
                         </subviews>
@@ -464,7 +465,6 @@
         <!--treatmentView-->
         <scene sceneID="0fC-Iq-u3G">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mjq-dq-OZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="treatmentView" id="SU1-j3-VWG" customClass="TreatmentViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Phf-Iq-XWc"/>
@@ -562,6 +562,7 @@
                         <outlet property="treatmentsList" destination="Ddh-OF-Y0E" id="FwE-As-jNR"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjq-dq-OZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="700" y="642"/>
         </scene>
@@ -661,16 +662,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qy2-OG-gIG">
-                                <rect key="frame" x="16" y="429" width="343" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qy2-OG-gIG">
+                                <rect key="frame" x="0.0" y="413" width="375" height="206.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qy2-OG-gIG" secondAttribute="height" multiplier="49:27" id="WDZ-Uv-E7Z"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="surveyCell" id="dwN-5v-y7x">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dwN-5v-y7x" id="JSs-Ki-b4p">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -685,6 +688,7 @@
                             <constraint firstItem="KiF-JW-V18" firstAttribute="top" secondItem="ivu-Th-NQk" secondAttribute="bottom" constant="8" id="BUy-n4-kEC"/>
                             <constraint firstItem="asY-GX-RRh" firstAttribute="trailing" secondItem="GEg-ba-g1K" secondAttribute="trailingMargin" id="EEk-3J-lZJ"/>
                             <constraint firstItem="CVk-hY-FrH" firstAttribute="leading" secondItem="GEg-ba-g1K" secondAttribute="leadingMargin" id="ERf-cy-cSA"/>
+                            <constraint firstItem="Qy2-OG-gIG" firstAttribute="leading" secondItem="GEg-ba-g1K" secondAttribute="leading" id="FVk-kL-GeK"/>
                             <constraint firstItem="O93-7f-ojR" firstAttribute="leading" secondItem="GEg-ba-g1K" secondAttribute="leadingMargin" id="FWB-1j-9Yv"/>
                             <constraint firstItem="ZoW-xr-hnC" firstAttribute="top" secondItem="E5t-gz-hxz" secondAttribute="bottom" constant="4" id="Ir3-OC-pcF"/>
                             <constraint firstItem="0B6-u7-NFb" firstAttribute="leading" secondItem="GEg-ba-g1K" secondAttribute="leadingMargin" id="J44-UG-4gm"/>
@@ -694,6 +698,7 @@
                             <constraint firstItem="asY-GX-RRh" firstAttribute="top" secondItem="ZoW-xr-hnC" secondAttribute="bottom" constant="4" id="S2w-ja-z4W"/>
                             <constraint firstItem="bgM-2f-ccY" firstAttribute="top" secondItem="fGH-Sj-MPP" secondAttribute="bottom" constant="4" id="TJ5-AF-M4g"/>
                             <constraint firstItem="h0Z-GF-2ka" firstAttribute="leading" secondItem="UWh-zj-a56" secondAttribute="trailing" constant="8" id="U4X-Zk-1os"/>
+                            <constraint firstAttribute="trailing" secondItem="Qy2-OG-gIG" secondAttribute="trailing" id="UJy-AW-raR"/>
                             <constraint firstItem="FGH-Ej-gAU" firstAttribute="leading" secondItem="GEg-ba-g1K" secondAttribute="leadingMargin" id="UWa-yR-PqJ"/>
                             <constraint firstItem="Wlc-fg-1JJ" firstAttribute="trailing" secondItem="GEg-ba-g1K" secondAttribute="trailingMargin" id="UyZ-Uk-2Nw"/>
                             <constraint firstItem="UWh-zj-a56" firstAttribute="leading" secondItem="GEg-ba-g1K" secondAttribute="leadingMargin" id="WJr-4C-Gqq"/>
@@ -714,6 +719,7 @@
                             <constraint firstItem="asY-GX-RRh" firstAttribute="leading" secondItem="GEg-ba-g1K" secondAttribute="leadingMargin" id="pR3-QC-8Fh"/>
                             <constraint firstItem="Wlc-fg-1JJ" firstAttribute="top" secondItem="h0Z-GF-2ka" secondAttribute="bottom" constant="16" id="pmf-3P-MCC"/>
                             <constraint firstItem="4xc-x1-3hu" firstAttribute="top" secondItem="Ut5-jZ-2gk" secondAttribute="bottom" constant="4" id="qPm-sB-Le7"/>
+                            <constraint firstItem="Qy2-OG-gIG" firstAttribute="top" secondItem="Wlc-fg-1JJ" secondAttribute="bottom" id="sEH-Qk-DUW"/>
                             <constraint firstItem="ZoW-xr-hnC" firstAttribute="leading" secondItem="GEg-ba-g1K" secondAttribute="leadingMargin" id="sdf-pe-FTk"/>
                             <constraint firstItem="Ut5-jZ-2gk" firstAttribute="top" secondItem="KiF-JW-V18" secondAttribute="bottom" constant="4" id="x33-mW-AGX"/>
                             <constraint firstItem="Ut5-jZ-2gk" firstAttribute="trailing" secondItem="GEg-ba-g1K" secondAttribute="trailingMargin" id="yMq-5D-XZt"/>
