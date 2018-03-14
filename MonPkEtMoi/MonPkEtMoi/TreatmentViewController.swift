@@ -10,9 +10,9 @@ import UIKit
 
 class TreatmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var medicineLabel: [String] = ["Sinemet LP 100","Modopar 150"]
-    var quantityLabel: [String] = ["2 cuillères à soupe","2 pillules"]
-    var hoursLabel: [String] = ["10h ; 18h","12h"]
+    var medicineLabel: [String] = ["Sinemet LP 100","Modopar 150","Mantadix 100","Mantadix 100","Mantadix 100","Mantadix 100"]
+    var quantityLabel: [String] = ["2 cuillères à soupe","2 pillules","1 pillule","2 pillules","2 pillules","2 pillules"]
+    var hoursLabel: [String] = ["10h ; 18h","12h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h"]
 
     @IBOutlet weak var treatmentsList: UITableView!
     

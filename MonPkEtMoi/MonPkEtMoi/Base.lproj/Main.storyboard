@@ -475,7 +475,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-xV-7pC">
-                                <rect key="frame" x="16" y="327" width="343" height="50"/>
+                                <rect key="frame" x="16" y="278" width="343" height="50"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Ajouter un traitement" image="add-50">
                                     <color key="titleColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -485,17 +485,17 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ddh-OF-Y0E">
-                                <rect key="frame" x="0.0" y="64" width="375" height="255"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="255" id="mi8-Jd-dpH"/>
+                                    <constraint firstAttribute="width" secondItem="Ddh-OF-Y0E" secondAttribute="height" multiplier="375:206" id="5z4-P4-hVP"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="treatmentCell" id="yfq-Ak-joZ" customClass="TreatmentTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yfq-Ak-joZ" id="p4O-kp-adU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedicineLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8X-wW-Ufw">
@@ -539,15 +539,24 @@
                                     <outlet property="delegate" destination="SU1-j3-VWG" id="8ws-AJ-1dF"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suivi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIT-NH-Upe">
+                                <rect key="frame" x="16" y="336" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G1Y-xV-7pC" firstAttribute="top" secondItem="Ddh-OF-Y0E" secondAttribute="bottom" constant="8" id="2Ui-Fv-QRU"/>
+                            <constraint firstItem="YIT-NH-Upe" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leadingMargin" id="FgE-v9-LOH"/>
                             <constraint firstItem="G1Y-xV-7pC" firstAttribute="trailing" secondItem="W4A-26-ckg" secondAttribute="trailingMargin" id="Oc1-mJ-WeU"/>
                             <constraint firstAttribute="trailing" secondItem="Ddh-OF-Y0E" secondAttribute="trailing" id="QcT-oO-YVm"/>
                             <constraint firstItem="G1Y-xV-7pC" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leadingMargin" id="U2d-RL-488"/>
                             <constraint firstItem="Ddh-OF-Y0E" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leading" id="VRx-eW-Ert"/>
                             <constraint firstItem="Ddh-OF-Y0E" firstAttribute="top" secondItem="Phf-Iq-XWc" secondAttribute="bottom" id="nlR-E9-3Lu"/>
+                            <constraint firstItem="YIT-NH-Upe" firstAttribute="trailing" secondItem="W4A-26-ckg" secondAttribute="trailingMargin" id="ntr-4L-CFn"/>
+                            <constraint firstItem="YIT-NH-Upe" firstAttribute="top" secondItem="G1Y-xV-7pC" secondAttribute="bottom" constant="8" id="qxk-YJ-4fq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Traitement" id="5ab-bZ-uFM">
@@ -564,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjq-dq-OZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="642"/>
+            <point key="canvasLocation" x="700" y="641.82908545727139"/>
         </scene>
         <!--profilView-->
         <scene sceneID="WT8-qH-5la">
