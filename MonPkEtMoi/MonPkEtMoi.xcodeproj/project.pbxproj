@@ -14,6 +14,7 @@
 		E0B02CAE20590B6C00841B32 /* PractitionerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CAD20590B6C00841B32 /* PractitionerModel.swift */; };
 		E0B02CB020590C9600841B32 /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CAF20590C9600841B32 /* Treatment.swift */; };
 		E0B02CB220590CB600841B32 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB120590CB600841B32 /* Medicine.swift */; };
+		E0B02CB420590CF800841B32 /* Specialism.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB320590CF800841B32 /* Specialism.swift */; };
 		E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */; };
 		E0FCAE92203EF9A300F04470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE91203EF9A300F04470 /* ViewController.swift */; };
 		E0FCAE95203EF9A300F04470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FCAE93203EF9A300F04470 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		E0B02CAD20590B6C00841B32 /* PractitionerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerModel.swift; sourceTree = "<group>"; };
 		E0B02CAF20590C9600841B32 /* Treatment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Treatment.swift; path = Models/Treatment.swift; sourceTree = "<group>"; };
 		E0B02CB120590CB600841B32 /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medicine.swift; path = Models/Medicine.swift; sourceTree = "<group>"; };
+		E0B02CB320590CF800841B32 /* Specialism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specialism.swift; path = Models/Specialism.swift; sourceTree = "<group>"; };
 		E0FCAE8C203EF9A300F04470 /* MonPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0FCAE91203EF9A300F04470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				E0B02CAD20590B6C00841B32 /* PractitionerModel.swift */,
 				E0B02CAF20590C9600841B32 /* Treatment.swift */,
 				E0B02CB120590CB600841B32 /* Medicine.swift */,
+				E0B02CB320590CF800841B32 /* Specialism.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				E0B02CAA20590AED00841B32 /* PersonModel.swift in Sources */,
 				15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */,
 				E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */,
+				E0B02CB420590CF800841B32 /* Specialism.swift in Sources */,
 				E0B02CAE20590B6C00841B32 /* PractitionerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  Treatment.swift
+//  Specialism.swift
 //  MonPkEtMoi
 //
 //  Created by Clement ROIG on 14/03/2018.
@@ -9,6 +9,6 @@
 import Foundation
 import CoreData
 
-extension Treatment {
+extension Specialism {
     
 }
