@@ -370,11 +370,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0jn-E6-wCC">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0jn-E6-wCC">
                                 <rect key="frame" x="0.0" y="252" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="542652424.93844795">
                                     <!--2018-03-13 16:47:04 +0000-->
                                 </date>
+                                <locale key="locale" localeIdentifier="fr_FR"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-KT-Xvg">
                                 <rect key="frame" x="16" y="608" width="343" height="41"/>
@@ -452,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrW-kF-0uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="-371"/>
+            <point key="canvasLocation" x="1142" y="-551"/>
         </scene>
         <!--Traitement-->
         <scene sceneID="0fC-Iq-u3G">
@@ -556,7 +557,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="775.20000000000005" y="641.82908545727139"/>
+            <point key="canvasLocation" x="700" y="642"/>
         </scene>
         <!--Profil-->
         <scene sceneID="WT8-qH-5la">
@@ -920,7 +921,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KE6-FH-SIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1118" y="1383"/>
+            <point key="canvasLocation" x="700" y="1413"/>
         </scene>
         <!--Ajout Médecin-->
         <scene sceneID="p5O-Xg-FeF">
@@ -1056,7 +1057,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmP-UM-zdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677.5999999999999" y="1367.7661169415294"/>
+            <point key="canvasLocation" x="6964" y="1386"/>
         </scene>
         <!--Practitioner - Info-->
         <scene sceneID="amN-Te-Pwi">
@@ -1198,7 +1199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66C-2J-IjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492" y="1368"/>
+            <point key="canvasLocation" x="6025" y="1362"/>
         </scene>
         <!--Nav Treatment Controller-->
         <scene sceneID="6fo-ta-s6n">
@@ -1217,7 +1218,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zgg-Do-wOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.799999999999997" y="641.82908545727139"/>
+            <point key="canvasLocation" x="-111" y="642"/>
         </scene>
         <!--Nav Exercises Controller-->
         <scene sceneID="h4u-mr-AdA">

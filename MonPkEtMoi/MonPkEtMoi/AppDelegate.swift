@@ -14,16 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-   
-     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let nav = storyboard.instantiateViewController(withIdentifier: "registrationView")
+        let nav = storyboard.instantiateViewController(withIdentifier: "patientRegistered")
         self.window?.rootViewController = nav
 
-        
-        //TODO : commented because of testing registration view.
-        let launchedBefore = UserDefaults.standard.bool(forKey:"launchedBefore")
+        let launchedBefore = UserDefaults.standard.bool(forKey:"patientRegistered")
         if launchedBefore  {
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let nav = storyboard.instantiateViewController(withIdentifier: "homeView")
@@ -31,10 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else {
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let nav = storyboard.instantiateViewController(withIdentifier: "registrationView")
-            self.window?.rootViewController = nav
-            // TODO : the forKey has to depend on a previous connection
-            // UserDefaults.standard.set(true, forKey: "launchedBefore")
+            let nav = storyboard.instantiateViewController(withIdentifier: "patientRegistered")
+            self.window?.rootViewController = nav            
         }
  
         return true

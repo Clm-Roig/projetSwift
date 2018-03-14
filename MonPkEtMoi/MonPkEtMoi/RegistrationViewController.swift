@@ -23,7 +23,7 @@ class RegistrationViewController : UIViewController {
             self.birthDateTF.text != "" && self.addressTF.text != "" &&
             self.cityTF.text != "" && self.postalCodeTF.text != ""
         ) {
-            print("form ok")
+            UserDefaults.standard.set(true, forKey: "patientRegistered")
             self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
         }
         else {
