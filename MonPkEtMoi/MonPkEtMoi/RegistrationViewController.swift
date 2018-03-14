@@ -24,8 +24,7 @@ class RegistrationViewController : UIViewController {
             self.cityTF.text != "" && self.postalCodeTF.text != ""
         ) {
             print("form ok")
-            
-            
+            self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
         }
         else {
             print("empty input(s)")

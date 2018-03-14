@@ -447,11 +447,12 @@
                         <outlet property="firstNameTF" destination="rAB-wH-XD3" id="aes-ML-JV7"/>
                         <outlet property="lastNameTF" destination="pAJ-Eb-kkX" id="bam-we-8lp"/>
                         <outlet property="postalCodeTF" destination="grw-2h-13q" id="IaG-ye-Z5I"/>
+                        <segue destination="NFE-XT-4FG" kind="show" identifier="registrationOkSegue" id="pc1-ab-cMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrW-kF-0uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680.79999999999995" y="-169.56521739130437"/>
+            <point key="canvasLocation" x="954" y="-371"/>
         </scene>
         <!--Traitement-->
         <scene sceneID="0fC-Iq-u3G">
@@ -487,7 +488,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yfq-Ak-joZ" id="p4O-kp-adU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedicineLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8X-wW-Ufw">
