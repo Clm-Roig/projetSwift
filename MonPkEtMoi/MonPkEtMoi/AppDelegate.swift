@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
      
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        /*
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let nav = storyboard.instantiateViewController(withIdentifier: "registrationView")
         self.window?.rootViewController = nav
-
+*/
         
         /* TODO : commented because of testing registration view.
         let launchedBefore = UserDefaults.standard.bool(forKey:"launchedBefore")

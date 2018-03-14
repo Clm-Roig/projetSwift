@@ -19,13 +19,18 @@ class RegistrationViewController : UIViewController {
     @IBOutlet weak var postalCodeTF: UITextField!
     
     @IBAction func createAccountButton(_ sender: Any) {
-        // All TF must not be empty
-        if(self.lastNameTF.text != "" && self.firstNameTF.text != "") {
-
-        }
-        else {
+        if( self.lastNameTF.text != "" && self.firstNameTF.text != "" &&
+            self.birthDateTF.text != "" && self.addressTF.text != "" &&
+            self.cityTF.text != "" && self.postalCodeTF.text != ""
+        ) {
+            print("form ok")
+            
             
         }
+        else {
+            print("empty input(s)")
+        }
+        
     }
     
     override internal func viewDidLoad() {
