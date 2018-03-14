@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegistrationViewController : UIViewController {
     
@@ -47,13 +48,16 @@ class RegistrationViewController : UIViewController {
             self.birthDateTF.text != "" && self.addressTF.text != "" &&
             self.cityTF.text != "" && self.postalCodeTF.text != ""
         ) {
-            let user = Patient();
-            user.firstName = firstNameTF.text
-            user.lastName = lastNameTF.text
-            user.birthDate = birthDateDP.date as NSDate
-            user.address = addressTF.text
-            user.city = cityTF.text
-            user.postalCode = postalCodeTF.text
+            // TODO : créer un nouveau patient
+            /*
+            let newPatient: Patient = Patient(context: )
+            newPatient.firstName = firstNameTF.text
+            newPatient.lastName = lastNameTF.text
+            newPatient.birthDate = birthDateDP.date as NSDate
+            newPatient.address = addressTF.text
+            newPatient.city = cityTF.text
+            newPatient.postalCode = postalCodeTF.text
+             */
 
             UserDefaults.standard.set(true, forKey: "patientRegistered")
             self.performSegue(withIdentifier: "registrationOkSegue", sender: self)

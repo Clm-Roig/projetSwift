@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="-1167.2" y="641.82908545727139"/>
         </scene>
-        <!--Exercice-->
+        <!--exercicesView-->
         <scene sceneID="bOx-AN-d48">
             <objects>
-                <viewController title="Exercice" id="Oez-nP-rWJ" customClass="ExerciceViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="exercicesView" id="Oez-nP-rWJ" customClass="ExerciceViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VbQ-v8-IbE"/>
                         <viewControllerLayoutGuide type="bottom" id="PHZ-Cd-M3V"/>
@@ -566,10 +566,10 @@
             </objects>
             <point key="canvasLocation" x="700" y="642"/>
         </scene>
-        <!--Profil-->
+        <!--profilView-->
         <scene sceneID="WT8-qH-5la">
             <objects>
-                <viewController storyboardIdentifier="profilView" title="Profil" id="B0M-2b-TY7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profilView" title="profilView" id="B0M-2b-TY7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bh6-i6-lR6"/>
                         <viewControllerLayoutGuide type="bottom" id="xjG-g9-hEu"/>
@@ -673,7 +673,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dwN-5v-y7x" id="JSs-Ki-b4p">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -740,10 +740,10 @@
             </objects>
             <point key="canvasLocation" x="4769" y="591"/>
         </scene>
-        <!--Infos-->
+        <!--infoView-->
         <scene sceneID="Ufs-GR-8Yk">
             <objects>
-                <viewController title="Infos" id="e8I-OS-Qj9" sceneMemberID="viewController">
+                <viewController title="infoView" id="e8I-OS-Qj9" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n1L-e7-5f2"/>
                         <viewControllerLayoutGuide type="bottom" id="GaD-wp-yRb"/>
@@ -897,10 +897,10 @@
             </objects>
             <point key="canvasLocation" x="6964" y="563.56821589205401"/>
         </scene>
-        <!--Ajout traitement-->
+        <!--Ajout Traitement-->
         <scene sceneID="chb-uy-vAc">
             <objects>
-                <viewController storyboardIdentifier="AddTreatmentView" title="Ajout traitement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zfc-Im-Rv0" customClass="TreatmentAddViewController" customModule="MonPkEtMoi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTreatmentView" title="Ajout Traitement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zfc-Im-Rv0" customClass="TreatmentAddViewController" customModule="MonPkEtMoi" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfW-4M-HyS"/>
                         <viewControllerLayoutGuide type="bottom" id="amw-Rq-PDa"/>
