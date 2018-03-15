@@ -2,45 +2,37 @@
 //  AgendaViewController.swift
 //  MonPkEtMoi
 //
-//  Created by Matthieu DYE on 13/03/2018.
+//  Created by Clément Roig on 13/03/2018.
 //  Copyright © 2018 Roig-Dye. All rights reserved.
 //
 
 import UIKit
 
-class AgendaViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AgendaViewController : UIViewController {
     
-    var todoToday: [String] = ["Exercice : marche à pied", "RDV : Docteur Martin"]
-    var hourToday: [String] = ["12h30","14h30"]
+    var appointmentsToday: [String] = ["RDV : Docteur Martin"]
+    var treatmentsToday: [String] = ["Modopar 100"]
+    var exercisesToday: [String] = ["Exercice : marche à pied"]
     
+    var tableViewTodoTodayCtrl: TodoTableViewController?
     
-    @IBAction func switchChanged(_ sender: Any) {
-    }
-    
-    @IBOutlet weak var todoListToday: UITableView!
+    @IBOutlet weak var todosTableView: UITableView!
+   
+    // ----------------------------------------------
     
     override internal func viewDidLoad() {
+        super.viewDidLoad()
         
+        // TODO : get todos from Core Data before passing them to Ctrl
+        tableViewTodoTodayCtrl = TodoTableViewController(todosTableView: self.todosTableView, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
     }
     
     override internal func didReceiveMemoryWarning() {
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    @IBAction func switchChanged(_ sender: Any) {
         
-        let cell = self.todoListToday.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TodoTableViewCell
-        cell.todoTF.text = self.todoToday[indexPath.row]
-        cell.hourTF.text = self.hourToday[indexPath.row]
-        return cell
- 
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection
-        section: Int) -> Int {
-       
-        return self.todoToday.count
-    }
-    
     
 }

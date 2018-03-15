@@ -76,8 +76,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="dlc-UH-WBd" id="dm3-3y-kpz"/>
-                                    <outlet property="delegate" destination="dlc-UH-WBd" id="x5g-ma-zyi"/>
+                                    <outlet property="dataSource" destination="dlc-UH-WBd" id="XZM-sT-hfd"/>
+                                    <outlet property="delegate" destination="dlc-UH-WBd" id="bnW-h6-XJL"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A venir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYz-rg-hww">
@@ -159,7 +159,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="todoListToday" destination="1uR-5I-DGN" id="KQ4-BK-75T"/>
+                        <outlet property="todosTableView" destination="1uR-5I-DGN" id="ce9-Ly-MRi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIE-Mf-gkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -474,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrW-kF-0uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="-552"/>
+            <point key="canvasLocation" x="1053.5999999999999" y="-552.77361319340332"/>
         </scene>
         <!--treatmentView-->
         <scene sceneID="0fC-Iq-u3G">
