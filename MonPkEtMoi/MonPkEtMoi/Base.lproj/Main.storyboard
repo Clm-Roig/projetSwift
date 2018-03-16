@@ -159,6 +159,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="todayLabel" destination="jUB-5Y-kUO" id="l3M-Cl-PSb"/>
                         <outlet property="todosTableViewLater" destination="4uR-vh-912" id="MPf-wN-dUk"/>
                         <outlet property="todosTableViewToday" destination="1uR-5I-DGN" id="ke6-Op-drd"/>
                     </connections>
