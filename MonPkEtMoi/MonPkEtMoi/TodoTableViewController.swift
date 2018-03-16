@@ -11,10 +11,10 @@ import UIKit
 class TodoTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     // TODO : use [Object] instead of [String]
-    var appointments: [String]
-    var treatments: [String]
-    var exercises: [String]
-    var todosList: [String] = []
+    var appointments: [String] = [""]
+    var treatments: [String] = [""]
+    var exercises: [String] = [""]
+    var todosList: [String] = [""]
     
     var todosTableView: UITableView
     

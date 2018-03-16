@@ -25,6 +25,10 @@ class AgendaViewController : UIViewController {
         
         // TODO : get todos from Core Data before passing them to Ctrl
         tableViewTodoTodayCtrl = TodoTableViewController(todosTableView: self.todosTableView, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
+        
+        self.todosTableView.dataSource = self.tableViewTodoTodayCtrl
+        self.todosTableView.delegate = self.tableViewTodoTodayCtrl
+
     }
     
     override internal func didReceiveMemoryWarning() {
