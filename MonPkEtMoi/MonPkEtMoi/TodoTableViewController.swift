@@ -14,7 +14,7 @@ class TodoTableViewController: NSObject, UITableViewDataSource, UITableViewDeleg
     var appointments: [String] = [""]
     var treatments: [String] = [""]
     var exercises: [String] = [""]
-    var todosList: [String] = [""]
+    var todosList: [String] = []
     
     var todosTableView: UITableView
     

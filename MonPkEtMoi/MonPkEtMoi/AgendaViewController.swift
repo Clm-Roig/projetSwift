@@ -10,13 +10,20 @@ import UIKit
 
 class AgendaViewController : UIViewController {
     
+    // TODO : Use Core Data instead of hardcoded String
     var appointmentsToday: [String] = ["RDV : Docteur Martin"]
     var treatmentsToday: [String] = ["Modopar 100"]
     var exercisesToday: [String] = ["Exercice : marche à pied"]
     
-    var tableViewTodoTodayCtrl: TodoTableViewController?
+    var appointmentsLater: [String] = ["RDV : Docteur Dupont"]
+    var treatmentsLater: [String] = ["Modopar 125"]
+    var exercisesLater: [String] = ["Exercice : jardinage"]
     
-    @IBOutlet weak var todosTableView: UITableView!
+    var tableViewTodoTodayCtrl: TodoTableViewController?
+    var tableViewTodoLaterCtrl: TodoTableViewController?
+
+    @IBOutlet weak var todosTableViewToday: UITableView!
+    @IBOutlet weak var todosTableViewLater: UITableView!
    
     // ----------------------------------------------
     
@@ -24,10 +31,13 @@ class AgendaViewController : UIViewController {
         super.viewDidLoad()
         
         // TODO : get todos from Core Data before passing them to Ctrl
-        tableViewTodoTodayCtrl = TodoTableViewController(todosTableView: self.todosTableView, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
+        tableViewTodoTodayCtrl = TodoTableViewController(todosTableView: self.todosTableViewToday, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
+        self.todosTableViewToday.dataSource = self.tableViewTodoTodayCtrl
+        self.todosTableViewToday.delegate = self.tableViewTodoTodayCtrl
         
-        self.todosTableView.dataSource = self.tableViewTodoTodayCtrl
-        self.todosTableView.delegate = self.tableViewTodoTodayCtrl
+        tableViewTodoLaterCtrl = TodoTableViewController(todosTableView: self.todosTableViewLater, treatments: self.treatmentsLater, exercises: self.exercisesLater, apppointments: self.appointmentsLater)
+        self.todosTableViewLater.dataSource = self.tableViewTodoTodayCtrl
+        self.todosTableViewLater.delegate = self.tableViewTodoTodayCtrl
 
     }
     
