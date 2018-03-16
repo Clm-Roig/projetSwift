@@ -26,19 +26,32 @@ class AgendaViewController : UIViewController {
     @IBOutlet weak var todosTableViewLater: UITableView!
    
     @IBOutlet weak var todayLabel: UILabel!
+    @IBOutlet weak var laterLabel: UILabel!
+    
+    @IBOutlet weak var addButton: UIButton!
+
     // ----------------------------------------------
     
     override internal func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set today Label 
+        // Button Layout
+        self.addButton.layer.shadowColor = UIColor.black.cgColor
+        self.addButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.addButton.layer.masksToBounds = false
+        self.addButton.layer.shadowRadius = 2.0
+        self.addButton.layer.shadowOpacity = 0.5
+        self.addButton.layer.cornerRadius = self.addButton.frame.width / 2
+        
+        // Set Labels
         let date = Date()
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "FR-fr")
         formatter.dateFormat = "dd MMMM yyyy"
         let dateString = formatter.string(from: date)
-        
         self.todayLabel.text = "Aujourd'hui " + dateString
+        
+        self.laterLabel.text = "A venir"
         
         // TODO : get todos from Core Data before passing them to Ctrl
         tableViewTodoTodayCtrl = TodoTableViewController(todosTableView: self.todosTableViewToday, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)

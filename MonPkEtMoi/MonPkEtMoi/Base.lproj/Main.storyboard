@@ -129,6 +129,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-te-F8E">
+                                <rect key="frame" x="293" y="552" width="50" height="50"/>
+                                <state key="normal" image="add-50"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -140,8 +144,10 @@
                             <constraint firstItem="jUB-5Y-kUO" firstAttribute="top" secondItem="iDB-dW-Fkf" secondAttribute="bottom" id="SQj-vQ-ZSz"/>
                             <constraint firstAttribute="trailing" secondItem="4uR-vh-912" secondAttribute="trailing" id="Ux2-ME-b1s"/>
                             <constraint firstAttribute="trailing" secondItem="1uR-5I-DGN" secondAttribute="trailing" id="ZbJ-sy-mQo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fBj-te-F8E" secondAttribute="trailing" constant="16" id="cjf-2Y-WuE"/>
                             <constraint firstItem="1uR-5I-DGN" firstAttribute="top" secondItem="jUB-5Y-kUO" secondAttribute="bottom" id="gOQ-eD-U5f"/>
                             <constraint firstItem="1uR-5I-DGN" firstAttribute="leading" secondItem="Nhq-qq-9MJ" secondAttribute="leading" id="i8y-yK-414"/>
+                            <constraint firstItem="obr-ac-9c4" firstAttribute="top" secondItem="fBj-te-F8E" secondAttribute="bottom" constant="16" id="ioo-XL-SCu"/>
                             <constraint firstAttribute="trailing" secondItem="BYz-rg-hww" secondAttribute="trailing" id="lWo-E4-5Lb"/>
                             <constraint firstItem="BYz-rg-hww" firstAttribute="leading" secondItem="Nhq-qq-9MJ" secondAttribute="leading" id="tiG-m5-gdg"/>
                             <constraint firstItem="4uR-vh-912" firstAttribute="leading" secondItem="Nhq-qq-9MJ" secondAttribute="leading" id="wie-ab-DYV"/>
@@ -159,6 +165,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="fBj-te-F8E" id="Lcg-Tc-UyE"/>
+                        <outlet property="laterLabel" destination="BYz-rg-hww" id="dQe-sv-tcT"/>
                         <outlet property="todayLabel" destination="jUB-5Y-kUO" id="l3M-Cl-PSb"/>
                         <outlet property="todosTableViewLater" destination="4uR-vh-912" id="MPf-wN-dUk"/>
                         <outlet property="todosTableViewToday" destination="1uR-5I-DGN" id="ke6-Op-drd"/>
