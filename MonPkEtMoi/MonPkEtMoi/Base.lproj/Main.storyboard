@@ -132,6 +132,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-te-F8E">
                                 <rect key="frame" x="293" y="552" width="50" height="50"/>
                                 <state key="normal" image="add-50"/>
+                                <connections>
+                                    <segue destination="Fyo-KO-kiL" kind="show" id="EsF-NT-uSY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -175,6 +178,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIE-Mf-gkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1167.2" y="641.82908545727139"/>
+        </scene>
+        <!--Ajouter un rendez-vous-->
+        <scene sceneID="tDg-ke-uEb">
+            <objects>
+                <viewController title="Ajouter un rendez-vous" id="Fyo-KO-kiL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3sW-1w-9V6"/>
+                        <viewControllerLayoutGuide type="bottom" id="UnH-Sk-nMO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mbz-2r-uWU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lar-FH-7G5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTF-bD-Oq9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="e8m-Qw-aWj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OTF-bD-Oq9" secondAttribute="trailing" id="Lgz-Vq-MUC"/>
+                                    <constraint firstItem="OTF-bD-Oq9" firstAttribute="leading" secondItem="Lar-FH-7G5" secondAttribute="leading" id="SzO-5H-973"/>
+                                    <constraint firstAttribute="bottom" secondItem="OTF-bD-Oq9" secondAttribute="bottom" id="kwg-sl-Dhh"/>
+                                    <constraint firstItem="OTF-bD-Oq9" firstAttribute="top" secondItem="Lar-FH-7G5" secondAttribute="top" id="lji-34-W5y"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OTF-bD-Oq9" firstAttribute="width" secondItem="Mbz-2r-uWU" secondAttribute="width" id="4cz-AX-zvM"/>
+                            <constraint firstItem="OTF-bD-Oq9" firstAttribute="height" secondItem="Mbz-2r-uWU" secondAttribute="height" id="Bu4-bE-DBa"/>
+                            <constraint firstItem="Lar-FH-7G5" firstAttribute="leading" secondItem="Mbz-2r-uWU" secondAttribute="leading" id="Ggs-Hc-EGO"/>
+                            <constraint firstAttribute="bottom" secondItem="Lar-FH-7G5" secondAttribute="bottom" id="NdT-eH-wkm"/>
+                            <constraint firstAttribute="trailing" secondItem="Lar-FH-7G5" secondAttribute="trailing" id="gsh-Zf-BWp"/>
+                            <constraint firstItem="Lar-FH-7G5" firstAttribute="top" secondItem="Mbz-2r-uWU" secondAttribute="top" id="tAS-sp-D3X"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7CC-gO-lJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1167" y="1554"/>
         </scene>
         <!--exercicesView-->
         <scene sceneID="bOx-AN-d48">
