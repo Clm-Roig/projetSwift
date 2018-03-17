@@ -30,6 +30,7 @@
 		E0FCAEA8203EF9A300F04470 /* MonPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEA7203EF9A300F04470 /* MonPkEtMoiTests.swift */; };
 		E0FCAEB3203EF9A300F04470 /* MonPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEB2203EF9A300F04470 /* MonPkEtMoiUITests.swift */; };
 		E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */; };
+		F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		E0FCAEB2203EF9A300F04470 /* MonPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonPkEtMoiUITests.swift; sourceTree = "<group>"; };
 		E0FCAEB4203EF9A300F04470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentViewController.swift; sourceTree = "<group>"; };
+		F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPatientDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +176,7 @@
 				E05352102046A8080083CA12 /* Models */,
 				E0FCAEC4203F292200F04470 /* Treatment */,
 				E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */,
-				E0788762205BC4B100F9E499 /* CoreDateConnection.swift */,
+				F3F07C55205D2DA60089DC4D /* Data */,
 				E0FCAE91203EF9A300F04470 /* ViewController.swift */,
 				E0FCAE93203EF9A300F04470 /* Main.storyboard */,
 				E0FCAE99203EF9A300F04470 /* Assets.xcassets */,
@@ -211,6 +213,15 @@
 				E0B02CB7205920B500841B32 /* TreatmentTableViewCell.swift */,
 			);
 			name = Treatment;
+			sourceTree = "<group>";
+		};
+		F3F07C55205D2DA60089DC4D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E0788762205BC4B100F9E499 /* CoreDateConnection.swift */,
+				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */,
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				E0B02CAC20590B2A00841B32 /* PatientModel.swift in Sources */,
+				F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */,
 				E0FCAE98203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld in Sources */,
 				E0B02CB020590C9600841B32 /* Treatment.swift in Sources */,
 				E0B02CB220590CB600841B32 /* Medicine.swift in Sources */,

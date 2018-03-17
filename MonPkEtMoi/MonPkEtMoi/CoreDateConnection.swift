@@ -12,6 +12,7 @@ import Foundation
 
 class CoreDataConnection: NSObject {
     
+    
     func getContext() -> NSManagedObjectContext {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError("Error getting app delegate.")
