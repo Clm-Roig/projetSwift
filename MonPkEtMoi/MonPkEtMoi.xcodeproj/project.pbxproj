@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15723EED2058330F00866455 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EEC2058330F00866455 /* RegistrationViewController.swift */; };
 		15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EF420583BDC00866455 /* AgendaViewController.swift */; };
+		BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B263D205E990E009BFE67 /* ProfileViewController.swift */; };
 		E0050682205AB22B000533DA /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0050681205AB22B000533DA /* TodoTableViewController.swift */; };
 		E016B0FB205989A900D9E7E9 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016B0FA205989A900D9E7E9 /* TodoTableViewCell.swift */; };
 		E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D39C82059540300C33AF8 /* ExerciseViewController.swift */; };
@@ -22,7 +23,6 @@
 		E0B02CB62059151100841B32 /* TreatmentAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB52059151100841B32 /* TreatmentAddViewController.swift */; };
 		E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB7205920B500841B32 /* TreatmentTableViewCell.swift */; };
 		E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */; };
-		E0FCAE92203EF9A300F04470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE91203EF9A300F04470 /* ViewController.swift */; };
 		E0FCAE95203EF9A300F04470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FCAE93203EF9A300F04470 /* Main.storyboard */; };
 		E0FCAE98203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE96203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld */; };
 		E0FCAE9A203EF9A300F04470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FCAE99203EF9A300F04470 /* Assets.xcassets */; };
@@ -53,6 +53,7 @@
 /* Begin PBXFileReference section */
 		15723EEC2058330F00866455 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		15723EF420583BDC00866455 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		BC7B263D205E990E009BFE67 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E0050681205AB22B000533DA /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		E016B0FA205989A900D9E7E9 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		E03D39C82059540300C33AF8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		E0B02CB7205920B500841B32 /* TreatmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTableViewCell.swift; sourceTree = "<group>"; };
 		E0FCAE8C203EF9A300F04470 /* MonPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0FCAE91203EF9A300F04470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0FCAE94203EF9A300F04470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0FCAE97203EF9A300F04470 /* MonPkEtMoi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MonPkEtMoi.xcdatamodel; sourceTree = "<group>"; };
 		E0FCAE99203EF9A300F04470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +126,14 @@
 			name = Agenda;
 			sourceTree = "<group>";
 		};
+		BC7B2640205E991E009BFE67 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B263D205E990E009BFE67 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		E03D39CB2059541100C33AF8 /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,11 +181,11 @@
 				15723EF620583BF900866455 /* Agenda */,
 				E03D39CB2059541100C33AF8 /* Exercise */,
 				15723EF12058368800866455 /* Registration */,
-				E05352102046A8080083CA12 /* Models */,
+				BC7B2640205E991E009BFE67 /* Profile */,
 				E0FCAEC4203F292200F04470 /* Treatment */,
-				E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */,
+				E05352102046A8080083CA12 /* Models */,
 				F3F07C55205D2DA60089DC4D /* Data */,
-				E0FCAE91203EF9A300F04470 /* ViewController.swift */,
+				E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */,
 				E0FCAE93203EF9A300F04470 /* Main.storyboard */,
 				E0FCAE99203EF9A300F04470 /* Assets.xcassets */,
 				E0FCAE9B203EF9A300F04470 /* LaunchScreen.storyboard */,
@@ -362,7 +370,6 @@
 				15723EED2058330F00866455 /* RegistrationViewController.swift in Sources */,
 				E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */,
 				E0B02CB62059151100841B32 /* TreatmentAddViewController.swift in Sources */,
-				E0FCAE92203EF9A300F04470 /* ViewController.swift in Sources */,
 				E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */,
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				E0B02CAC20590B2A00841B32 /* PatientModel.swift in Sources */,
@@ -374,6 +381,7 @@
 				E0B02CAA20590AED00841B32 /* PersonModel.swift in Sources */,
 				E016B0FB205989A900D9E7E9 /* TodoTableViewCell.swift in Sources */,
 				E0050682205AB22B000533DA /* TodoTableViewController.swift in Sources */,
+				BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */,
 				15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */,
 				E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */,
 				E0B02CB420590CF800841B32 /* Specialism.swift in Sources */,

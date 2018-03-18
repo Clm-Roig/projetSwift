@@ -738,10 +738,10 @@
             </objects>
             <point key="canvasLocation" x="700" y="641.82908545727139"/>
         </scene>
-        <!--profilView-->
+        <!--profileView-->
         <scene sceneID="WT8-qH-5la">
             <objects>
-                <viewController storyboardIdentifier="profilView" title="profilView" id="B0M-2b-TY7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profilView" title="profileView" id="B0M-2b-TY7" customClass="ProfileViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bh6-i6-lR6"/>
                         <viewControllerLayoutGuide type="bottom" id="xjG-g9-hEu"/>
