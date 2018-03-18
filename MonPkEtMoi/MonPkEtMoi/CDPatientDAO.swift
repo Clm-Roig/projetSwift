@@ -21,7 +21,7 @@ class CDPatientDAO {
     }
     
     func get() -> Patient?	 {
-        guard let patients: [Patient] = try self.getAll() else{
+        guard let patients: [Patient] = self.getAll() else {
             print("Error getting patient")
             return nil
         }
