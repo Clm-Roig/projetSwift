@@ -907,6 +907,12 @@
                             </switch>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressL" destination="ZoW-xr-hnC" id="JdN-jN-sQK"/>
+                        <outlet property="birthDateL" destination="E5t-gz-hxz" id="xxS-AU-kJk"/>
+                        <outlet property="cityCPL" destination="asY-GX-RRh" id="zn1-ru-kDq"/>
+                        <outlet property="fullNameL" destination="O93-7f-ojR" id="U3c-7e-tx8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5h-Ri-rpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

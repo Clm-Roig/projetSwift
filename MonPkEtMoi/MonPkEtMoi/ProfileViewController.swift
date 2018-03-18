@@ -13,12 +13,27 @@ class ProfileViewController: UIViewController {
     var patientDAO: CDPatientDAO = CDPatientDAO()
     var patient: Patient? = nil
     
+    @IBOutlet weak var fullNameL: UILabel!
+    @IBOutlet weak var birthDateL: UILabel!
+    @IBOutlet weak var addressL: UILabel!
+    @IBOutlet weak var cityCPL: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.patient = self.patientDAO.get()
-        if let patient = self.patient {
-            print(patient.lastName)
+        guard let patient = self.patient else {
+            fatalError("No patient registered")
         }
+
+        self.fullNameL.text = patient.firstName! + " " + patient.lastName!.uppercased()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        dateFormatter.locale = Locale.init(identifier: "fr_FR")
+        self.birthDateL.text = "Né(e) le " + dateFormatter.string(from: patient.birthDate! as Date)
+        
+        self.addressL.text = patient.address!
+        self.cityCPL.text = patient.postalCode! + " " + patient.city!.uppercased()
     }
     
     override func didReceiveMemoryWarning() {
