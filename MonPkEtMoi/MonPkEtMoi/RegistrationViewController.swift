@@ -11,6 +11,7 @@ import CoreData
 
 class RegistrationViewController : UIViewController {
     
+    var patientDAO: CDPatientDAO = CDPatientDAO()
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var firstNameTF: UITextField!
     
@@ -46,9 +47,7 @@ class RegistrationViewController : UIViewController {
             self.cityTF.text != "" && self.postalCodeTF.text != ""
         ) {
             // Construct a new patient
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let context = appDelegate.persistentContainer.viewContext
-            let newPatient = Patient(context: context)
+            let newPatient = self.patientDAO.create()
             
             newPatient.firstName = firstNameTF.text
             newPatient.lastName = lastNameTF.text
@@ -59,14 +58,14 @@ class RegistrationViewController : UIViewController {
             
             // Save the patient
             do {
-                try context.save()
-                
+                try patientDAO.save(patient: newPatient)
                 // Set UserDefaults variable to true and navigate to Home
                 UserDefaults.standard.set(true, forKey: "patientRegistered")
                 self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
             } catch {
                     print("Failed saving new Patient.")
             }
+            
         }
         else {
             print("Empty input(s)")

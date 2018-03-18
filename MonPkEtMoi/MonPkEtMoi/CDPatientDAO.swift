@@ -32,8 +32,16 @@ class CDPatientDAO {
         return 3
     }
     
-    func create(object: Patient) -> Bool {
-        return true
+    func create() -> Patient {
+        return Patient(context: self.context)
+    }
+    
+    func save(patient: Patient) throws {
+        do {
+            try context.save()
+        } catch let error {
+            throw error
+        }
     }
     
     func update(object: Patient) -> Bool {
