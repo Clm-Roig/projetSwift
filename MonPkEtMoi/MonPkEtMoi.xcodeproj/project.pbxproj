@@ -180,17 +180,17 @@
 			children = (
 				15723EF620583BF900866455 /* Agenda */,
 				E03D39CB2059541100C33AF8 /* Exercise */,
-				15723EF12058368800866455 /* Registration */,
 				BC7B2640205E991E009BFE67 /* Profile */,
+				15723EF12058368800866455 /* Registration */,
 				E0FCAEC4203F292200F04470 /* Treatment */,
-				E05352102046A8080083CA12 /* Models */,
-				F3F07C55205D2DA60089DC4D /* Data */,
 				E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */,
 				E0FCAE93203EF9A300F04470 /* Main.storyboard */,
 				E0FCAE99203EF9A300F04470 /* Assets.xcassets */,
 				E0FCAE9B203EF9A300F04470 /* LaunchScreen.storyboard */,
 				E0FCAE9E203EF9A300F04470 /* Info.plist */,
 				E0FCAE96203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld */,
+				F3F07C55205D2DA60089DC4D /* Data */,
+				E05352102046A8080083CA12 /* Models */,
 			);
 			path = MonPkEtMoi;
 			sourceTree = "<group>";
