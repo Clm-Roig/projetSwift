@@ -182,7 +182,7 @@
         <!--Ajouter un rendez-vous-->
         <scene sceneID="tDg-ke-uEb">
             <objects>
-                <viewController title="Ajouter un rendez-vous" id="Fyo-KO-kiL" sceneMemberID="viewController">
+                <viewController title="Ajouter un rendez-vous" id="Fyo-KO-kiL" customClass="AddMeetingController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3sW-1w-9V6"/>
                         <viewControllerLayoutGuide type="bottom" id="UnH-Sk-nMO"/>
