@@ -36,7 +36,7 @@ class CDPatientDAO {
         return Patient(context: self.context)
     }
     
-    func save(patient: Patient) throws {
+    func save() throws {
         do {
             try context.save()
         } catch let error {

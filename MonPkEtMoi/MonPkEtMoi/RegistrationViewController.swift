@@ -58,7 +58,7 @@ class RegistrationViewController : UIViewController {
             
             // Save the patient
             do {
-                try patientDAO.save(patient: newPatient)
+                try patientDAO.save()
                 // Set UserDefaults variable to true and navigate to Home
                 UserDefaults.standard.set(true, forKey: "patientRegistered")
                 self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
