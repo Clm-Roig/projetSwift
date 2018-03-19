@@ -17,6 +17,7 @@ class RegistrationViewController : UIViewController {
     
     @IBOutlet weak var birthDateTF: UITextField!
     
+    @IBOutlet weak var textIntro: UITextView!
     
     // The DatePicker update the value in the birthDateTF.
     @IBOutlet weak var birthDateDP: UIDatePicker!
@@ -84,6 +85,7 @@ class RegistrationViewController : UIViewController {
     override internal func viewDidLoad() {
         super.viewDidLoad();
         
+        self.textIntro.isEditable = false
     }
     
     override internal func didReceiveMemoryWarning() {

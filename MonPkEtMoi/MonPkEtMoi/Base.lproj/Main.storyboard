@@ -130,7 +130,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-te-F8E">
-                                <rect key="frame" x="293" y="552" width="50" height="50"/>
+                                <rect key="frame" x="309" y="552" width="50" height="50"/>
                                 <state key="normal" image="add-50"/>
                                 <connections>
                                     <segue destination="Fyo-KO-kiL" kind="show" id="EsF-NT-uSY"/>
@@ -147,7 +147,7 @@
                             <constraint firstItem="jUB-5Y-kUO" firstAttribute="top" secondItem="iDB-dW-Fkf" secondAttribute="bottom" id="SQj-vQ-ZSz"/>
                             <constraint firstAttribute="trailing" secondItem="4uR-vh-912" secondAttribute="trailing" id="Ux2-ME-b1s"/>
                             <constraint firstAttribute="trailing" secondItem="1uR-5I-DGN" secondAttribute="trailing" id="ZbJ-sy-mQo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fBj-te-F8E" secondAttribute="trailing" constant="16" id="cjf-2Y-WuE"/>
+                            <constraint firstAttribute="trailing" secondItem="fBj-te-F8E" secondAttribute="trailing" constant="16" id="b8d-qj-86M"/>
                             <constraint firstItem="1uR-5I-DGN" firstAttribute="top" secondItem="jUB-5Y-kUO" secondAttribute="bottom" id="gOQ-eD-U5f"/>
                             <constraint firstItem="1uR-5I-DGN" firstAttribute="leading" secondItem="Nhq-qq-9MJ" secondAttribute="leading" id="i8y-yK-414"/>
                             <constraint firstItem="obr-ac-9c4" firstAttribute="top" secondItem="fBj-te-F8E" secondAttribute="bottom" constant="16" id="ioo-XL-SCu"/>
@@ -249,6 +249,12 @@
                                                     <action selector="addMeetingButton:" destination="Fyo-KO-kiL" eventType="touchUpInside" id="BW4-Qh-i1h"/>
                                                 </connections>
                                             </button>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-6s-Hfe">
+                                                <rect key="frame" x="0.0" y="335" width="375" height="216"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="543174573.58484101">
+                                                    <!--2018-03-19 17:49:33 +0000-->
+                                                </date>
+                                            </datePicker>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btH-3y-dy7">
                                                 <rect key="frame" x="0.0" y="37" width="375" height="216"/>
                                                 <connections>
@@ -256,12 +262,6 @@
                                                     <outlet property="delegate" destination="Fyo-KO-kiL" id="eb1-F8-NQE"/>
                                                 </connections>
                                             </pickerView>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-6s-Hfe">
-                                                <rect key="frame" x="0.0" y="335" width="375" height="216"/>
-                                                <date key="date" timeIntervalSinceReferenceDate="543174573.58484101">
-                                                    <!--2018-03-19 17:49:33 +0000-->
-                                                </date>
-                                            </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -632,6 +632,7 @@
                         <outlet property="firstNameTF" destination="rAB-wH-XD3" id="aes-ML-JV7"/>
                         <outlet property="lastNameTF" destination="pAJ-Eb-kkX" id="bam-we-8lp"/>
                         <outlet property="postalCodeTF" destination="grw-2h-13q" id="IaG-ye-Z5I"/>
+                        <outlet property="textIntro" destination="dUo-GF-4FU" id="0Tx-Er-VFr"/>
                         <segue destination="NFE-XT-4FG" kind="show" identifier="registrationOkSegue" id="pc1-ab-cMF"/>
                     </connections>
                 </viewController>

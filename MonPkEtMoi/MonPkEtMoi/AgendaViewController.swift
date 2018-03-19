@@ -35,14 +35,6 @@ class AgendaViewController : UIViewController {
     override internal func viewDidLoad() {
         super.viewDidLoad()
         
-        // Button Layout
-        self.addButton.layer.shadowColor = UIColor.black.cgColor
-        self.addButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        self.addButton.layer.masksToBounds = false
-        self.addButton.layer.shadowRadius = 2.0
-        self.addButton.layer.shadowOpacity = 0.5
-        self.addButton.layer.cornerRadius = self.addButton.frame.width / 2
-        
         // Set Labels
         let date = Date()
         let formatter = DateFormatter()
