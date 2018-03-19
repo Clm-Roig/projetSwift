@@ -245,21 +245,27 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVg-YC-whq">
                                                 <rect key="frame" x="16" y="657" width="351" height="30"/>
                                                 <state key="normal" title="Ajouter un rendez-vous"/>
+                                                <connections>
+                                                    <action selector="addMeetingButton:" destination="Fyo-KO-kiL" eventType="touchUpInside" id="BW4-Qh-i1h"/>
+                                                </connections>
                                             </button>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btH-3y-dy7">
                                                 <rect key="frame" x="0.0" y="37" width="375" height="216"/>
                                             </pickerView>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljr-Ja-FWk">
-                                                <rect key="frame" x="0.0" y="335" width="375" height="216"/>
-                                            </pickerView>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-6s-Hfe">
+                                                <rect key="frame" x="0.0" y="335" width="320" height="216"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="543174573.58484101">
+                                                    <!--2018-03-19 17:49:33 +0000-->
+                                                </date>
+                                            </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="GVg-YC-whq" firstAttribute="trailing" secondItem="OTF-bD-Oq9" secondAttribute="trailingMargin" id="0Uk-Rv-Fbr"/>
                                             <constraint firstItem="btH-3y-dy7" firstAttribute="top" secondItem="p1b-80-wUb" secondAttribute="bottom" constant="8" id="1TU-jn-Mbp"/>
-                                            <constraint firstItem="Ljr-Ja-FWk" firstAttribute="top" secondItem="DR0-tZ-Ao2" secondAttribute="bottom" constant="8" id="7uv-7z-RzS"/>
                                             <constraint firstItem="DR0-tZ-Ao2" firstAttribute="top" secondItem="9Ht-Hf-L7u" secondAttribute="bottom" constant="16" id="CBb-m9-Szz"/>
                                             <constraint firstItem="UHj-yg-4AK" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leadingMargin" id="CDq-WN-OD6"/>
+                                            <constraint firstItem="TDd-6s-Hfe" firstAttribute="top" secondItem="DR0-tZ-Ao2" secondAttribute="bottom" constant="8" id="EC0-if-4KR"/>
                                             <constraint firstAttribute="trailing" secondItem="btH-3y-dy7" secondAttribute="trailing" id="F8f-cq-dr6"/>
                                             <constraint firstItem="RXh-PQ-f8w" firstAttribute="centerX" secondItem="OTF-bD-Oq9" secondAttribute="centerX" id="FKx-x3-ohd"/>
                                             <constraint firstItem="3Ec-0P-Yj8" firstAttribute="centerX" secondItem="RXh-PQ-f8w" secondAttribute="centerX" id="IzH-GI-fPJ"/>
@@ -269,18 +275,18 @@
                                             <constraint firstItem="DR0-tZ-Ao2" firstAttribute="trailing" secondItem="OTF-bD-Oq9" secondAttribute="trailingMargin" id="QDN-Mm-GL0"/>
                                             <constraint firstItem="p1b-80-wUb" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leadingMargin" id="Qmo-l9-J02"/>
                                             <constraint firstItem="hk4-eW-ENm" firstAttribute="centerY" secondItem="RXh-PQ-f8w" secondAttribute="centerY" id="R1R-EC-w4W"/>
-                                            <constraint firstItem="UHj-yg-4AK" firstAttribute="top" secondItem="Ljr-Ja-FWk" secondAttribute="bottom" constant="16" id="SBt-hH-1gS"/>
                                             <constraint firstItem="UHj-yg-4AK" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leadingMargin" id="UHk-bt-MhJ"/>
-                                            <constraint firstItem="Ljr-Ja-FWk" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leading" id="VTq-MN-10e"/>
+                                            <constraint firstItem="UHj-yg-4AK" firstAttribute="top" secondItem="TDd-6s-Hfe" secondAttribute="bottom" constant="16" id="VeB-Je-93K"/>
                                             <constraint firstItem="3Ec-0P-Yj8" firstAttribute="top" secondItem="RXh-PQ-f8w" secondAttribute="bottom" constant="8" id="Wu3-2O-70Q"/>
                                             <constraint firstItem="jOJ-O5-pHb" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leadingMargin" id="YUH-XB-Iwm"/>
                                             <constraint firstAttribute="height" constant="850" id="e8m-Qw-aWj"/>
                                             <constraint firstItem="RXh-PQ-f8w" firstAttribute="centerY" secondItem="UHj-yg-4AK" secondAttribute="centerY" id="hDB-H3-gA5"/>
                                             <constraint firstItem="btH-3y-dy7" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leading" id="m5C-t9-hew"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ljr-Ja-FWk" secondAttribute="trailing" id="o31-1F-ywu"/>
+                                            <constraint firstItem="TDd-6s-Hfe" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leading" id="oGK-Lp-fmf"/>
                                             <constraint firstItem="hk4-eW-ENm" firstAttribute="leading" secondItem="RXh-PQ-f8w" secondAttribute="trailing" constant="32" id="p0r-em-YCO"/>
                                             <constraint firstItem="p1b-80-wUb" firstAttribute="top" secondItem="OTF-bD-Oq9" secondAttribute="topMargin" id="qmM-HX-YXB"/>
                                             <constraint firstItem="9Ht-Hf-L7u" firstAttribute="centerY" secondItem="jOJ-O5-pHb" secondAttribute="centerY" id="xWp-Jt-5wn"/>
+                                            <constraint firstItem="UHj-yg-4AK" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leading" constant="8" id="yDs-xh-t3E"/>
                                             <constraint firstItem="jOJ-O5-pHb" firstAttribute="top" secondItem="btH-3y-dy7" secondAttribute="bottom" constant="16" id="yts-OO-Z2j"/>
                                             <constraint firstItem="9Ht-Hf-L7u" firstAttribute="leading" secondItem="jOJ-O5-pHb" secondAttribute="trailing" constant="8" id="zuv-Sb-92t"/>
                                         </constraints>
@@ -306,6 +312,13 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="850"/>
+                    <connections>
+                        <outlet property="datePicker" destination="TDd-6s-Hfe" id="auC-NP-Cwu"/>
+                        <outlet property="durationLabel" destination="RXh-PQ-f8w" id="q8a-aa-mH6"/>
+                        <outlet property="durationStepper" destination="3Ec-0P-Yj8" id="FBG-YG-GeX"/>
+                        <outlet property="practitionerPicker" destination="btH-3y-dy7" id="uB6-tG-rbx"/>
+                        <outlet property="specialityLabel" destination="9Ht-Hf-L7u" id="v6y-XU-yaz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CC-gO-lJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
