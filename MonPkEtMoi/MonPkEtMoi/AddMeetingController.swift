@@ -16,7 +16,10 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var specialityLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var durationStepper: UIStepper!
+    
+    @IBAction func stepper(_ sender: UIStepper) {
+        self.durationLabel.text = String(Int(sender.value))
+    }
     
     @IBAction func addMeetingButton(_ sender: Any) {
         
@@ -24,7 +27,8 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        practitioners.sort()
+        self.practitioners.sort()
+        self.durationLabel.text = "00"
     }
     
     // MARK: Picker functions

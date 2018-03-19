@@ -227,8 +227,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3Ec-0P-Yj8">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="180" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Ec-0P-Yj8">
                                                 <rect key="frame" x="140.5" y="596" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="stepper:" destination="Fyo-KO-kiL" eventType="valueChanged" id="abB-Sh-pPs"/>
+                                                </connections>
                                             </stepper>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXh-PQ-f8w">
                                                 <rect key="frame" x="176" y="567" width="23" height="21"/>
@@ -321,7 +324,6 @@
                     <connections>
                         <outlet property="datePicker" destination="TDd-6s-Hfe" id="auC-NP-Cwu"/>
                         <outlet property="durationLabel" destination="RXh-PQ-f8w" id="q8a-aa-mH6"/>
-                        <outlet property="durationStepper" destination="3Ec-0P-Yj8" id="FBG-YG-GeX"/>
                         <outlet property="practitionerPicker" destination="btH-3y-dy7" id="laQ-7C-Dvt"/>
                         <outlet property="specialityLabel" destination="9Ht-Hf-L7u" id="v6y-XU-yaz"/>
                     </connections>
