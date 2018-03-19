@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 
-class CDPatientDAO {
+class CDPatientDAO: PatientDAO {
     
     var context: NSManagedObjectContext
     

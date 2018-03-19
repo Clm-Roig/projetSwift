@@ -12,6 +12,7 @@ import UIKit
 class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var practitioners: [String] = ["Jean", "Pierre", "Marie", "Isabelle"]
+    
     @IBOutlet weak var practitionerPicker: UIPickerView!
     @IBOutlet weak var specialityLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -28,7 +29,7 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.practitioners.sort()
-        self.durationLabel.text = "00"
+        self.durationLabel.text = "0"
     }
     
     // MARK: Picker functions

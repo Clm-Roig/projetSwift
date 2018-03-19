@@ -15,6 +15,7 @@
 		E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D39C82059540300C33AF8 /* ExerciseViewController.swift */; };
 		E0788763205BC4B100F9E499 /* CoreDateConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0788762205BC4B100F9E499 /* CoreDateConnection.swift */; };
 		E096031D206027B900E4F5C4 /* AddMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096031C206027B900E4F5C4 /* AddMeetingController.swift */; };
+		E096031F20603FDE00E4F5C4 /* patientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096031E20603FDE00E4F5C4 /* patientDAO.swift */; };
 		E0B02CAA20590AED00841B32 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CA920590AED00841B32 /* PersonModel.swift */; };
 		E0B02CAC20590B2A00841B32 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CAB20590B2A00841B32 /* PatientModel.swift */; };
 		E0B02CAE20590B6C00841B32 /* PractitionerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CAD20590B6C00841B32 /* PractitionerModel.swift */; };
@@ -60,6 +61,7 @@
 		E03D39C82059540300C33AF8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		E0788762205BC4B100F9E499 /* CoreDateConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDateConnection.swift; sourceTree = "<group>"; };
 		E096031C206027B900E4F5C4 /* AddMeetingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMeetingController.swift; sourceTree = "<group>"; };
+		E096031E20603FDE00E4F5C4 /* patientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = patientDAO.swift; sourceTree = "<group>"; };
 		E0B02CA920590AED00841B32 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		E0B02CAB20590B2A00841B32 /* PatientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		E0B02CAD20590B6C00841B32 /* PractitionerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerModel.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		E09603202060407B00E4F5C4 /* CoreDataDAO */ = {
+			isa = PBXGroup;
+			children = (
+				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
+			);
+			name = CoreDataDAO;
+			sourceTree = "<group>";
+		};
 		E0FCAE83203EF9A300F04470 = {
 			isa = PBXGroup;
 			children = (
@@ -229,8 +239,9 @@
 		F3F07C55205D2DA60089DC4D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E09603202060407B00E4F5C4 /* CoreDataDAO */,
 				E0788762205BC4B100F9E499 /* CoreDateConnection.swift */,
-				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
+				E096031E20603FDE00E4F5C4 /* patientDAO.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -374,6 +385,7 @@
 				E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */,
 				E0B02CB62059151100841B32 /* TreatmentAddViewController.swift in Sources */,
 				E096031D206027B900E4F5C4 /* AddMeetingController.swift in Sources */,
+				E096031F20603FDE00E4F5C4 /* patientDAO.swift in Sources */,
 				E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */,
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				E0B02CAC20590B2A00841B32 /* PatientModel.swift in Sources */,
