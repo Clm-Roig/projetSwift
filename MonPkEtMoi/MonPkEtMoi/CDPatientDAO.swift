@@ -20,20 +20,24 @@ class CDPatientDAO: PatientDAO {
         self.context = CDC.getContext()
     }
     
-    func get() -> Patient?	 {
-        guard let patients: [Patient] = self.getAll() else {
-            print("Error getting patient")
-            return nil
+    func get() throws -> Patient? {
+        do {
+            guard let patients: [Patient] = try self.getAll() else {
+                print("Error getting patient")
+                return nil
+            }
+            return patients.first
+        } catch let error {
+            throw error
         }
-        return patients.first
     }
     
-    func delete(id: Int) -> Int {
-        return 3
-    }
-    
-    func create() -> Patient {
+    func create() throws -> Patient {
         return Patient(context: self.context)
+    }
+    
+    func delete() throws -> Int {
+        return 3
     }
     
     func save() throws {
@@ -44,18 +48,17 @@ class CDPatientDAO: PatientDAO {
         }
     }
     
-    func update(object: Patient) -> Bool {
+    func update(object: Patient) throws -> Bool {
         return true
     }
     
-    func getAll() -> [Patient]? {
+    func getAll() throws -> [Patient]? {
         let request: NSFetchRequest<Patient> = NSFetchRequest(entityName: "Patient")
         do {
             let patients:[Patient] = try self.context.fetch(request)
             return patients
-        } catch {
-            print("Error getting all patients")
-            return nil
+        } catch let error {
+            throw error
         }
     }
 }

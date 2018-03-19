@@ -48,7 +48,13 @@ class RegistrationViewController : UIViewController {
             self.cityTF.text != "" && self.postalCodeTF.text != ""
         ) {
             // Construct a new patient
-            let newPatient = self.patientDAO.create()
+            var newPatient = Patient()
+            do {
+                newPatient = try self.patientDAO.create()
+            } catch let error {
+                // TODO : show alert if error
+                print("error creating new patient")
+            }
             
             newPatient.firstName = firstNameTF.text
             newPatient.lastName = lastNameTF.text

@@ -9,8 +9,9 @@
 import Foundation
 
 protocol PatientDAO {
-    func get() -> Patient?
-    func create() -> Patient
+    func get() throws -> Patient?
+    func create() throws -> Patient
+    func delete() throws -> Int
     func save() throws
-    func getAll() -> [Patient]?
+    func getAll() throws -> [Patient]?
 }
