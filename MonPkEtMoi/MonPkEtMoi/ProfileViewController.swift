@@ -20,7 +20,13 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.patient = self.patientDAO.get()
+        do {
+            self.patient = try self.patientDAO.get()
+        } catch {
+            // TODO : show alert
+            print("Error getting patient")
+        }
+        
         guard let patient = self.patient else {
             fatalError("No patient registered")
         }

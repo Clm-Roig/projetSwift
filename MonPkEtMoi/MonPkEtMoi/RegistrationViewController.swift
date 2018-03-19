@@ -51,9 +51,8 @@ class RegistrationViewController : UIViewController {
             var newPatient = Patient()
             do {
                 newPatient = try self.patientDAO.create()
-            } catch let error {
-                // TODO : show alert if error
-                print("error creating new patient")
+            } catch {
+                AlertHelper.alertError(view: self, errorMessage: "Erreur à la création du patient")
             }
             
             newPatient.firstName = firstNameTF.text
