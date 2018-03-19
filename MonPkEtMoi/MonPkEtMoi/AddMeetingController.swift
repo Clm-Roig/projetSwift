@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
-class AddMeetingController : UIViewController {
+class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var practitioners: [String] = ["Jean", "Pierre", "Marie", "Isabelle"]
     @IBOutlet weak var practitionerPicker: UIPickerView!
     @IBOutlet weak var specialityLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -19,6 +20,24 @@ class AddMeetingController : UIViewController {
     
     @IBAction func addMeetingButton(_ sender: Any) {
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        practitioners.sort()
+    }
+    
+    // MARK: Picker functions
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return practitioners.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return practitioners[row]
     }
     
 }

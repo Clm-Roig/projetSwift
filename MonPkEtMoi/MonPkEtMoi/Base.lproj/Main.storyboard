@@ -251,9 +251,13 @@
                                             </button>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btH-3y-dy7">
                                                 <rect key="frame" x="0.0" y="37" width="375" height="216"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Fyo-KO-kiL" id="Uc6-6k-RYK"/>
+                                                    <outlet property="delegate" destination="Fyo-KO-kiL" id="eb1-F8-NQE"/>
+                                                </connections>
                                             </pickerView>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-6s-Hfe">
-                                                <rect key="frame" x="0.0" y="335" width="320" height="216"/>
+                                                <rect key="frame" x="0.0" y="335" width="375" height="216"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="543174573.58484101">
                                                     <!--2018-03-19 17:49:33 +0000-->
                                                 </date>
@@ -263,9 +267,9 @@
                                         <constraints>
                                             <constraint firstItem="GVg-YC-whq" firstAttribute="trailing" secondItem="OTF-bD-Oq9" secondAttribute="trailingMargin" id="0Uk-Rv-Fbr"/>
                                             <constraint firstItem="btH-3y-dy7" firstAttribute="top" secondItem="p1b-80-wUb" secondAttribute="bottom" constant="8" id="1TU-jn-Mbp"/>
+                                            <constraint firstAttribute="trailing" secondItem="TDd-6s-Hfe" secondAttribute="trailing" id="7Tq-Df-YA4"/>
                                             <constraint firstItem="DR0-tZ-Ao2" firstAttribute="top" secondItem="9Ht-Hf-L7u" secondAttribute="bottom" constant="16" id="CBb-m9-Szz"/>
                                             <constraint firstItem="UHj-yg-4AK" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leadingMargin" id="CDq-WN-OD6"/>
-                                            <constraint firstItem="TDd-6s-Hfe" firstAttribute="top" secondItem="DR0-tZ-Ao2" secondAttribute="bottom" constant="8" id="EC0-if-4KR"/>
                                             <constraint firstAttribute="trailing" secondItem="btH-3y-dy7" secondAttribute="trailing" id="F8f-cq-dr6"/>
                                             <constraint firstItem="RXh-PQ-f8w" firstAttribute="centerX" secondItem="OTF-bD-Oq9" secondAttribute="centerX" id="FKx-x3-ohd"/>
                                             <constraint firstItem="3Ec-0P-Yj8" firstAttribute="centerX" secondItem="RXh-PQ-f8w" secondAttribute="centerX" id="IzH-GI-fPJ"/>
@@ -281,9 +285,10 @@
                                             <constraint firstItem="jOJ-O5-pHb" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leadingMargin" id="YUH-XB-Iwm"/>
                                             <constraint firstAttribute="height" constant="850" id="e8m-Qw-aWj"/>
                                             <constraint firstItem="RXh-PQ-f8w" firstAttribute="centerY" secondItem="UHj-yg-4AK" secondAttribute="centerY" id="hDB-H3-gA5"/>
+                                            <constraint firstItem="TDd-6s-Hfe" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leading" id="lcF-1f-bYi"/>
                                             <constraint firstItem="btH-3y-dy7" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leading" id="m5C-t9-hew"/>
-                                            <constraint firstItem="TDd-6s-Hfe" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leading" id="oGK-Lp-fmf"/>
                                             <constraint firstItem="hk4-eW-ENm" firstAttribute="leading" secondItem="RXh-PQ-f8w" secondAttribute="trailing" constant="32" id="p0r-em-YCO"/>
+                                            <constraint firstItem="TDd-6s-Hfe" firstAttribute="top" secondItem="DR0-tZ-Ao2" secondAttribute="bottom" constant="8" id="pu9-tm-aTN"/>
                                             <constraint firstItem="p1b-80-wUb" firstAttribute="top" secondItem="OTF-bD-Oq9" secondAttribute="topMargin" id="qmM-HX-YXB"/>
                                             <constraint firstItem="9Ht-Hf-L7u" firstAttribute="centerY" secondItem="jOJ-O5-pHb" secondAttribute="centerY" id="xWp-Jt-5wn"/>
                                             <constraint firstItem="UHj-yg-4AK" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leading" constant="8" id="yDs-xh-t3E"/>
@@ -316,7 +321,7 @@
                         <outlet property="datePicker" destination="TDd-6s-Hfe" id="auC-NP-Cwu"/>
                         <outlet property="durationLabel" destination="RXh-PQ-f8w" id="q8a-aa-mH6"/>
                         <outlet property="durationStepper" destination="3Ec-0P-Yj8" id="FBG-YG-GeX"/>
-                        <outlet property="practitionerPicker" destination="btH-3y-dy7" id="uB6-tG-rbx"/>
+                        <outlet property="practitionerPicker" destination="btH-3y-dy7" id="laQ-7C-Dvt"/>
                         <outlet property="specialityLabel" destination="9Ht-Hf-L7u" id="v6y-XU-yaz"/>
                     </connections>
                 </viewController>
