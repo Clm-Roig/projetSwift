@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="-1167.2" y="641.82908545727139"/>
         </scene>
-        <!--Ajouter un rendez-vous-->
+        <!--Ajouter rendez-vous-->
         <scene sceneID="tDg-ke-uEb">
             <objects>
-                <viewController title="Ajouter un rendez-vous" id="Fyo-KO-kiL" customClass="AddMeetingController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Ajouter rendez-vous" id="Fyo-KO-kiL" customClass="AddMeetingController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3sW-1w-9V6"/>
                         <viewControllerLayoutGuide type="bottom" id="UnH-Sk-nMO"/>
@@ -254,6 +254,7 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="543174573.58484101">
                                                     <!--2018-03-19 17:49:33 +0000-->
                                                 </date>
+                                                <locale key="locale" localeIdentifier="fr"/>
                                             </datePicker>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btH-3y-dy7">
                                                 <rect key="frame" x="0.0" y="37" width="375" height="216"/>
