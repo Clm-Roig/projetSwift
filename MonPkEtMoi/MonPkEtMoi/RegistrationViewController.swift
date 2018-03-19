@@ -69,7 +69,7 @@ class RegistrationViewController : UIViewController {
                 UserDefaults.standard.set(true, forKey: "patientRegistered")
                 self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
             } catch {
-                    print("Failed saving new Patient.")
+                AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du patient")
             }
             
         }
