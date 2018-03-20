@@ -38,9 +38,10 @@ class Seeder {
         
         // Specialisms
         let speciaslismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
-        let wordings = ["kinésithérapeute", "orthophoniste", "infirmer"]
+        let wordings = ["kinésithérapeute", "orthophoniste", "infirmer", "neurologue"]
         var specialisms = [Specialism]()
         do {
+            specialisms.append(try speciaslismDAO.create())
             specialisms.append(try speciaslismDAO.create())
             specialisms.append(try speciaslismDAO.create())
             specialisms.append(try speciaslismDAO.create())
