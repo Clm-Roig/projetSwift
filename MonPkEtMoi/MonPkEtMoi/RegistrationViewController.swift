@@ -11,7 +11,7 @@ import CoreData
 
 class RegistrationViewController : UIViewController {
     
-    var patientDAO: CDPatientDAO = CDPatientDAO()
+    let patientDAO = CDPatientDAO()
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var firstNameTF: UITextField!
     

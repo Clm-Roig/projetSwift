@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol PatientDAO {
+protocol PatientDAO: DAO {
+    associatedtype Object = Patient
+    
+    /// Get the first patient in DB.
+    ///
+    /// - Returns: Patient?, the first patient in DB or nil
+    /// - Throws: DB error
     func get() throws -> Patient?
-    func create() throws -> Patient
-    func delete() throws -> Int
-    func save() throws
-    func getAll() throws -> [Patient]?
 }

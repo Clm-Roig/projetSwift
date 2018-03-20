@@ -20,23 +20,14 @@ class CDPatientDAO: PatientDAO {
         self.context = CDC.getContext()
     }
     
-    func get() throws -> Patient? {
-        do {
-            guard let patients: [Patient] = try self.getAll() else {
-                print("Error getting patient")
-                return nil
-            }
-            return patients.first
-        } catch let error {
-            throw error
-        }
-    }
-    
+    // =====================================
+
     func create() throws -> Patient {
         return Patient(context: self.context)
     }
     
     func delete() throws -> Int {
+        // TODO
         return 3
     }
     
@@ -49,6 +40,7 @@ class CDPatientDAO: PatientDAO {
     }
     
     func update(object: Patient) throws -> Bool {
+        // TODO
         return true
     }
     
@@ -61,4 +53,18 @@ class CDPatientDAO: PatientDAO {
             throw error
         }
     }
+    
+    // MARK: custom methods
+    func get() throws -> Patient? {
+        do {
+            guard let patients: [Patient] = try self.getAll() else {
+                print("Error getting patient")
+                return nil
+            }
+            return patients.first
+        } catch let error {
+            throw error
+        }
+    }
+
 }
