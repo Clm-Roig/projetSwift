@@ -32,7 +32,7 @@ class AgendaViewController : UIViewController {
 
     // ----------------------------------------------
     
-    override internal func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set Labels

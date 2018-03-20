@@ -34,6 +34,7 @@
 		E0B02CB420590CF800841B32 /* Specialism.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB320590CF800841B32 /* Specialism.swift */; };
 		E0B02CB62059151100841B32 /* TreatmentAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB52059151100841B32 /* TreatmentAddViewController.swift */; };
 		E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB7205920B500841B32 /* TreatmentTableViewCell.swift */; };
+		E0D99C0C2061203200CF2508 /* AddPractitionerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D99C0B2061203200CF2508 /* AddPractitionerViewController.swift */; };
 		E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */; };
 		E0FCAE95203EF9A300F04470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FCAE93203EF9A300F04470 /* Main.storyboard */; };
 		E0FCAE98203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE96203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld */; };
@@ -90,6 +91,7 @@
 		E0B02CB320590CF800841B32 /* Specialism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specialism.swift; path = Models/Specialism.swift; sourceTree = "<group>"; };
 		E0B02CB52059151100841B32 /* TreatmentAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentAddViewController.swift; sourceTree = "<group>"; };
 		E0B02CB7205920B500841B32 /* TreatmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTableViewCell.swift; sourceTree = "<group>"; };
+		E0D99C0B2061203200CF2508 /* AddPractitionerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPractitionerViewController.swift; sourceTree = "<group>"; };
 		E0FCAE8C203EF9A300F04470 /* MonPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0FCAE94203EF9A300F04470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -208,6 +210,14 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		E0D99C0D2061203700CF2508 /* Practitioner */ = {
+			isa = PBXGroup;
+			children = (
+				E0D99C0B2061203200CF2508 /* AddPractitionerViewController.swift */,
+			);
+			name = Practitioner;
+			sourceTree = "<group>";
+		};
 		E0FCAE83203EF9A300F04470 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +243,7 @@
 			children = (
 				15723EF620583BF900866455 /* Agenda */,
 				E03D39CB2059541100C33AF8 /* Exercise */,
+				E0D99C0D2061203700CF2508 /* Practitioner */,
 				BC7B2640205E991E009BFE67 /* Profile */,
 				15723EF12058368800866455 /* Registration */,
 				E0FCAEC4203F292200F04470 /* Treatment */,
@@ -440,6 +451,7 @@
 				E096031D206027B900E4F5C4 /* AddMeetingController.swift in Sources */,
 				E096031F20603FDE00E4F5C4 /* PatientDAO.swift in Sources */,
 				E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */,
+				E0D99C0C2061203200CF2508 /* AddPractitionerViewController.swift in Sources */,
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				E0B02CAC20590B2A00841B32 /* PatientModel.swift in Sources */,
 				F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */,

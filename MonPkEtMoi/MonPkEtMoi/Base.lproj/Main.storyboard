@@ -1134,7 +1134,7 @@
         <!--Ajout Médecin-->
         <scene sceneID="p5O-Xg-FeF">
             <objects>
-                <viewController title="Ajout Médecin" id="Jy6-dd-QOE" sceneMemberID="viewController">
+                <viewController title="Ajout Médecin" id="Jy6-dd-QOE" customClass="AddPractitionerViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NPi-Jc-45g"/>
                         <viewControllerLayoutGuide type="bottom" id="rPD-ff-rh7"/>
