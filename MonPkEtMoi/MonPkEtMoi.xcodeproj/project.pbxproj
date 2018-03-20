@@ -22,6 +22,7 @@
 		E0788763205BC4B100F9E499 /* CoreDateConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0788762205BC4B100F9E499 /* CoreDateConnection.swift */; };
 		E08151FA2061178000A98DF6 /* SpecialismDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08151F92061178000A98DF6 /* SpecialismDAO.swift */; };
 		E08151FC206117F200A98DF6 /* CDSpecialismDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08151FB206117F200A98DF6 /* CDSpecialismDAO.swift */; };
+		E08151FE20611AB300A98DF6 /* Seeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08151FD20611AB300A98DF6 /* Seeder.swift */; };
 		E096031D206027B900E4F5C4 /* AddMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096031C206027B900E4F5C4 /* AddMeetingController.swift */; };
 		E096031F20603FDE00E4F5C4 /* PatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E096031E20603FDE00E4F5C4 /* PatientDAO.swift */; };
 		E09603222060441500E4F5C4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09603212060441500E4F5C4 /* AlertHelper.swift */; };
@@ -77,6 +78,7 @@
 		E0788762205BC4B100F9E499 /* CoreDateConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDateConnection.swift; sourceTree = "<group>"; };
 		E08151F92061178000A98DF6 /* SpecialismDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialismDAO.swift; sourceTree = "<group>"; };
 		E08151FB206117F200A98DF6 /* CDSpecialismDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDSpecialismDAO.swift; sourceTree = "<group>"; };
+		E08151FD20611AB300A98DF6 /* Seeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seeder.swift; sourceTree = "<group>"; };
 		E096031C206027B900E4F5C4 /* AddMeetingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMeetingController.swift; sourceTree = "<group>"; };
 		E096031E20603FDE00E4F5C4 /* PatientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDAO.swift; sourceTree = "<group>"; };
 		E09603212060441500E4F5C4 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				E096031E20603FDE00E4F5C4 /* PatientDAO.swift */,
 				E016041E206104E100E6EB08 /* PractitionerDAO.swift */,
 				E08151F92061178000A98DF6 /* SpecialismDAO.swift */,
+				E08151FD20611AB300A98DF6 /* Seeder.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				E0B02CAA20590AED00841B32 /* PersonModel.swift in Sources */,
 				E016042820610A0100E6EB08 /* CDPractitionerDAO.swift in Sources */,
 				E016B0FB205989A900D9E7E9 /* TodoTableViewCell.swift in Sources */,
+				E08151FE20611AB300A98DF6 /* Seeder.swift in Sources */,
 				E0050682205AB22B000533DA /* TodoTableViewController.swift in Sources */,
 				E016042C2061101300E6EB08 /* CDDAO.swift in Sources */,
 				BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */,
