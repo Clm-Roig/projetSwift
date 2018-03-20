@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SpecialismDAO: DAO {
-    associatedtype Object = Specialism
+    typealias Object = Specialism
 }

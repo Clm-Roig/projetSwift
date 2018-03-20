@@ -29,13 +29,14 @@ class Seeder {
         }
         practitioner2.firstName = "Marie"
         practitioner2.lastName = "Monroe"
+        
         do {
             try practitionerDAO.save()
         } catch {
             print("Error saving practitioner seeds")
         }
         
-        // Specilisms
+        // Specialisms
         let speciaslismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
         let wordings = ["kinésithérapeute", "orthophoniste", "infirmer"]
         var specialisms = [Specialism]()
@@ -48,7 +49,7 @@ class Seeder {
         }
         
         for specialism in specialisms {
-            specialism.wording = wordings[find(specialisms, specialism)]
+            specialism.wording = wordings[specialisms.index(of: specialism)!]
         }
         
         do {

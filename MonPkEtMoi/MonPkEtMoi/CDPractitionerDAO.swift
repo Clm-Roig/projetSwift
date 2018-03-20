@@ -16,7 +16,7 @@ class CDPractitionerDAO: CDDAO, PractitionerDAO {
     }
     
     func delete(obj: Practitioner) {
-        // TODO
+        self.context.delete(obj)
     }
     
     func getAll() throws -> [Practitioner]? {

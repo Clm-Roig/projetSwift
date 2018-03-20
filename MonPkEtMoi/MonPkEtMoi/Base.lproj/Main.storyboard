@@ -1131,10 +1131,10 @@
             </objects>
             <point key="canvasLocation" x="700" y="1413"/>
         </scene>
-        <!--Ajout Médecin-->
+        <!--Ajouter Médecin-->
         <scene sceneID="p5O-Xg-FeF">
             <objects>
-                <viewController title="Ajout Médecin" id="Jy6-dd-QOE" customClass="AddPractitionerViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Ajouter Médecin" id="Jy6-dd-QOE" customClass="AddPractitionerViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NPi-Jc-45g"/>
                         <viewControllerLayoutGuide type="bottom" id="rPD-ff-rh7"/>
@@ -1179,31 +1179,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgQ-sO-hy8" userLabel="LastNameLabel">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgQ-sO-hy8" userLabel="LastNameTF">
                                 <rect key="frame" x="122" y="317" width="237" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUX-wm-NB1" userLabel="FirstNameLabel">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUX-wm-NB1" userLabel="FirstNameTF">
                                 <rect key="frame" x="122" y="371" width="237" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGE-Kl-oMP" userLabel="AddressLabel">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGE-Kl-oMP" userLabel="AddressTF">
                                 <rect key="frame" x="122" y="423" width="237" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Xu-IO-FV6" userLabel="CityLabel">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Xu-IO-FV6" userLabel="CityTF">
                                 <rect key="frame" x="122" y="476" width="237" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58a-Sj-Kmi" userLabel="PostalCodeLabel">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58a-Sj-Kmi" userLabel="PostalCodeTF">
                                 <rect key="frame" x="122" y="530" width="237" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1212,9 +1212,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2g-FT-VmL">
                                 <rect key="frame" x="120" y="576" width="134" height="30"/>
                                 <state key="normal" title="Ajouter un médecin"/>
+                                <connections>
+                                    <action selector="addPractitioner:" destination="Jy6-dd-QOE" eventType="touchUpInside" id="bU3-gb-xfR"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Cd-ze-gHQ">
                                 <rect key="frame" x="0.0" y="101" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jy6-dd-QOE" id="3K9-4i-jJV"/>
+                                    <outlet property="delegate" destination="Jy6-dd-QOE" id="Vbj-Fx-MkU"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1259,6 +1266,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Infos" image="info-25" id="tAG-FK-wXL"/>
+                    <connections>
+                        <outlet property="addressTF" destination="aGE-Kl-oMP" id="NMD-QO-gbP"/>
+                        <outlet property="cityTF" destination="3Xu-IO-FV6" id="ImC-RB-rd6"/>
+                        <outlet property="firstNameTF" destination="aUX-wm-NB1" id="Waz-Sy-Rp0"/>
+                        <outlet property="lastNameTF" destination="pgQ-sO-hy8" id="pB4-ng-Dx7"/>
+                        <outlet property="postalCodeTF" destination="58a-Sj-Kmi" id="tzo-pF-MDy"/>
+                        <outlet property="specialismsPicker" destination="8Cd-ze-gHQ" id="EtG-0q-mIn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmP-UM-zdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,9 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // ====== SEEDERS ====== //
-        let seeder = Seeder()
-        seeder.seed()
-        
+        let seeded = UserDefaults.standard.bool(forKey:"seeded")
+        if(!seeded) {
+            let seeder = Seeder()
+            seeder.seed()
+            UserDefaults.standard.set(true, forKey: "seeded")
+        }       
         
         // Check if the patient is already registered to choose the appropriate view.
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)

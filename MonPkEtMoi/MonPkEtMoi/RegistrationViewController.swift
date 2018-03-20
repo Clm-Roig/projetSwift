@@ -51,7 +51,7 @@ class RegistrationViewController : UIViewController {
             do {
                 newPatient = try self.patientDAO.create()
             } catch {
-                AlertHelper.alertError(view: self, errorMessage: "Erreur à la création du patient")
+                AlertHelper.alertError(view: self, errorMessage: "Erreur à la création du patient.")
             }
             
             newPatient.firstName = firstNameTF.text
@@ -68,7 +68,7 @@ class RegistrationViewController : UIViewController {
                 UserDefaults.standard.set(true, forKey: "patientRegistered")
                 self.performSegue(withIdentifier: "registrationOkSegue", sender: self)
             } catch {
-                AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du patient")
+                AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du patient.")
             }
             
         }

@@ -11,7 +11,7 @@ import Foundation
 class CoreDataDAOFactory: AbstractDAOFactory {
     
     typealias PatientDAO = CDPatientDAO
-    typealias PatientDAO = CDPractitionerDAO
+    typealias PractitionerDAO = CDPractitionerDAO
     typealias SpecialismDAO = CDSpecialismDAO
     
     private static var instance: CoreDataDAOFactory?

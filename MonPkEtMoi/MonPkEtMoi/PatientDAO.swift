@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PatientDAO: DAO {
-    associatedtype Object = Patient
+    typealias Object = Patient
     
     /// Get the first patient in DB.
     ///

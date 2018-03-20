@@ -9,6 +9,6 @@
 import Foundation
 
 protocol PractitionerDAO: DAO {
-    associatedtype Object = Practitioner
+    typealias Object = Practitioner
 
 }

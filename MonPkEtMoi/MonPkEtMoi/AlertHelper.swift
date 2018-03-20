@@ -19,4 +19,13 @@ class AlertHelper {
         alert.addAction(okAction)
         view.present(alert, animated: true)
     }
+    
+    class func alertWarning(view: UIViewController, warningMessage: String) {
+        let title = "Avertissement"
+        let message = warningMessage
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        view.present(alert, animated: true)
+    }
 }
