@@ -16,6 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // ====== SEEDERS ====== //
+        // Practitioner
+        let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
+        var practitioner1 = Practitioner()
+        do {
+            practitioner1 = try practitionerDAO.create()
+        } catch {
+            print("error creating practitioner1")
+        }
+        practitioner1.firstName = "Michel"
+        practitioner1.lastName = "Dupond"
+        
+        var practitioner2 = Practitioner()
+        do {
+            practitioner2 = try practitionerDAO.create()
+        } catch {
+            print("error creating practitioner1")
+        }
+        practitioner2.firstName = "Marie"
+        practitioner2.lastName = "Monroe"
+        
+        // =========== END SEEDERS =========== //
+        
+        
+        // Check if the patient is already registered to choose the appropriate view.
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let launchedBefore = UserDefaults.standard.bool(forKey:"patientRegistered")
         var nav = UIViewController()

@@ -16,5 +16,4 @@ protocol AbstractDAOFactory {
     func getPatientDAO() -> Patient
     func getPractitionerDAO() -> Practitioner
     
-    
 }

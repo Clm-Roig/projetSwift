@@ -72,7 +72,7 @@ class RegistrationViewController : UIViewController {
             }
             
         }
-        else {           
+        else {
             // create the alert
             let alert = UIAlertController(title: "Formulaire incomplet", message: "Veuillez remplir tous les champs.", preferredStyle: UIAlertControllerStyle.alert)
             // add an action (button)

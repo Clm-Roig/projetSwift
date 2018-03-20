@@ -15,9 +15,8 @@ class CDPractitionerDAO: CDDAO, PractitionerDAO {
         return Practitioner(context: self.context)
     }
     
-    func delete(obj: Practitioner) throws -> Int {
+    func delete(obj: Practitioner) {
         // TODO
-        return 3
     }
     
     func getAll() throws -> [Practitioner]? {

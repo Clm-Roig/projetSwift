@@ -15,14 +15,8 @@ class CDPatientDAO: CDDAO, PatientDAO {
         return Patient(context: self.context)
     }
     
-    func delete(obj: Patient) throws -> Int {
+    func delete(obj: Patient) {
         // TODO
-        return 3
-    }
-    
-    func update(object: Patient) throws -> Bool {
-        // TODO
-        return true
     }
     
     func getAll() throws -> [Patient]? {
