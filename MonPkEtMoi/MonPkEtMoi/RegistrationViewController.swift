@@ -11,12 +11,11 @@ import CoreData
 
 class RegistrationViewController : UIViewController {
     
-    let patientDAO = CDPatientDAO()
+    let patientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
+    
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var firstNameTF: UITextField!
-    
     @IBOutlet weak var birthDateTF: UITextField!
-    
     @IBOutlet weak var textIntro: UITextView!
     
     // The DatePicker update the value in the birthDateTF.

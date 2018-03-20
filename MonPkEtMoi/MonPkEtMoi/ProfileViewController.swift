@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController {
-    var patientDAO: CDPatientDAO = CDPatientDAO()
+    var patientDAO: PatientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
+    
     var patient: Patient? = nil
     
     @IBOutlet weak var fullNameL: UILabel!
