@@ -72,15 +72,11 @@ class RegistrationViewController : UIViewController {
             }
             
         }
-        else {
-            print("Empty input(s)")
-            
+        else {           
             // create the alert
             let alert = UIAlertController(title: "Formulaire incomplet", message: "Veuillez remplir tous les champs.", preferredStyle: UIAlertControllerStyle.alert)
-            
             // add an action (button)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            
             // show the alert
             self.present(alert, animated: true, completion: nil)
         }
