@@ -7,36 +7,17 @@
 //
 
 import Foundation
-import UIKit
 import CoreData
 
-
-class CDPatientDAO: PatientDAO {
+class CDPatientDAO: CDDAO, PatientDAO {
     
-    var context: NSManagedObjectContext
-    
-    init() {
-        let CDC  = CoreDataConnection()
-        self.context = CDC.getContext()
-    }
-    
-    // =====================================
-
     func create() throws -> Patient {
         return Patient(context: self.context)
     }
     
-    func delete() throws -> Int {
+    func delete(obj: Patient) throws -> Int {
         // TODO
         return 3
-    }
-    
-    func save() throws {
-        do {
-            try context.save()
-        } catch let error {
-            throw error
-        }
     }
     
     func update(object: Patient) throws -> Bool {

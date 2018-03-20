@@ -16,6 +16,7 @@
 		E0160423206108E600E6EB08 /* AbstractDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0160422206108E600E6EB08 /* AbstractDAOFactory.swift */; };
 		E0160426206109A300E6EB08 /* CoreDataDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0160425206109A300E6EB08 /* CoreDataDAOFactory.swift */; };
 		E016042820610A0100E6EB08 /* CDPractitionerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */; };
+		E016042C2061101300E6EB08 /* CDDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016042B2061101300E6EB08 /* CDDAO.swift */; };
 		E016B0FB205989A900D9E7E9 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016B0FA205989A900D9E7E9 /* TodoTableViewCell.swift */; };
 		E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D39C82059540300C33AF8 /* ExerciseViewController.swift */; };
 		E0788763205BC4B100F9E499 /* CoreDateConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0788762205BC4B100F9E499 /* CoreDateConnection.swift */; };
@@ -68,6 +69,7 @@
 		E0160422206108E600E6EB08 /* AbstractDAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDAOFactory.swift; sourceTree = "<group>"; };
 		E0160425206109A300E6EB08 /* CoreDataDAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAOFactory.swift; sourceTree = "<group>"; };
 		E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPractitionerDAO.swift; sourceTree = "<group>"; };
+		E016042B2061101300E6EB08 /* CDDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDAO.swift; sourceTree = "<group>"; };
 		E016B0FA205989A900D9E7E9 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		E03D39C82059540300C33AF8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		E0788762205BC4B100F9E499 /* CoreDateConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDateConnection.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
 				E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */,
+				E016042B2061101300E6EB08 /* CDDAO.swift */,
 			);
 			name = CoreDataDAO;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				E016042820610A0100E6EB08 /* CDPractitionerDAO.swift in Sources */,
 				E016B0FB205989A900D9E7E9 /* TodoTableViewCell.swift in Sources */,
 				E0050682205AB22B000533DA /* TodoTableViewController.swift in Sources */,
+				E016042C2061101300E6EB08 /* CDDAO.swift in Sources */,
 				BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */,
 				E016041F206104E100E6EB08 /* practitionerDAO.swift in Sources */,
 				15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */,

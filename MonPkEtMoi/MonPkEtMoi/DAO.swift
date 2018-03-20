@@ -12,7 +12,6 @@ protocol DAO {
     associatedtype Object
     
     func create() throws -> Object
-    func delete() throws -> Int
-    func save() throws
+    func delete(obj: Object) throws -> Int
     func getAll() throws -> [Object]?
 }

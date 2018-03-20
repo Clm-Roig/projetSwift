@@ -7,19 +7,17 @@
 //
 
 import Foundation
+import CoreData
 
-class CDPractitionerDAO: PractitionerDAO {
+class CDPractitionerDAO: CDDAO, PractitionerDAO {
     
     func create() throws -> Practitioner {
-        return Practitioner()
+        return Practitioner(context: self.context)
     }
     
-    func delete() throws -> Int {
+    func delete(obj: Practitioner) throws -> Int {
+        // TODO
         return 3
-    }
-    
-    func save() throws {
-        
     }
     
     func getAll() throws -> [Practitioner]? {
