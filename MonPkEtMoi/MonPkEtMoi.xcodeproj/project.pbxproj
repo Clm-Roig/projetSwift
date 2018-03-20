@@ -354,6 +354,9 @@
 		E0FCAE84203EF9A300F04470 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					test,
+				);
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Roig-Dye";
