@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController {
-    var patientDAO: PatientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
+    let patientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
     
     var patient: Patient? = nil
     
@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
             self.patient = try self.patientDAO.get()
         } catch {
             // TODO : show alert
-            print("Error getting patient")
+            AlertHelper.alertError(view: self, errorMessage: "Error getting patient.")
         }
         
         guard let patient = self.patient else {
