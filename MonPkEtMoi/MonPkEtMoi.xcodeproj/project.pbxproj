@@ -30,6 +30,8 @@
 		E09603222060441500E4F5C4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09603212060441500E4F5C4 /* AlertHelper.swift */; };
 		E09EACE22062C139008A6B01 /* ExerciseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09EACE12062C139008A6B01 /* ExerciseDAO.swift */; };
 		E09EACE42062C1AD008A6B01 /* CDExerciseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09EACE32062C1AD008A6B01 /* CDExerciseDAO.swift */; };
+		E09EACE62062C449008A6B01 /* AppointmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09EACE52062C449008A6B01 /* AppointmentDAO.swift */; };
+		E09EACE82062C57A008A6B01 /* CDAppointmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09EACE72062C57A008A6B01 /* CDAppointmentDAO.swift */; };
 		E0A6AC9720629C8900CC45E0 /* PractitionerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A6AC9620629C8900CC45E0 /* PractitionerViewController.swift */; };
 		E0B02CAA20590AED00841B32 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CA920590AED00841B32 /* PersonModel.swift */; };
 		E0B02CAC20590B2A00841B32 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CAB20590B2A00841B32 /* PatientModel.swift */; };
@@ -92,6 +94,8 @@
 		E09603212060441500E4F5C4 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		E09EACE12062C139008A6B01 /* ExerciseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDAO.swift; sourceTree = "<group>"; };
 		E09EACE32062C1AD008A6B01 /* CDExerciseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDExerciseDAO.swift; sourceTree = "<group>"; };
+		E09EACE52062C449008A6B01 /* AppointmentDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDAO.swift; sourceTree = "<group>"; };
+		E09EACE72062C57A008A6B01 /* CDAppointmentDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDAppointmentDAO.swift; sourceTree = "<group>"; };
 		E0A6AC9620629C8900CC45E0 /* PractitionerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerViewController.swift; sourceTree = "<group>"; };
 		E0B02CA920590AED00841B32 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		E0B02CAB20590B2A00841B32 /* PatientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 				E016042B2061101300E6EB08 /* CDDAO.swift */,
 				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
 				E09EACE32062C1AD008A6B01 /* CDExerciseDAO.swift */,
+				E09EACE72062C57A008A6B01 /* CDAppointmentDAO.swift */,
 				E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */,
 				E08151FB206117F200A98DF6 /* CDSpecialismDAO.swift */,
 			);
@@ -312,6 +317,7 @@
 				E096031E20603FDE00E4F5C4 /* PatientDAO.swift */,
 				E09EACE12062C139008A6B01 /* ExerciseDAO.swift */,
 				E016041E206104E100E6EB08 /* PractitionerDAO.swift */,
+				E09EACE52062C449008A6B01 /* AppointmentDAO.swift */,
 				E08151F92061178000A98DF6 /* SpecialismDAO.swift */,
 				E08151FD20611AB300A98DF6 /* Seeder.swift */,
 			);
@@ -463,6 +469,7 @@
 				E0160426206109A300E6EB08 /* CoreDataDAOFactory.swift in Sources */,
 				E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */,
 				E0B02CB62059151100841B32 /* TreatmentAddViewController.swift in Sources */,
+				E09EACE82062C57A008A6B01 /* CDAppointmentDAO.swift in Sources */,
 				847C756B2062A3F100038449 /* PractitionerTableViewCell.swift in Sources */,
 				E096031D206027B900E4F5C4 /* AddMeetingController.swift in Sources */,
 				E096031F20603FDE00E4F5C4 /* PatientDAO.swift in Sources */,
@@ -478,6 +485,7 @@
 				E0B02CB020590C9600841B32 /* Treatment.swift in Sources */,
 				E0B02CB220590CB600841B32 /* Medicine.swift in Sources */,
 				847C756D2062A40C00038449 /* PractitionerTableViewController.swift in Sources */,
+				E09EACE62062C449008A6B01 /* AppointmentDAO.swift in Sources */,
 				E0A6AC9720629C8900CC45E0 /* PractitionerViewController.swift in Sources */,
 				E0788763205BC4B100F9E499 /* CoreDateConnection.swift in Sources */,
 				E0B02CAA20590AED00841B32 /* PersonModel.swift in Sources */,
