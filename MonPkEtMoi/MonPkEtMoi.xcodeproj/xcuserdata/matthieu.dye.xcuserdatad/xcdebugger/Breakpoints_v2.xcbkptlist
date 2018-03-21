@@ -19,53 +19,5 @@
             landmarkType = "4">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MonPkEtMoi/TreatmentTableViewController.swift"
-            timestampString = "543346502.374427"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "init(treatmentTableView:treatments:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MonPkEtMoi.TreatmentTableViewController.init (treatmentTableView : __ObjC.UITableView, treatments : Swift.Array&lt;MonPkEtMoi.Treatment&gt;) -&gt; MonPkEtMoi.TreatmentTableViewController"
-                  moduleName = "MonPkEtMoi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matthieu.dye/Desktop/projetSwift/MonPkEtMoi/MonPkEtMoi/TreatmentTableViewController.swift"
-                  timestampString = "543346801.626829"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MonPkEtMoi.TreatmentTableViewController.__allocating_init (treatmentTableView : __ObjC.UITableView, treatments : Swift.Array&lt;MonPkEtMoi.Treatment&gt;) -&gt; MonPkEtMoi.TreatmentTableViewController"
-                  moduleName = "MonPkEtMoi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matthieu.dye/Desktop/projetSwift/MonPkEtMoi/MonPkEtMoi/TreatmentTableViewController.swift"
-                  timestampString = "543346801.628467"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

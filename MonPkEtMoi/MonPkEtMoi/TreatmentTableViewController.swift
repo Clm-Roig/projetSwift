@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
-
-    var treatments: [Treatment] = []
+    
+    var treatments: [Treatment?] = []
     var treatmentTableView: UITableView
     
-    init(treatmentTableView: UITableView, treatments: [Treatment]) {
+    init(treatmentTableView: UITableView, treatments: [Treatment?]) {
         self.treatmentTableView = treatmentTableView
         self.treatments = treatments
     }
@@ -24,19 +24,34 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         return self.treatments.count
     }
     
+    //MARK: TableView functions
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.treatmentTableView.dequeueReusableCell(withIdentifier: "treatmentCell", for: indexPath) as! TreatmentTableViewCell
-        let treatment = self.treatments[indexPath.row]
+        cell.medicineLabel.text = self.treatments[indexPath.row]?.need?.wording
+        cell.quantityLabel.text = String(describing: self.treatments[indexPath.row]?.quantity)
+       
+        /*
+        let hoursTable = self.treatments[indexPath.row]?.hours
+        if let hours = hoursTable {
+            for hour in hours {
+                cell.hoursLabel.text = cell.hoursLabel.text! + String(Calendar.current.component(.hour, from: hour as Date))
+            }
+        }
+         */
         
-        cell.hoursLabel.text = "7"
-        cell.medicineLabel.text = "Modopar"
-        cell.quantityLabel.text = "125mg"
         
-       /* cell.nameSpecialismL.text = practitioner.lastName
-        cell.nameSpecialismL.text = cell.nameSpecialismL.text! + " - "
-        cell.nameSpecialismL.text = cell.nameSpecialismL.text! + (practitioner.master?.wording!)!
-        cell.cityL.text = self.practitioners[indexPath.row].city
-        */
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true;
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
 }

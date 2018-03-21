@@ -8,13 +8,15 @@
 
 import UIKit
 
-class TreatmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TreatmentViewController: UIViewController {
     
   
-    var medicineLabel: [String] = ["Motquipar"]
-    var quantityLabel: [String] = ["1 pilule et 1 pilule bleue"]
+    var medicineLabel: [String] = ["Matrix"]
+    var quantityLabel: [String] = ["1 pilule rouge et 1 pilule bleue"]
     var hoursLabel: [String] = ["10h ; 18h","12h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h"]
   
+    var treatments: [Treatment?] = []
+    
     @IBOutlet weak var treatmentsList: UITableView!
     @IBAction func addTreatment(_ sender: Any) {
         
@@ -22,39 +24,19 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        // TODO : Call the DAO 
+        
+        let tableViewCtrl = TreatmentTableViewController(treatmentTableView: self.treatmentsList, treatments: self.treatments)
+        self.treatmentsList.delegate = tableViewCtrl
+        self.treatmentsList.dataSource = tableViewCtrl
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    //MARK: TableView functions
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.treatmentsList.dequeueReusableCell(withIdentifier: "treatmentCell", for: indexPath) as! TreatmentTableViewCell
-        cell.medicineLabel.text = self.medicineLabel[indexPath.row]
-        cell.quantityLabel.text = self.quantityLabel[indexPath.row]
-        cell.hoursLabel.text = self.hoursLabel[indexPath.row]
-        return cell
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.medicineLabel.count
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true;
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    
     
     
 
