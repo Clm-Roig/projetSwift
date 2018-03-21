@@ -55,7 +55,9 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
         } catch {
             fatalError("Erreur lors de l'obtention des spécialités.")
         }
-        // TODO : sort self.specialisms
+        self.specialisms = self.specialisms.sorted {
+            $0.wording! < $1.wording!
+        }
     }
     
     //MARK: Picker functions
