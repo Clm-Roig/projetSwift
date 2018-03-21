@@ -18,14 +18,15 @@ class CDSpecialismDAO: CDDAO, SpecialismDAO {
         self.context.delete(obj)
     }
     
-    func getAll() throws -> [Specialism]? {
+    func getAll() throws -> [Specialism?] {
         let request: NSFetchRequest<Specialism> = NSFetchRequest(entityName: "Specialism")
+        var specialisms: [Specialism] = []
         do {
-            let specialisms:[Specialism] = try self.context.fetch(request)
-            return specialisms
+            specialisms = try self.context.fetch(request)
         } catch let error {
             throw error
         }
+        return specialisms
     }
 
 }

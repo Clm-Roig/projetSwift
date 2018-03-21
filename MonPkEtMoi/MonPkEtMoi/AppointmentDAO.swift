@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol AppointmentDAO {
+protocol AppointmentDAO: DAO {
     typealias Object = Appointment
 }

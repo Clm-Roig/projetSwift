@@ -19,26 +19,30 @@ class CDPatientDAO: CDDAO, PatientDAO {
         self.context.delete(obj)
     }
     
-    func getAll() throws -> [Patient]? {
+    func getAll() throws -> [Patient?] {
+        var patients: [Patient] = []
         let request: NSFetchRequest<Patient> = NSFetchRequest(entityName: "Patient")
         do {
-            let patients:[Patient] = try self.context.fetch(request)
-            return patients
+            patients = try self.context.fetch(request)
         } catch let error {
             throw error
         }
+        return patients
     }
     
     // MARK: custom methods
     func get() throws -> Patient? {
+        var patients: [Patient] = []
         do {
-            guard let patients: [Patient] = try self.getAll() else {
-                print("Error getting patient")
-                return nil
-            }
-            return patients.first
+            patients = try self.getAll() as! [Patient]
         } catch let error {
             throw error
+        }
+        if(patients.count > 0) {
+            return patients.first
+        }
+        else {
+            return nil
         }
     }
 

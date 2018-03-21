@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ExerciseDAO {
+protocol ExerciseDAO: DAO {
     typealias Object = Exercise
 }

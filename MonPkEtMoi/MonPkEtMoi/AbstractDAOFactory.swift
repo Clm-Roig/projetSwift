@@ -12,8 +12,12 @@ protocol AbstractDAOFactory {
     associatedtype PatientDAO
     associatedtype PractitionerDAO
     associatedtype SpecialismDAO
+    associatedtype ExerciseDAO
+    associatedtype AppointmentDAO
     
     // MARK: DAOs
+    func getAppointmentDAO() -> AppointmentDAO
+    func getExerciseDAO() -> ExerciseDAO
     func getPatientDAO() -> PatientDAO
     func getPractitionerDAO() -> PractitionerDAO
     func getSpecialismDAO() -> SpecialismDAO

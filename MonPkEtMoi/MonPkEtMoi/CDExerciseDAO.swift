@@ -19,14 +19,15 @@ class CDExerciseDAO: CDDAO, ExerciseDAO {
         self.context.delete(obj)
     }
     
-    func getAll() throws -> [Exercise]? {
+    func getAll() throws -> [Exercise?] {
+        var exercises: [Exercise] = []
         let request: NSFetchRequest<Exercise> = NSFetchRequest(entityName: "Exercise")
         do {
-            let exercises:[Exercise] = try self.context.fetch(request)
-            return exercises
+            exercises = try self.context.fetch(request)
         } catch let error {
             throw error
         }
+        return exercises
     }
     
 }

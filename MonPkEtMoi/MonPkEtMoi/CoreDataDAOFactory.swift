@@ -39,4 +39,12 @@ class CoreDataDAOFactory: AbstractDAOFactory {
     func getSpecialismDAO() -> CDSpecialismDAO {
         return CDSpecialismDAO()
     }
+    
+    func getAppointmentDAO() -> CDAppointmentDAO {
+        return CDAppointmentDAO()
+    }
+    
+    func getExerciseDAO() -> CDExerciseDAO {
+        return CDExerciseDAO()
+    }
 }

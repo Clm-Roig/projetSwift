@@ -14,7 +14,7 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
     let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
     let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
     
-    var specialisms = [Specialism]()
+    var specialisms: [Specialism] = []
     
     @IBOutlet weak var specialismsPicker: UIPickerView!
     
@@ -60,7 +60,7 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
         super.viewDidLoad()
         
         do {
-            self.specialisms = try specialismDAO.getAll()!
+            self.specialisms = try specialismDAO.getAll() as! [Specialism]
         } catch {
             fatalError("Erreur lors de l'obtention des spécialités.")
         }

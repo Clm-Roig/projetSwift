@@ -13,5 +13,5 @@ protocol DAO {
     
     func create() throws -> Object
     func delete(obj: Object)
-    func getAll() throws -> [Object]?
+    func getAll() throws -> [Object?]
 }

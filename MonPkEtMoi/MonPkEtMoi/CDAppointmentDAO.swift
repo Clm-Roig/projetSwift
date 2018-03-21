@@ -18,14 +18,16 @@ class CDAppointmentDAO: CDDAO, AppointmentDAO {
         self.context.delete(obj)
     }
     
-    func getAll() throws -> [Appointment]? {
+    func getAll() throws -> [Appointment?] {
+        var appointments: [Appointment] = []
         let request: NSFetchRequest<Appointment> = NSFetchRequest(entityName: "Appointment")
         do {
-            let appointments:[Appointment] = try self.context.fetch(request)
-            return appointments
+            appointments = try self.context.fetch(request)
         } catch let error {
             throw error
         }
+        return appointments
+
     }
 
 }

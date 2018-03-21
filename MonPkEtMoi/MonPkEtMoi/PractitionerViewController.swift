@@ -13,7 +13,7 @@ class PractitionerViewController: UIViewController {
     let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
     
     var practitionerViewCtrl: PractitionerTableViewController?
-    var practitioners = [Practitioner]()
+    var practitioners: [Practitioner?] = []
     
     @IBOutlet weak var practitionerTableView: UITableView!
     // ===================================================
@@ -22,12 +22,14 @@ class PractitionerViewController: UIViewController {
         super.viewDidLoad()
         
         do {
-            try self.practitioners = practitionerDAO.getAll()!
+            try self.practitioners = practitionerDAO.getAll()
         } catch {
             fatalError("Erreur lors de l'obtention des médecins.")
         }
         
-        self.practitionerViewCtrl = PractitionerTableViewController(practitionerTableView: self.practitionerTableView, practitioners: self.practitioners)
+        if(self.practitioners.count > 0) {
+            self.practitionerViewCtrl = PractitionerTableViewController(practitionerTableView: self.practitionerTableView, practitioners: self.practitioners as! [Practitioner])
+        }
         
         practitionerTableView.dataSource = self.practitionerViewCtrl
         practitionerTableView.delegate = self.practitionerViewCtrl

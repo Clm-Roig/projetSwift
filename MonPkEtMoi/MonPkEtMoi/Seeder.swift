@@ -13,6 +13,7 @@ class Seeder {
         // Practitioner
         let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
         let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
+        
         var practitioner1 = Practitioner()
         do {
             practitioner1 = try practitionerDAO.create()
@@ -56,29 +57,30 @@ class Seeder {
             print("Error saving practitioner seeds")
         }
         
-        // Specialisms
-        let speciaslismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
-        let wordings = ["kinésithérapeute", "orthophoniste", "infirmer", "neurologue"]
-        var specialisms = [Specialism]()
+        // Appointments
+        let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
+        var appointment1 = Appointment()
         do {
-            specialisms.append(try speciaslismDAO.create())
-            specialisms.append(try speciaslismDAO.create())
-            specialisms.append(try speciaslismDAO.create())
-            specialisms.append(try speciaslismDAO.create())
+            appointment1 = try appointmentDAO.create()
         } catch {
-            print("Error creating specialisms")
+            print("error creating appointment 1")
         }
+        appointment1.date = Date() as NSDate
+        appointment1.proposedBy = practitioner1
         
-        for specialism in specialisms {
-            specialism.wording = wordings[specialisms.index(of: specialism)!]
+        var appointment2 = Appointment()
+        do {
+            appointment2 = try appointmentDAO.create()
+        } catch {
+            print("error creating appointment 2")
         }
+        appointment2.date = Calendar.current.date(byAdding: .day, value: 1, to: Date())! as NSDate
+        appointment2.proposedBy = practitioner2
         
         do {
-            try speciaslismDAO.save()
+            try appointmentDAO.save()
         } catch {
-            print("Error saving specialism seeds")
+            print("Error saving practitioner seeds")
         }
-
-
     }
 }

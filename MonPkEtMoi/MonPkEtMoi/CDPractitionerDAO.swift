@@ -19,14 +19,15 @@ class CDPractitionerDAO: CDDAO, PractitionerDAO {
         self.context.delete(obj)
     }
     
-    func getAll() throws -> [Practitioner]? {
+    func getAll() throws -> [Practitioner?] {
         let request: NSFetchRequest<Practitioner> = NSFetchRequest(entityName: "Practitioner")
+        var practitioners: [Practitioner] = []
         do {
-            let practitioners:[Practitioner] = try self.context.fetch(request)
-            return practitioners
+            practitioners = try self.context.fetch(request)
         } catch let error {
             throw error
         }
+        return practitioners
     }
 
 }
