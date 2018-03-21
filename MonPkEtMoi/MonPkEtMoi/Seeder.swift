@@ -21,6 +21,7 @@ class Seeder {
         }
         practitioner1.firstName = "Michel"
         practitioner1.lastName = "Dupond"
+        practitioner1.city = "Montpellier"
         
         var spe1 = Specialism()
         do {
@@ -39,6 +40,7 @@ class Seeder {
         }
         practitioner2.firstName = "Marie"
         practitioner2.lastName = "Monroe"
+        practitioner2.city = "Castelnau Le Lez"
         
         var spe2 = Specialism()
         do {
