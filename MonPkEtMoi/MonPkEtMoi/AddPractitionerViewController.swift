@@ -6,6 +6,7 @@
 //  Copyright © 2018 Roig-Dye. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -32,13 +33,21 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
             do {
                 newPractitioner = try practitionerDAO.create()
             } catch {
-                AlertHelper.alertError(view: self, errorMessage: "Impossible d'ajouter un médecin")
+                AlertHelper.alertError(view: self, errorMessage: "Impossible de créer un médecin.")
             }
             
             newPractitioner.lastName = lastNameTF.text
             newPractitioner.firstName = firstNameTF.text
             newPractitioner.address = addressTF.text
             newPractitioner.postalCode = postalCodeTF.text
+            newPractitioner.master = specialisms[specialismsPicker.selectedRow(inComponent: 0)]
+            
+            do {
+                try practitionerDAO.save()
+                navigationController?.popToViewController(self, animated: true)
+            } catch {
+                AlertHelper.alertError(view: self, errorMessage: "Impossible d'ajouter un médecin.")
+            }
         }
         else {
             AlertHelper.alertWarning(view: self, warningMessage: "Veuillez remplir tous les champs.")
