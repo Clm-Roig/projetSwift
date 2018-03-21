@@ -30,6 +30,7 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: TableView functions
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.treatmentsList.dequeueReusableCell(withIdentifier: "treatmentCell", for: indexPath) as! TreatmentTableViewCell
         cell.medicineLabel.text = self.medicineLabel[indexPath.row]
@@ -39,7 +40,6 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     
-    //MARK: TableView functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.medicineLabel.count
     }
