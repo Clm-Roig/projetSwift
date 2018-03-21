@@ -15,6 +15,9 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
     var hoursLabel: [String] = ["10h ; 18h","12h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h"]
 
     @IBOutlet weak var treatmentsList: UITableView!
+    @IBAction func addTreatment(_ sender: Any) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,8 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    
+    //MARK: TableView functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.medicineLabel.count
     }

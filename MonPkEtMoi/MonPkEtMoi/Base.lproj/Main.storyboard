@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NFE-XT-4FG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NFE-XT-4FG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -665,6 +665,7 @@
                                     <color key="titleColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="addTreatment:" destination="SU1-j3-VWG" eventType="touchUpInside" id="A3Y-Sz-ioN"/>
                                     <segue destination="zfc-Im-Rv0" kind="show" id="dEn-Ko-Re3"/>
                                 </connections>
                             </button>
@@ -1382,7 +1383,7 @@
                 <navigationController title="Nav Treatment Controller" automaticallyAdjustsScrollViewInsets="NO" id="tgl-bB-CRy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Traitement" image="medicine-25" id="YSo-eY-cvM"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="daF-bD-roE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="daF-bD-roE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1401,7 +1402,7 @@
                 <navigationController title="Nav Exercises Controller" automaticallyAdjustsScrollViewInsets="NO" id="SD6-zt-a3I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Exercice" image="exercise-25" id="ztk-Zm-J8n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="67K-iq-u9F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="67K-iq-u9F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1420,7 +1421,7 @@
                 <navigationController title="Nav Agenda Controller" automaticallyAdjustsScrollViewInsets="NO" id="hhN-ky-Ovd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Agenda" image="calendar-25" id="JmX-CK-CZK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="10X-cT-3ac">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="10X-cT-3ac">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1439,7 +1440,7 @@
                 <navigationController title="Nav Profile Controller" automaticallyAdjustsScrollViewInsets="NO" id="8Zw-N9-kYt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profil" image="account-25" id="qPI-L6-Hlu"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8g4-MY-hYn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8g4-MY-hYn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1458,7 +1459,7 @@
                 <navigationController title="Nav Info Controller" automaticallyAdjustsScrollViewInsets="NO" id="EKx-Xv-k5F" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Infos" image="info-25" id="KjX-Md-eHN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="k8b-Cv-Syn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k8b-Cv-Syn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
