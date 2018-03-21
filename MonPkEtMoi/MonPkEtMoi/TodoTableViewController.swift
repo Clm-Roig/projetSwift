@@ -11,14 +11,14 @@ import UIKit
 class TodoTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     // TODO : use [Object] instead of [String]
-    var appointments: [String] = [""]
-    var treatments: [String] = [""]
-    var exercises: [String] = [""]
-    var todosList: [String] = []
+    var appointments: [Appointment?] = []
+    var treatments: [Treatment?] = []
+    var exercises: [Exercise?] = []
+    var todosList: [Any?] = []
     
     var todosTableView: UITableView
     
-    init(todosTableView: UITableView, treatments: [String], exercises: [String], apppointments: [String]) {
+    init(todosTableView: UITableView, treatments: [Treatment?], exercises: [Exercise?], apppointments: [Appointment?]) {
         self.todosTableView = todosTableView
         self.appointments = apppointments
         self.treatments = treatments
@@ -49,7 +49,9 @@ class TodoTableViewController: NSObject, UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.todosTableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TodoTableViewCell
-        cell.todoTF.text = self.todosList[indexPath.row]
+        
+        // TODO:
+        //cell.todoTF.text = self.todosList[indexPath.row]
         return cell        
     }
     

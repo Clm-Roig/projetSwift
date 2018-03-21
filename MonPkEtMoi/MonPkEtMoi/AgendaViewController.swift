@@ -14,20 +14,18 @@ class AgendaViewController : UIViewController {
     
     // TODO : wait for TreatmentDAO
     //let treatmentDAO = CoreDataDAOFactory.getInstance().geTreatmentDAO()
-
-
-    // TODO : Use Core Data instead of hardcoded String
-    var appointmentsToday: [String] = ["RDV : Docteur Martin"]
-    var treatmentsToday: [String] = ["Modopar 100"]
-    var exercisesToday: [String] = ["Exercice : catch"]
-    
-    var appointmentsLater: [String] = ["RDV : Docteur Dupont"]
-    var treatmentsLater: [String] = ["Modopar 125"]
-    var exercisesLater: [String] = ["Exercice : jardinage"]
     
     var appointments: [Appointment?] = []
     var exercises: [Exercise?] = []
     var treatments: [Treatment?] = []
+    
+    var appointmentsToday: [Appointment?] = []
+    var exercisesToday: [Exercise?] = []
+    var treatmentsToday: [Treatment?] = []
+    
+    var appointmentsLater: [Appointment?] = []
+    var exercisesLater: [Exercise?] = []
+    var treatmentsLater: [Treatment?] = []
     
     var tableViewTodoTodayCtrl: TodoTableViewController?
     var tableViewTodoLaterCtrl: TodoTableViewController?
@@ -73,7 +71,10 @@ class AgendaViewController : UIViewController {
         }
          */
         
-        // TODO : get todos from Core Data before passing them to Ctrl
+        // Separate today's TODOs and later's TODOs
+        
+        
+        // Construct table view controller
         tableViewTodoTodayCtrl = TodoTableViewController(todosTableView: self.todosTableViewToday, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
         self.todosTableViewToday.dataSource = self.tableViewTodoTodayCtrl
         self.todosTableViewToday.delegate = self.tableViewTodoTodayCtrl
