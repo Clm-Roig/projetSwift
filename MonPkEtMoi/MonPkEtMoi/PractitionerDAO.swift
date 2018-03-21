@@ -1,5 +1,5 @@
 //
-//  pratitionerDAO.swift
+//  PractitionerDAO.swift
 //  MonPkEtMoi
 //
 //  Created by Clement ROIG on 19/03/2018.

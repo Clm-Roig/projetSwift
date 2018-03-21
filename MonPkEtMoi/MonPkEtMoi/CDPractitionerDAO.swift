@@ -27,7 +27,6 @@ class CDPractitionerDAO: CDDAO, PractitionerDAO {
         } catch let error {
             throw error
         }
-
     }
 
 }
