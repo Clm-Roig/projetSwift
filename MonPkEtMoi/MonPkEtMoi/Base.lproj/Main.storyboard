@@ -939,7 +939,7 @@
         <!--infoView-->
         <scene sceneID="Ufs-GR-8Yk">
             <objects>
-                <viewController title="infoView" id="e8I-OS-Qj9" sceneMemberID="viewController">
+                <viewController title="infoView" id="e8I-OS-Qj9" customClass="PractitionerViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n1L-e7-5f2"/>
                         <viewControllerLayoutGuide type="bottom" id="GaD-wp-yRb"/>
@@ -973,21 +973,21 @@
                                 <rect key="frame" x="0.0" y="94" width="375" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="practitionerCell" id="uHu-KE-3g6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="practitionerCell" id="uHu-KE-3g6" customClass="PractitionerTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uHu-KE-3g6" id="Fo3-FN-80G">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Dupont - Neurologue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E01-96-iAQ">
-                                                    <rect key="frame" x="8" y="8" width="188" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameSpecialismL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E01-96-iAQ">
+                                                    <rect key="frame" x="8" y="8" width="136.5" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montpellier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYF-QO-wU4">
-                                                    <rect key="frame" x="294" y="0.0" width="73" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYF-QO-wU4">
+                                                    <rect key="frame" x="333.5" y="0.0" width="33.5" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1002,8 +1002,16 @@
                                                 <constraint firstItem="jYF-QO-wU4" firstAttribute="top" secondItem="Fo3-FN-80G" secondAttribute="top" id="xL8-c5-gzE"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityL" destination="jYF-QO-wU4" id="tgR-Un-uPs"/>
+                                            <outlet property="nameSpecialismL" destination="E01-96-iAQ" id="Abt-bE-5aS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="e8I-OS-Qj9" id="5gg-ou-9Sy"/>
+                                    <outlet property="delegate" destination="e8I-OS-Qj9" id="9g1-Su-NV5"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1028,6 +1036,9 @@
                             </switch>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="practitionerTableView" destination="gh2-a1-hvY" id="CVe-XF-sN7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARu-eC-eqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

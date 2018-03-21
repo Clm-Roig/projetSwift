@@ -20,7 +20,14 @@ class CDPractitionerDAO: CDDAO, PractitionerDAO {
     }
     
     func getAll() throws -> [Practitioner]? {
-        return [Practitioner()]
+        let request: NSFetchRequest<Practitioner> = NSFetchRequest(entityName: "Practitioner")
+        do {
+            let practitioners:[Practitioner] = try self.context.fetch(request)
+            return practitioners
+        } catch let error {
+            throw error
+        }
+
     }
 
 }

@@ -50,8 +50,7 @@ class TodoTableViewController: NSObject, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.todosTableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TodoTableViewCell
         cell.todoTF.text = self.todosList[indexPath.row]
-        return cell
-        
+        return cell        
     }
     
     

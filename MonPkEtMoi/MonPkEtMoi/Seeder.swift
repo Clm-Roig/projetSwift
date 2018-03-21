@@ -12,6 +12,7 @@ class Seeder {
     func seed() {
         // Practitioner
         let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
+        let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
         var practitioner1 = Practitioner()
         do {
             practitioner1 = try practitionerDAO.create()
@@ -20,6 +21,15 @@ class Seeder {
         }
         practitioner1.firstName = "Michel"
         practitioner1.lastName = "Dupond"
+        
+        var spe1 = Specialism()
+        do {
+            spe1 = try specialismDAO.create()
+        } catch {
+            print("error creating specialism 1")
+        }
+        spe1.setValue("neurologue", forKey: "wording")
+        practitioner1.setValue(spe1, forKey: "master")
         
         var practitioner2 = Practitioner()
         do {
@@ -30,6 +40,14 @@ class Seeder {
         practitioner2.firstName = "Marie"
         practitioner2.lastName = "Monroe"
         
+        var spe2 = Specialism()
+        do {
+            spe2 = try specialismDAO.create()
+        } catch {
+            print("error creating specialism 2")
+        }
+        spe2.setValue("kinésithérapeute", forKey: "wording")
+        practitioner2.setValue(spe2, forKey: "master")
         do {
             try practitionerDAO.save()
         } catch {

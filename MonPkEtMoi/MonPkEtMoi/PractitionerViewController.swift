@@ -10,5 +10,27 @@ import Foundation
 import UIKit
 
 class PractitionerViewController: UIViewController {
+    let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
     
+    var practitionerViewCtrl: PractitionerTableViewController?
+    var practitioners = [Practitioner]()
+    
+    @IBOutlet weak var practitionerTableView: UITableView!
+    // ===================================================
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        do {
+            try self.practitioners = practitionerDAO.getAll()!
+        } catch {
+            fatalError("Erreur lors de l'obtention des médecins.")
+        }
+        
+        self.practitionerViewCtrl = PractitionerTableViewController(practitionerTableView: self.practitionerTableView, practitioners: self.practitioners)
+        
+        practitionerTableView.dataSource = self.practitionerViewCtrl
+        practitionerTableView.delegate = self.practitionerViewCtrl
+        
+    }
 }
