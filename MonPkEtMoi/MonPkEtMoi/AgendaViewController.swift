@@ -11,6 +11,10 @@ import UIKit
 class AgendaViewController : UIViewController {
     let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
     let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
+    
+    // TODO : wait for TreatmentDAO
+    //let treatmentDAO = CoreDataDAOFactory.getInstance().geTreatmentDAO()
+
 
     // TODO : Use Core Data instead of hardcoded String
     var appointmentsToday: [String] = ["RDV : Docteur Martin"]
@@ -22,6 +26,8 @@ class AgendaViewController : UIViewController {
     var exercisesLater: [String] = ["Exercice : jardinage"]
     
     var appointments: [Appointment?] = []
+    var exercises: [Exercise?] = []
+    var treatments: [Treatment?] = []
     
     var tableViewTodoTodayCtrl: TodoTableViewController?
     var tableViewTodoLaterCtrl: TodoTableViewController?
@@ -54,6 +60,18 @@ class AgendaViewController : UIViewController {
         } catch {
             fatalError("Erreur lors de l'obtention des rendez-vous.")
         }
+        do {
+            self.exercises = try exerciseDAO.getAll()
+        } catch {
+            fatalError("Erreur lors de l'obtention des exercices.")
+        }
+        /* TODO: wait for treatmentDAO
+        do {
+            self.treatments = try treatmentsDAO.getAll()
+        } catch {
+            fatalError("Erreur lors de l'obtention des traitements.")
+        }
+         */
         
         // TODO : get todos from Core Data before passing them to Ctrl
         tableViewTodoTodayCtrl = TodoTableViewController(todosTableView: self.todosTableViewToday, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
