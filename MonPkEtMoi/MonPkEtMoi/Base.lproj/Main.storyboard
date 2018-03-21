@@ -720,7 +720,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="SU1-j3-VWG" id="26w-83-jVR"/>
+                                    <outlet property="dataSource" destination="SU1-j3-VWG" id="hNv-Ku-kX5"/>
                                     <outlet property="delegate" destination="SU1-j3-VWG" id="8ws-AJ-1dF"/>
                                 </connections>
                             </tableView>
@@ -1165,7 +1165,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2g-FT-VmL">
-                                <rect key="frame" x="83" y="576" width="208" height="41"/>
+                                <rect key="frame" x="83.5" y="576" width="208" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Ajouter un médecin"/>
                                 <connections>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15723EED2058330F00866455 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EEC2058330F00866455 /* RegistrationViewController.swift */; };
 		15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EF420583BDC00866455 /* AgendaViewController.swift */; };
+		15FE14652062C3C90094785B /* TreatmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE14642062C3C90094785B /* TreatmentTableViewController.swift */; };
 		847C756B2062A3F100038449 /* PractitionerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C756A2062A3F100038449 /* PractitionerTableViewCell.swift */; };
 		847C756D2062A40C00038449 /* PractitionerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C756C2062A40C00038449 /* PractitionerTableViewController.swift */; };
 		BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B263D205E990E009BFE67 /* ProfileViewController.swift */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		15723EEC2058330F00866455 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		15723EF420583BDC00866455 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		15FE14642062C3C90094785B /* TreatmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTableViewController.swift; sourceTree = "<group>"; };
 		847C756A2062A3F100038449 /* PractitionerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerTableViewCell.swift; sourceTree = "<group>"; };
 		847C756C2062A40C00038449 /* PractitionerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerTableViewController.swift; sourceTree = "<group>"; };
 		BC7B263D205E990E009BFE67 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */,
 				E0B02CB52059151100841B32 /* TreatmentAddViewController.swift */,
 				E0B02CB7205920B500841B32 /* TreatmentTableViewCell.swift */,
+				15FE14642062C3C90094785B /* TreatmentTableViewController.swift */,
 			);
 			name = Treatment;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */,
 				E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */,
 				E0B02CB420590CF800841B32 /* Specialism.swift in Sources */,
+				15FE14652062C3C90094785B /* TreatmentTableViewController.swift in Sources */,
 				E0B02CAE20590B6C00841B32 /* PractitionerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,10 +659,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MonPkEtMoi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Polytech.MonPkEtMoi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -669,10 +676,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MonPkEtMoi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Polytech.MonPkEtMoi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
