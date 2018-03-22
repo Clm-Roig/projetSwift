@@ -115,4 +115,8 @@ class AgendaViewController : UIViewController {
         
     }
     
+    @IBAction func unwindToAgenda(segue:UIStoryboardSegue) {
+        loadData()
+    }
+    
 }

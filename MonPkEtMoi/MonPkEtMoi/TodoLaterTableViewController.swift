@@ -36,7 +36,7 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
         }
         if(self.programs.count > 0) {
             for prog in self.programs {
-                self.todosList.append(prog)
+                self.todosList.insert(prog, at:0)
             }
         }
     }

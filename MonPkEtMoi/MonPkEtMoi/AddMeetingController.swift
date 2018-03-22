@@ -52,8 +52,7 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
         
         do {
             try appointmentDAO.save()
-            let agendaView = self.navigationController?.popViewController(animated: true)
-            agendaView?.viewDidLoad()
+            self.performSegue(withIdentifier: "test", sender: self)
         } catch {
             AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du rendez-vous.")
             print("Error info: \(error)")
@@ -81,6 +80,10 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
         }
         
         self.travelTimeL.text = "0"
+    }
+    
+    @IBAction func goBackToOneButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSegueToAgenda", sender: self)
     }
     
     // MARK: Picker functions
