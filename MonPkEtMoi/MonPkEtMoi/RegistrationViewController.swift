@@ -85,6 +85,7 @@ class RegistrationViewController : UIViewController {
     override internal func viewDidLoad() {
         super.viewDidLoad();
         
+        self.birthDateDP.maximumDate = Date()
         self.textIntro.isEditable = false
     }
     

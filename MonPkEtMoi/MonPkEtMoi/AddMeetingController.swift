@@ -63,6 +63,9 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.dayPicker.minimumDate = Date()
+        
+        
         // Get Data
         do {
             self.practitioners = try practitionerDAO.getAll()
