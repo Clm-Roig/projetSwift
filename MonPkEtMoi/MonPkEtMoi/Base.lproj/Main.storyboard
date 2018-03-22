@@ -145,7 +145,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4uR-vh-912" firstAttribute="top" secondItem="BYz-rg-hww" secondAttribute="bottom" id="1w2-Si-mTc"/>
                             <constraint firstAttribute="trailing" secondItem="jUB-5Y-kUO" secondAttribute="trailing" id="49F-Sp-lrg"/>
@@ -349,7 +348,7 @@
                         <viewControllerLayoutGuide type="top" id="VbQ-v8-IbE"/>
                         <viewControllerLayoutGuide type="bottom" id="PHZ-Cd-M3V"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lXz-jC-BUm">
+                    <view key="view" contentMode="scaleToFill" id="lXz-jC-BUm" customClass="MyUIView" customModule="MonPkEtMoi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -359,7 +358,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4It-Zp-Heq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4It-Zp-Heq" customClass="MyUIButton" customModule="MonPkEtMoi" customModuleProvider="target">
                                 <rect key="frame" x="16" y="294" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -380,7 +379,7 @@
                                     <constraint firstAttribute="width" secondItem="9Vk-Vg-fmn" secondAttribute="height" multiplier="25:12" id="HhS-Vb-c8f"/>
                                 </constraints>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-Cf-rlX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-Cf-rlX" customClass="MyUIButton" customModule="MonPkEtMoi" customModuleProvider="target">
                                 <rect key="frame" x="16" y="574" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -777,7 +776,7 @@
                         <viewControllerLayoutGuide type="top" id="bh6-i6-lR6"/>
                         <viewControllerLayoutGuide type="bottom" id="xjG-g9-hEu"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GEg-ba-g1K">
+                    <view key="view" contentMode="scaleToFill" id="GEg-ba-g1K" customClass="MyUIView" customModule="MonPkEtMoi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

@@ -47,6 +47,7 @@
 		E0FCAEA8203EF9A300F04470 /* MonPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEA7203EF9A300F04470 /* MonPkEtMoiTests.swift */; };
 		E0FCAEB3203EF9A300F04470 /* MonPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEB2203EF9A300F04470 /* MonPkEtMoiUITests.swift */; };
 		E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */; };
+		F3093CAE206457350010ED39 /* GraphicalCharter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3093CAD206457350010ED39 /* GraphicalCharter.swift */; };
 		F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		E0FCAEB2203EF9A300F04470 /* MonPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonPkEtMoiUITests.swift; sourceTree = "<group>"; };
 		E0FCAEB4203EF9A300F04470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentViewController.swift; sourceTree = "<group>"; };
+		F3093CAD206457350010ED39 /* GraphicalCharter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicalCharter.swift; sourceTree = "<group>"; };
 		F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPatientDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				E09603212060441500E4F5C4 /* AlertHelper.swift */,
+				F3093CAD206457350010ED39 /* GraphicalCharter.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				E09EACE82062C57A008A6B01 /* CDAppointmentDAO.swift in Sources */,
 				847C756B2062A3F100038449 /* PractitionerTableViewCell.swift in Sources */,
 				E096031D206027B900E4F5C4 /* AddMeetingController.swift in Sources */,
+				F3093CAE206457350010ED39 /* GraphicalCharter.swift in Sources */,
 				E0B0F1F82063F4DE00A22BC7 /* TodoLaterTableViewCell.swift in Sources */,
 				E096031F20603FDE00E4F5C4 /* PatientDAO.swift in Sources */,
 				E09EACE42062C1AD008A6B01 /* CDExerciseDAO.swift in Sources */,
