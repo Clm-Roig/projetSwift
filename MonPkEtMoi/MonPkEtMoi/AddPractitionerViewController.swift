@@ -44,7 +44,7 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
             
             do {
                 try practitionerDAO.save()
-                navigationController?.popToViewController(self, animated: true)
+                self.navigationController?.popViewController(animated: true)
             } catch {
                 AlertHelper.alertError(view: self, errorMessage: "Impossible d'ajouter un médecin.")
             }

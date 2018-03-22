@@ -11,19 +11,53 @@ import UIKit
 
 class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
+    let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
 
     var practitioners: [Practitioner?] = []
     
+    @IBOutlet weak var hourPicker: UIDatePicker!
+    @IBOutlet weak var dayPicker: UIDatePicker!
     @IBOutlet weak var practitionerPicker: UIPickerView!
-    @IBOutlet weak var specialityLabel: UILabel!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var durationLabel: UILabel!
     
     @IBAction func stepper(_ sender: UIStepper) {
-        self.durationLabel.text = String(Int(sender.value))
+        self.travelTimeL.text = String(Int(sender.value))
     }
     
+    @IBOutlet weak var travelTimeL: UILabel!
+    
     @IBAction func addMeetingButton(_ sender: Any) {
+        var newAppointment = Appointment()
+        do {
+            newAppointment = try appointmentDAO.create()
+        } catch {
+            AlertHelper.alertError(view: self, errorMessage: "Erreur à la création du rendez-vous.")
+        }
+        
+        // Construct date
+        let day = dayPicker.date
+        let hour = hourPicker.date
+        
+        let calendar = Calendar.current
+        var dateComponents = calendar.dateComponents([.year, .month, .day], from: day)
+        let timeComponents = calendar.dateComponents([.hour, .minute], from: hour)
+       
+        dateComponents.hour = timeComponents.hour
+        dateComponents.minute = timeComponents.minute
+        let date = calendar.date(from: dateComponents)
+        
+        // Other attributes
+        newAppointment.date = date! as NSDate
+        newAppointment.proposedBy = practitioners[practitionerPicker.selectedRow(inComponent: 0)]
+        newAppointment.travelTime = Int16(travelTimeL.text!)!
+        
+        do {
+            try appointmentDAO.save()
+            let agendaView = self.navigationController?.popViewController(animated: true)
+            agendaView?.viewDidLoad()
+        } catch {
+            AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du rendez-vous.")
+            print("Error info: \(error)")
+        }
         
     }
     
@@ -46,7 +80,7 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
             }
         }
         
-        self.durationLabel.text = "0"
+        self.travelTimeL.text = "0"
     }
     
     // MARK: Picker functions
