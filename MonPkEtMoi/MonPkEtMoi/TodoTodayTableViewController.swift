@@ -65,7 +65,8 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
         if(todo is Program) {
             let todoProg: Program = todo as! Program
             cell.todoL.text = "Exercice : " + (todoProg.isComposedBy?.wording)!
-            cell.hourL.text = String(todoProg.duration) + " min"
+            cell.todoL.text = cell.todoL.text! + " - " + String(todoProg.duration) + " min"
+            cell.hourL.text = ""
         }
         return cell
         

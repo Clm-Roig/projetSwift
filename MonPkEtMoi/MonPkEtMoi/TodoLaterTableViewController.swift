@@ -69,6 +69,7 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
         if(todo is Program) {
             let todoProg: Program = todo as! Program
             cell.todoL.text = "Exercice : " + (todoProg.isComposedBy?.wording)!
+            cell.todoL.text = cell.todoL.text! + " - " + String(todoProg.duration) + " min"
             
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale.init(identifier: "fr_FR")
