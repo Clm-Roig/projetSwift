@@ -52,6 +52,10 @@ class AgendaViewController : UIViewController {
         self.todayLabel.text = "Aujourd'hui " + dateString
         self.laterLabel.text = "A venir"
         
+        loadData()
+    }
+    
+    func loadData() {
         // Get Data
         do {
             self.appointments = try appointmentDAO.getAll()
@@ -64,11 +68,11 @@ class AgendaViewController : UIViewController {
             fatalError("Erreur lors de l'obtention des programmes.")
         }
         /* TODO: wait for treatmentDAO
-        do {
-            self.treatments = try treatmentsDAO.getAll()
-        } catch {
-            fatalError("Erreur lors de l'obtention des traitements.")
-        }
+         do {
+         self.treatments = try treatmentsDAO.getAll()
+         } catch {
+         fatalError("Erreur lors de l'obtention des traitements.")
+         }
          */
         
         
@@ -101,7 +105,6 @@ class AgendaViewController : UIViewController {
         tableViewTodoLaterCtrl = TodoLaterTableViewController(todosTableView: self.todosTableViewLater, treatments: self.treatmentsLater, programs: self.programsLater, apppointments: self.appointmentsLater)
         self.todosTableViewLater.dataSource = self.tableViewTodoLaterCtrl
         self.todosTableViewLater.delegate = self.tableViewTodoLaterCtrl
-
     }
     
     override internal func didReceiveMemoryWarning() {
