@@ -217,9 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				E016042B2061101300E6EB08 /* CDDAO.swift */,
-				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
-				E09EACE32062C1AD008A6B01 /* CDExerciseDAO.swift */,
 				E09EACE72062C57A008A6B01 /* CDAppointmentDAO.swift */,
+				E09EACE32062C1AD008A6B01 /* CDExerciseDAO.swift */,
+				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
 				E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */,
 				E08151FB206117F200A98DF6 /* CDSpecialismDAO.swift */,
 			);

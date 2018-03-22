@@ -16,15 +16,15 @@ class AgendaViewController : UIViewController {
     //let treatmentDAO = CoreDataDAOFactory.getInstance().geTreatmentDAO()
     
     var appointments: [Appointment?] = []
-    var exercises: [Exercise?] = []
+    var programs: [Program?] = []
     var treatments: [Treatment?] = []
     
     var appointmentsToday: [Appointment?] = []
-    var exercisesToday: [Exercise?] = []
+    var programsToday: [Program?] = []
     var treatmentsToday: [Treatment?] = []
     
     var appointmentsLater: [Appointment?] = []
-    var exercisesLater: [Exercise?] = []
+    var programsLater: [Program?] = []
     var treatmentsLater: [Treatment?] = []
     
     var tableViewTodoTodayCtrl: TodoTodayTableViewController?
@@ -59,9 +59,9 @@ class AgendaViewController : UIViewController {
             fatalError("Erreur lors de l'obtention des rendez-vous.")
         }
         do {
-            self.exercises = try exerciseDAO.getAll()
+            self.programs = try exerciseDAO.getAllPrograms()
         } catch {
-            fatalError("Erreur lors de l'obtention des exercices.")
+            fatalError("Erreur lors de l'obtention des programmes.")
         }
         /* TODO: wait for treatmentDAO
         do {
@@ -83,15 +83,22 @@ class AgendaViewController : UIViewController {
                 }
             }
         }
+        if (self.programs.count > 0) {
+            // A program specifies an exercise at least once a day
+            for prog in self.programs {
+                self.programsToday.append(prog)
+                self.programsLater.append(prog)
+            }
+        }
         
         
         // Construct table view controller
-        tableViewTodoTodayCtrl = TodoTodayTableViewController(todosTableView: self.todosTableViewToday, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
+        tableViewTodoTodayCtrl = TodoTodayTableViewController(todosTableView: self.todosTableViewToday, treatments: self.treatmentsToday, programs: self.programsToday, apppointments: self.appointmentsToday)
         self.todosTableViewToday.dataSource = self.tableViewTodoTodayCtrl
         self.todosTableViewToday.delegate = self.tableViewTodoTodayCtrl
         
         
-        tableViewTodoLaterCtrl = TodoLaterTableViewController(todosTableView: self.todosTableViewLater, treatments: self.treatmentsLater, exercises: self.exercisesLater, apppointments: self.appointmentsLater)
+        tableViewTodoLaterCtrl = TodoLaterTableViewController(todosTableView: self.todosTableViewLater, treatments: self.treatmentsLater, programs: self.programsLater, apppointments: self.appointmentsLater)
         self.todosTableViewLater.dataSource = self.tableViewTodoLaterCtrl
         self.todosTableViewLater.delegate = self.tableViewTodoLaterCtrl
 

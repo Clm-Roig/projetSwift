@@ -85,6 +85,14 @@ class Seeder {
         
         // Exercises
         let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
+        var program1 = Program()
+        do {
+            program1 = try exerciseDAO.createProgram()
+        } catch {
+            print("error creating program 1")
+        }
+        program1.frequency = 2
+        program1.duration = 30
         
         var exercise1 = Exercise()
         do {
@@ -93,7 +101,7 @@ class Seeder {
             print("error creating exercise 1")
         }
         exercise1.wording = "Marche"
-        exercise1.
+        exercise1.composes = program1
         
         do {
             try exerciseDAO.save()

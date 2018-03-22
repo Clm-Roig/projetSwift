@@ -12,16 +12,16 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
     
     var appointments: [Appointment?] = []
     var treatments: [Treatment?] = []
-    var exercises: [Exercise?] = []
+    var programs: [Program?] = []
     var todosList: [Any?] = []
     
     var todosTableView: UITableView
     
-    init(todosTableView: UITableView, treatments: [Treatment?], exercises: [Exercise?], apppointments: [Appointment?]) {
+    init(todosTableView: UITableView, treatments: [Treatment?], programs: [Program?], apppointments: [Appointment?]) {
         self.todosTableView = todosTableView
         self.appointments = apppointments
         self.treatments = treatments
-        self.exercises = exercises
+        self.programs = programs
         super.init()
         
         if(self.appointments.count > 0) {
@@ -34,9 +34,9 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
                 self.todosList.append(treat)
             }
         }
-        if(self.exercises.count > 0) {
-            for ex in self.exercises {
-                self.todosList.append(ex)
+        if(self.programs.count > 0) {
+            for prog in self.programs {
+                self.todosList.append(prog)
             }
         }
     }
@@ -49,6 +49,7 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
         let cell = self.todosTableView.dequeueReusableCell(withIdentifier: "todoLaterCell", for: indexPath) as! TodoLaterTableViewCell
         let todo = self.todosList[indexPath.row]
         
+        // Appointment
         if(todo is Appointment) {
             let todoApp: Appointment = todo as! Appointment
             cell.todoL.text = "RDV : Docteur " + (todoApp.proposedBy?.lastName)!
@@ -63,6 +64,20 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
             cell.dateL.text = day + " " + String(hour) + "h" + String(minute)
         }
         
+        // Progam
+        // 1 reminder just for tomorrow
+        if(todo is Program) {
+            let todoProg: Program = todo as! Program
+            cell.todoL.text = "Exercice : " + (todoProg.isComposedBy?.wording)!
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale.init(identifier: "fr_FR")
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            
+            let date = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+            let day = dateFormatter.string(from: date)
+            cell.dateL.text = day
+        }
         return cell
     }
     
