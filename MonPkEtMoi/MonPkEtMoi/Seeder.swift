@@ -82,5 +82,24 @@ class Seeder {
         } catch {
             print("Error saving practitioner seeds")
         }
+        
+        // Exercises
+        let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
+        
+        var exercise1 = Exercise()
+        do {
+            exercise1 = try exerciseDAO.create()
+        } catch {
+            print("error creating exercise 1")
+        }
+        exercise1.wording = "Marche"
+        exercise1.
+        
+        do {
+            try exerciseDAO.save()
+        } catch {
+            print("Error saving exercises seeds")
+        }
+
     }
 }
