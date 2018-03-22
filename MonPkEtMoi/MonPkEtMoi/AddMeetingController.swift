@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    var practitioners: [String] = ["Jean", "Pierre", "Marie", "Isabelle"]
+    let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
+
+    var practitioners: [Practitioner?] = []
     
     @IBOutlet weak var practitionerPicker: UIPickerView!
     @IBOutlet weak var specialityLabel: UILabel!
@@ -28,7 +29,23 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.practitioners.sort()
+        
+        // Get Data
+        do {
+            self.practitioners = try practitionerDAO.getAll()
+        } catch {
+            fatalError("Erreur lors de l'obtention des médecins.")
+        }
+        
+        self.practitioners = self.practitioners.sorted {
+            if($0?.master?.wording == $1?.master?.wording) {
+                return ($0?.lastName)! < ($1?.lastName)!
+            }
+            else {
+                return ($0?.master?.wording)! < ($1?.master?.wording)!
+            }
+        }
+        
         self.durationLabel.text = "0"
     }
     
@@ -42,7 +59,11 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return practitioners[row]
+        var title = practitioners[row]?.lastName?.uppercased()
+        let firstName = practitioners[row]?.firstName
+        let specialism = practitioners[row]?.master?.wording
+        title = title! + " " + firstName! + " - " + specialism!
+        return title
     }
     
 }

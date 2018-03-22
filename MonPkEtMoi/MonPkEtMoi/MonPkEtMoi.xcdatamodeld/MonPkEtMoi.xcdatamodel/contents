@@ -52,7 +52,7 @@
         <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Practitioner" representedClassName="Practitioner" parentEntity="Person" syncable="YES" codeGenerationType="class">
-        <relationship name="master" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Specialism" inverseName="isMasteredBy" inverseEntity="Specialism" syncable="YES"/>
+        <relationship name="master" maxCount="1" deletionRule="Nullify" destinationEntity="Specialism" inverseName="isMasteredBy" inverseEntity="Specialism" syncable="YES"/>
         <relationship name="propose" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment" inverseName="proposedBy" inverseEntity="Appointment" syncable="YES"/>
     </entity>
     <entity name="Program" representedClassName="Program" syncable="YES" codeGenerationType="class">
@@ -87,7 +87,7 @@
         <element name="Medicine" positionX="-9" positionY="-207" width="128" height="73"/>
         <element name="Patient" positionX="-749" positionY="-666" width="128" height="88"/>
         <element name="Person" positionX="-747" positionY="-387" width="126" height="135"/>
-        <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="75"/>
+        <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="73"/>
         <element name="Program" positionX="-585" positionY="-766" width="128" height="88"/>
         <element name="Specialism" positionX="-486" positionY="-198" width="128" height="73"/>
         <element name="Survey" positionX="-56" positionY="-571" width="128" height="88"/>
