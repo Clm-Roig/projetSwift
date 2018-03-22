@@ -1,5 +1,5 @@
 //
-//  TodoTableViewCell.swift
+//  TodoTodayTableViewCell
 //  MonPkEtMoi
 //
 //  Created by Clement ROIG on 14/03/2018.
@@ -7,11 +7,10 @@
 //
 import UIKit
 
-class TodoTableViewCell: UITableViewCell {
+class TodoTodayTableViewCell: UITableViewCell {
     
-    
-    @IBOutlet weak var todoTF: UILabel!
-    @IBOutlet weak var hourTF: UILabel!
+    @IBOutlet weak var todoL: UILabel!
+    @IBOutlet weak var hourL: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

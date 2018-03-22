@@ -1,5 +1,5 @@
 //
-//  TodoTableViewController.swift
+//  TodoTodayTableViewController.swift
 //  MonPkEtMoi
 //
 //  Created by Clement ROIG on 15/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodoTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
+class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     // TODO : use [Object] instead of [String]
     var appointments: [Appointment?] = []
@@ -25,7 +25,6 @@ class TodoTableViewController: NSObject, UITableViewDataSource, UITableViewDeleg
         self.exercises = exercises
         super.init()
         
-        // TODO : Process the data --> format "Todo"
         if(self.appointments.count > 0) {
             for app in self.appointments {
                 self.todosList.append(app)
@@ -48,11 +47,19 @@ class TodoTableViewController: NSObject, UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.todosTableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TodoTableViewCell
+        let cell = self.todosTableView.dequeueReusableCell(withIdentifier: "todoTodayCell", for: indexPath) as! TodoTodayTableViewCell
+        let todo = self.todosList[indexPath.row]
         
-        // TODO:
-        //cell.todoTF.text = self.todosList[indexPath.row]
-        return cell        
+        if(todo is Appointment) {
+            let todoApp: Appointment = todo as! Appointment
+            cell.todoL.text = "RDV : Docteur " + (todoApp.proposedBy?.lastName)!
+
+            let hour = Calendar.current.component(.hour, from: todoApp.date! as Date)
+            let minute = Calendar.current.component(.minute, from: todoApp.date! as Date)
+            cell.hourL.text = String(hour) + "h" + String(minute)
+        }
+        
+        return cell
     }
     
     

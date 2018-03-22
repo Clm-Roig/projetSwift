@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="width" secondItem="1uR-5I-DGN" secondAttribute="height" multiplier="3:2" id="Oew-nm-q5N"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoCell" id="ieP-VK-RGu" customClass="TodoTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoTodayCell" id="ieP-VK-RGu" customClass="TodoTodayTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ieP-VK-RGu" id="cKS-xI-iRK">
@@ -70,8 +70,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="hourTF" destination="ih9-11-6Lr" id="Kyd-AH-5Qa"/>
-                                            <outlet property="todoTF" destination="Wep-3f-pPZ" id="jR3-ov-bfL"/>
+                                            <outlet property="hourL" destination="ih9-11-6Lr" id="xDb-Dz-ksD"/>
+                                            <outlet property="todoL" destination="Wep-3f-pPZ" id="IA8-ZI-Mcg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -97,7 +97,7 @@
                                     <constraint firstAttribute="width" secondItem="4uR-vh-912" secondAttribute="height" multiplier="3:2" id="zHB-ZC-BPV"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoCell" id="xWk-eM-DvL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoLaterCell" id="xWk-eM-DvL" customClass="TodoLaterTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xWk-eM-DvL" id="hgF-HM-q8h">
@@ -126,8 +126,16 @@
                                                 <constraint firstItem="Oe7-W3-iGp" firstAttribute="leading" secondItem="hgF-HM-q8h" secondAttribute="leadingMargin" id="tnY-Qb-U0H"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateL" destination="ggV-Ns-MyH" id="GY6-i3-vNu"/>
+                                            <outlet property="todoL" destination="Oe7-W3-iGp" id="2tG-CG-SSc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dlc-UH-WBd" id="xd1-LS-nQd"/>
+                                    <outlet property="delegate" destination="dlc-UH-WBd" id="VAA-wE-LNK"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-te-F8E">
                                 <rect key="frame" x="309" y="552" width="50" height="50"/>
@@ -204,63 +212,63 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spécialité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOJ-O5-pHb">
-                                                <rect key="frame" x="8" y="269" width="81" height="21"/>
+                                                <rect key="frame" x="8" y="261" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MédecinSpecialité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ht-Hf-L7u">
-                                                <rect key="frame" x="97" y="269" width="140" height="21"/>
+                                                <rect key="frame" x="97" y="261" width="140" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date du rendez-vous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-tZ-Ao2">
-                                                <rect key="frame" x="8" y="306" width="359" height="21"/>
+                                                <rect key="frame" x="8" y="298" width="359" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durée du trajet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHj-yg-4AK">
-                                                <rect key="frame" x="8" y="567" width="122.5" height="21"/>
+                                                <rect key="frame" x="8" y="559" width="122.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="180" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Ec-0P-Yj8">
-                                                <rect key="frame" x="140.5" y="596" width="94" height="29"/>
+                                                <rect key="frame" x="140.5" y="588" width="94" height="29"/>
                                                 <connections>
                                                     <action selector="stepper:" destination="Fyo-KO-kiL" eventType="valueChanged" id="abB-Sh-pPs"/>
                                                 </connections>
                                             </stepper>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXh-PQ-f8w">
-                                                <rect key="frame" x="176" y="567" width="23" height="21"/>
+                                                <rect key="frame" x="176" y="559" width="23" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-eW-ENm">
-                                                <rect key="frame" x="231" y="567" width="28" height="21"/>
+                                                <rect key="frame" x="231" y="559" width="28" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVg-YC-whq">
-                                                <rect key="frame" x="16" y="657" width="351" height="30"/>
+                                                <rect key="frame" x="16" y="649" width="351" height="30"/>
                                                 <state key="normal" title="Ajouter un rendez-vous"/>
                                                 <connections>
                                                     <action selector="addMeetingButton:" destination="Fyo-KO-kiL" eventType="touchUpInside" id="BW4-Qh-i1h"/>
                                                 </connections>
                                             </button>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-6s-Hfe">
-                                                <rect key="frame" x="0.0" y="335" width="375" height="216"/>
+                                                <rect key="frame" x="0.0" y="327" width="375" height="216"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="543174573.58484101">
                                                     <!--2018-03-19 17:49:33 +0000-->
                                                 </date>
                                                 <locale key="locale" localeIdentifier="fr"/>
                                             </datePicker>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btH-3y-dy7">
-                                                <rect key="frame" x="0.0" y="37" width="375" height="216"/>
+                                                <rect key="frame" x="0.0" y="29" width="375" height="216"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="Fyo-KO-kiL" id="Uc6-6k-RYK"/>
                                                     <outlet property="delegate" destination="Fyo-KO-kiL" id="eb1-F8-NQE"/>
@@ -270,7 +278,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="GVg-YC-whq" firstAttribute="trailing" secondItem="OTF-bD-Oq9" secondAttribute="trailingMargin" id="0Uk-Rv-Fbr"/>
-                                            <constraint firstItem="btH-3y-dy7" firstAttribute="top" secondItem="p1b-80-wUb" secondAttribute="bottom" constant="8" id="1TU-jn-Mbp"/>
+                                            <constraint firstItem="btH-3y-dy7" firstAttribute="top" secondItem="p1b-80-wUb" secondAttribute="bottom" id="1TU-jn-Mbp"/>
                                             <constraint firstAttribute="trailing" secondItem="TDd-6s-Hfe" secondAttribute="trailing" id="7Tq-Df-YA4"/>
                                             <constraint firstItem="DR0-tZ-Ao2" firstAttribute="top" secondItem="9Ht-Hf-L7u" secondAttribute="bottom" constant="16" id="CBb-m9-Szz"/>
                                             <constraint firstItem="UHj-yg-4AK" firstAttribute="leading" secondItem="OTF-bD-Oq9" secondAttribute="leadingMargin" id="CDq-WN-OD6"/>

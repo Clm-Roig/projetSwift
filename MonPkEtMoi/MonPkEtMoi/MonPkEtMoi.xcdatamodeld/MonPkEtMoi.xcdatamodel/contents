@@ -3,7 +3,7 @@
     <entity name="Appointment" representedClassName="Appointment" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="askFor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Survey" inverseName="isAskedBy" inverseEntity="Survey" syncable="YES"/>
-        <relationship name="proposedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Practitioner" inverseName="propose" inverseEntity="Practitioner" syncable="YES"/>
+        <relationship name="proposedBy" maxCount="1" deletionRule="Nullify" destinationEntity="Practitioner" inverseName="propose" inverseEntity="Practitioner" syncable="YES"/>
     </entity>
     <entity name="Evaluation" representedClassName="Evaluation" syncable="YES" codeGenerationType="class">
         <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -47,13 +47,13 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
         <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Practitioner" representedClassName="Practitioner" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <relationship name="master" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Specialism" inverseName="isMasteredBy" inverseEntity="Specialism" syncable="YES"/>
-        <relationship name="propose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment" inverseName="proposedBy" inverseEntity="Appointment" syncable="YES"/>
+        <relationship name="propose" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment" inverseName="proposedBy" inverseEntity="Appointment" syncable="YES"/>
     </entity>
     <entity name="Program" representedClassName="Program" syncable="YES" codeGenerationType="class">
         <attribute name="frequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -76,7 +76,7 @@
         <relationship name="need" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="isLinkedTo" inverseEntity="Medicine" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Appointment" positionX="-315" positionY="-601" width="128" height="88"/>
+        <element name="Appointment" positionX="-315" positionY="-601" width="128" height="90"/>
         <element name="Evaluation" positionX="142" positionY="-540" width="128" height="88"/>
         <element name="EvaluationType" positionX="153" positionY="-352" width="128" height="73"/>
         <element name="Event" positionX="-63" positionY="-699" width="128" height="88"/>
@@ -85,8 +85,8 @@
         <element name="ExerciseDone" positionX="-585" positionY="-612" width="128" height="88"/>
         <element name="Medicine" positionX="-9" positionY="-207" width="128" height="73"/>
         <element name="Patient" positionX="-749" positionY="-666" width="128" height="88"/>
-        <element name="Person" positionX="-747" positionY="-387" width="126" height="133"/>
-        <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="73"/>
+        <element name="Person" positionX="-747" positionY="-387" width="126" height="135"/>
+        <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="75"/>
         <element name="Program" positionX="-585" positionY="-766" width="128" height="73"/>
         <element name="Specialism" positionX="-486" positionY="-198" width="128" height="73"/>
         <element name="Survey" positionX="-56" positionY="-571" width="128" height="88"/>

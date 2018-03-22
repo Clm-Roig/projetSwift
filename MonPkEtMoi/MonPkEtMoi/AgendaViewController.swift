@@ -27,8 +27,8 @@ class AgendaViewController : UIViewController {
     var exercisesLater: [Exercise?] = []
     var treatmentsLater: [Treatment?] = []
     
-    var tableViewTodoTodayCtrl: TodoTableViewController?
-    var tableViewTodoLaterCtrl: TodoTableViewController?
+    var tableViewTodoTodayCtrl: TodoTodayTableViewController?
+    var tableViewTodoLaterCtrl: TodoLaterTableViewController?
 
     @IBOutlet weak var todosTableViewToday: UITableView!
     @IBOutlet weak var todosTableViewLater: UITableView!
@@ -71,17 +71,29 @@ class AgendaViewController : UIViewController {
         }
          */
         
+        
         // Separate today's TODOs and later's TODOs
+        if (self.appointments.count > 0) {
+            for app in self.appointments {
+                if(Calendar.autoupdatingCurrent.isDateInToday(app!.date! as Date)) {
+                    self.appointmentsToday.append(app)
+                }
+                else {
+                    self.appointmentsLater.append(app)
+                }
+            }
+        }
         
         
         // Construct table view controller
-        tableViewTodoTodayCtrl = TodoTableViewController(todosTableView: self.todosTableViewToday, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
+        tableViewTodoTodayCtrl = TodoTodayTableViewController(todosTableView: self.todosTableViewToday, treatments: self.treatmentsToday, exercises: self.exercisesToday, apppointments: self.appointmentsToday)
         self.todosTableViewToday.dataSource = self.tableViewTodoTodayCtrl
         self.todosTableViewToday.delegate = self.tableViewTodoTodayCtrl
         
-        tableViewTodoLaterCtrl = TodoTableViewController(todosTableView: self.todosTableViewLater, treatments: self.treatmentsLater, exercises: self.exercisesLater, apppointments: self.appointmentsLater)
-        self.todosTableViewLater.dataSource = self.tableViewTodoTodayCtrl
-        self.todosTableViewLater.delegate = self.tableViewTodoTodayCtrl
+        
+        tableViewTodoLaterCtrl = TodoLaterTableViewController(todosTableView: self.todosTableViewLater, treatments: self.treatmentsLater, exercises: self.exercisesLater, apppointments: self.appointmentsLater)
+        self.todosTableViewLater.dataSource = self.tableViewTodoLaterCtrl
+        self.todosTableViewLater.delegate = self.tableViewTodoLaterCtrl
 
     }
     

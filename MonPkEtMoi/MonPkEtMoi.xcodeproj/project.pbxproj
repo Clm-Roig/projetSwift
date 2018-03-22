@@ -13,14 +13,12 @@
 		847C756B2062A3F100038449 /* PractitionerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C756A2062A3F100038449 /* PractitionerTableViewCell.swift */; };
 		847C756D2062A40C00038449 /* PractitionerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C756C2062A40C00038449 /* PractitionerTableViewController.swift */; };
 		BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B263D205E990E009BFE67 /* ProfileViewController.swift */; };
-		E0050682205AB22B000533DA /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0050681205AB22B000533DA /* TodoTableViewController.swift */; };
 		E016041F206104E100E6EB08 /* PractitionerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016041E206104E100E6EB08 /* PractitionerDAO.swift */; };
 		E01604212061050900E6EB08 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01604202061050900E6EB08 /* DAO.swift */; };
 		E0160423206108E600E6EB08 /* AbstractDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0160422206108E600E6EB08 /* AbstractDAOFactory.swift */; };
 		E0160426206109A300E6EB08 /* CoreDataDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0160425206109A300E6EB08 /* CoreDataDAOFactory.swift */; };
 		E016042820610A0100E6EB08 /* CDPractitionerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */; };
 		E016042C2061101300E6EB08 /* CDDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016042B2061101300E6EB08 /* CDDAO.swift */; };
-		E016B0FB205989A900D9E7E9 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016B0FA205989A900D9E7E9 /* TodoTableViewCell.swift */; };
 		E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D39C82059540300C33AF8 /* ExerciseViewController.swift */; };
 		E0788763205BC4B100F9E499 /* CoreDateConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0788762205BC4B100F9E499 /* CoreDateConnection.swift */; };
 		E08151FA2061178000A98DF6 /* SpecialismDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08151F92061178000A98DF6 /* SpecialismDAO.swift */; };
@@ -42,6 +40,10 @@
 		E0B02CB420590CF800841B32 /* Specialism.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB320590CF800841B32 /* Specialism.swift */; };
 		E0B02CB62059151100841B32 /* TreatmentAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB52059151100841B32 /* TreatmentAddViewController.swift */; };
 		E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B02CB7205920B500841B32 /* TreatmentTableViewCell.swift */; };
+		E0B0F1F62063F4A100A22BC7 /* TodoTodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0F1F52063F4A100A22BC7 /* TodoTodayTableViewCell.swift */; };
+		E0B0F1F82063F4DE00A22BC7 /* TodoLaterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0F1F72063F4DE00A22BC7 /* TodoLaterTableViewCell.swift */; };
+		E0B0F1FA2063F53100A22BC7 /* TodoTodayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0F1F92063F53100A22BC7 /* TodoTodayTableViewController.swift */; };
+		E0B0F1FC2063F56700A22BC7 /* TodoLaterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B0F1FB2063F56700A22BC7 /* TodoLaterTableViewController.swift */; };
 		E0D99C0C2061203200CF2508 /* AddPractitionerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D99C0B2061203200CF2508 /* AddPractitionerViewController.swift */; };
 		E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */; };
 		E0FCAE95203EF9A300F04470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FCAE93203EF9A300F04470 /* Main.storyboard */; };
@@ -78,14 +80,12 @@
 		847C756A2062A3F100038449 /* PractitionerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerTableViewCell.swift; sourceTree = "<group>"; };
 		847C756C2062A40C00038449 /* PractitionerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerTableViewController.swift; sourceTree = "<group>"; };
 		BC7B263D205E990E009BFE67 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		E0050681205AB22B000533DA /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		E016041E206104E100E6EB08 /* PractitionerDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerDAO.swift; sourceTree = "<group>"; };
 		E01604202061050900E6EB08 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		E0160422206108E600E6EB08 /* AbstractDAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDAOFactory.swift; sourceTree = "<group>"; };
 		E0160425206109A300E6EB08 /* CoreDataDAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAOFactory.swift; sourceTree = "<group>"; };
 		E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPractitionerDAO.swift; sourceTree = "<group>"; };
 		E016042B2061101300E6EB08 /* CDDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDAO.swift; sourceTree = "<group>"; };
-		E016B0FA205989A900D9E7E9 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		E03D39C82059540300C33AF8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		E0788762205BC4B100F9E499 /* CoreDateConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDateConnection.swift; sourceTree = "<group>"; };
 		E08151F92061178000A98DF6 /* SpecialismDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialismDAO.swift; sourceTree = "<group>"; };
@@ -107,6 +107,10 @@
 		E0B02CB320590CF800841B32 /* Specialism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specialism.swift; path = Models/Specialism.swift; sourceTree = "<group>"; };
 		E0B02CB52059151100841B32 /* TreatmentAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentAddViewController.swift; sourceTree = "<group>"; };
 		E0B02CB7205920B500841B32 /* TreatmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTableViewCell.swift; sourceTree = "<group>"; };
+		E0B0F1F52063F4A100A22BC7 /* TodoTodayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTodayTableViewCell.swift; sourceTree = "<group>"; };
+		E0B0F1F72063F4DE00A22BC7 /* TodoLaterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoLaterTableViewCell.swift; sourceTree = "<group>"; };
+		E0B0F1F92063F53100A22BC7 /* TodoTodayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTodayTableViewController.swift; sourceTree = "<group>"; };
+		E0B0F1FB2063F56700A22BC7 /* TodoLaterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoLaterTableViewController.swift; sourceTree = "<group>"; };
 		E0D99C0B2061203200CF2508 /* AddPractitionerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPractitionerViewController.swift; sourceTree = "<group>"; };
 		E0FCAE8C203EF9A300F04470 /* MonPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,9 +166,11 @@
 			isa = PBXGroup;
 			children = (
 				15723EF420583BDC00866455 /* AgendaViewController.swift */,
-				E0050681205AB22B000533DA /* TodoTableViewController.swift */,
+				E0B0F1F92063F53100A22BC7 /* TodoTodayTableViewController.swift */,
+				E0B0F1FB2063F56700A22BC7 /* TodoLaterTableViewController.swift */,
 				E096031C206027B900E4F5C4 /* AddMeetingController.swift */,
-				E016B0FA205989A900D9E7E9 /* TodoTableViewCell.swift */,
+				E0B0F1F52063F4A100A22BC7 /* TodoTodayTableViewCell.swift */,
+				E0B0F1F72063F4DE00A22BC7 /* TodoLaterTableViewCell.swift */,
 			);
 			name = Agenda;
 			sourceTree = "<group>";
@@ -466,8 +472,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01604212061050900E6EB08 /* DAO.swift in Sources */,
+				E0B0F1FA2063F53100A22BC7 /* TodoTodayTableViewController.swift in Sources */,
 				E09603222060441500E4F5C4 /* AlertHelper.swift in Sources */,
 				E0160423206108E600E6EB08 /* AbstractDAOFactory.swift in Sources */,
+				E0B0F1F62063F4A100A22BC7 /* TodoTodayTableViewCell.swift in Sources */,
 				15723EED2058330F00866455 /* RegistrationViewController.swift in Sources */,
 				E0160426206109A300E6EB08 /* CoreDataDAOFactory.swift in Sources */,
 				E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */,
@@ -475,6 +483,7 @@
 				E09EACE82062C57A008A6B01 /* CDAppointmentDAO.swift in Sources */,
 				847C756B2062A3F100038449 /* PractitionerTableViewCell.swift in Sources */,
 				E096031D206027B900E4F5C4 /* AddMeetingController.swift in Sources */,
+				E0B0F1F82063F4DE00A22BC7 /* TodoLaterTableViewCell.swift in Sources */,
 				E096031F20603FDE00E4F5C4 /* PatientDAO.swift in Sources */,
 				E09EACE42062C1AD008A6B01 /* CDExerciseDAO.swift in Sources */,
 				E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */,
@@ -493,9 +502,8 @@
 				E0788763205BC4B100F9E499 /* CoreDateConnection.swift in Sources */,
 				E0B02CAA20590AED00841B32 /* PersonModel.swift in Sources */,
 				E016042820610A0100E6EB08 /* CDPractitionerDAO.swift in Sources */,
-				E016B0FB205989A900D9E7E9 /* TodoTableViewCell.swift in Sources */,
 				E08151FE20611AB300A98DF6 /* Seeder.swift in Sources */,
-				E0050682205AB22B000533DA /* TodoTableViewController.swift in Sources */,
+				E0B0F1FC2063F56700A22BC7 /* TodoLaterTableViewController.swift in Sources */,
 				E09EACE22062C139008A6B01 /* ExerciseDAO.swift in Sources */,
 				E016042C2061101300E6EB08 /* CDDAO.swift in Sources */,
 				BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */,
