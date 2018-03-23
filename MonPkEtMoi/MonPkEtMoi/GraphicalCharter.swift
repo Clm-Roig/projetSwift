@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+let DEEP_BLUE = "#1C2145FF"
+let LIGHT_BLUE = "#E6F7FFFF"
+let ORANGE = "#FF7E0BFF"
+let NONE = "#00000000"
+
 class MyUIView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.backgroundColor = UIColor(hexString: "#cfdeffff")
+        self.backgroundColor = UIColor(hexString: LIGHT_BLUE)
     }
     
 }
@@ -20,8 +25,22 @@ class MyUIView: UIView {
 class MyUIButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let fontColor = UIColor(hexString: "#ff6600ff")
+        let fontColor = UIColor(hexString: ORANGE)
         self.setTitleColor(fontColor, for: UIControlState.normal)
+    }
+}
+
+class MyTextView: UITextView {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor(hexString: NONE)
+    }
+}
+
+class MyBlueLabel: UILabel {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor(hexString: DEEP_BLUE)
     }
 }
 
