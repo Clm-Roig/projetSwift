@@ -59,7 +59,7 @@
     <entity name="Program" representedClassName="Program" syncable="YES" codeGenerationType="class">
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="frequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="isComposedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="composes" inverseEntity="Exercise" syncable="YES"/>
+        <relationship name="isComposedBy" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="composes" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <entity name="Specialism" representedClassName="Specialism" syncable="YES" codeGenerationType="class">
         <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
