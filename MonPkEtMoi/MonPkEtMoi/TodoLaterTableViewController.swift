@@ -66,7 +66,7 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
             
             dateFormatter.dateFormat = "HH"
             let hour = dateFormatter.string(from: date as Date)
-                        
+            
             cell.dateL.text = day + " " + String(hour) + "h" + String(minute)
         }
         

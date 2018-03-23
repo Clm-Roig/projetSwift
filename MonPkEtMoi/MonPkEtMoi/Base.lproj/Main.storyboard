@@ -776,8 +776,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="hhN-ky-Ovd" kind="relationship" relationship="viewControllers" id="bIT-hn-dKP"/>
-                        <segue destination="SD6-zt-a3I" kind="relationship" relationship="viewControllers" id="SS1-FN-fZk"/>
                         <segue destination="tgl-bB-CRy" kind="relationship" relationship="viewControllers" id="kaf-fJ-zfc"/>
+                        <segue destination="SD6-zt-a3I" kind="relationship" relationship="viewControllers" id="SS1-FN-fZk"/>
                         <segue destination="8Zw-N9-kYt" kind="relationship" relationship="viewControllers" id="RJe-FW-71y"/>
                         <segue destination="EKx-Xv-k5F" kind="relationship" relationship="viewControllers" id="wMB-Hy-z9O"/>
                     </connections>
