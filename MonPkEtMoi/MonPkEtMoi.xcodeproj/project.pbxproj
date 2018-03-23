@@ -19,6 +19,8 @@
 		E0160426206109A300E6EB08 /* CoreDataDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0160425206109A300E6EB08 /* CoreDataDAOFactory.swift */; };
 		E016042820610A0100E6EB08 /* CDPractitionerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */; };
 		E016042C2061101300E6EB08 /* CDDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016042B2061101300E6EB08 /* CDDAO.swift */; };
+		E032EE9A2064EF2700BDB87E /* AddExerciseDoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E032EE992064EF2700BDB87E /* AddExerciseDoneController.swift */; };
+		E032EE9C2064EF3200BDB87E /* AddProgramController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E032EE9B2064EF3200BDB87E /* AddProgramController.swift */; };
 		E03D39C92059540300C33AF8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D39C82059540300C33AF8 /* ExerciseViewController.swift */; };
 		E0788763205BC4B100F9E499 /* CoreDateConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0788762205BC4B100F9E499 /* CoreDateConnection.swift */; };
 		E08151FA2061178000A98DF6 /* SpecialismDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08151F92061178000A98DF6 /* SpecialismDAO.swift */; };
@@ -81,6 +83,8 @@
 		E0160425206109A300E6EB08 /* CoreDataDAOFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAOFactory.swift; sourceTree = "<group>"; };
 		E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPractitionerDAO.swift; sourceTree = "<group>"; };
 		E016042B2061101300E6EB08 /* CDDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDDAO.swift; sourceTree = "<group>"; };
+		E032EE992064EF2700BDB87E /* AddExerciseDoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseDoneController.swift; sourceTree = "<group>"; };
+		E032EE9B2064EF3200BDB87E /* AddProgramController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProgramController.swift; sourceTree = "<group>"; };
 		E03D39C82059540300C33AF8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		E0788762205BC4B100F9E499 /* CoreDateConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDateConnection.swift; sourceTree = "<group>"; };
 		E08151F92061178000A98DF6 /* SpecialismDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialismDAO.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				E03D39C82059540300C33AF8 /* ExerciseViewController.swift */,
+				E032EE9B2064EF3200BDB87E /* AddProgramController.swift */,
+				E032EE992064EF2700BDB87E /* AddExerciseDoneController.swift */,
 			);
 			name = Exercise;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 				E08151FC206117F200A98DF6 /* CDSpecialismDAO.swift in Sources */,
 				E0FCAE98203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld in Sources */,
 				E08151FA2061178000A98DF6 /* SpecialismDAO.swift in Sources */,
+				E032EE9C2064EF3200BDB87E /* AddProgramController.swift in Sources */,
 				847C756D2062A40C00038449 /* PractitionerTableViewController.swift in Sources */,
 				E09EACE62062C449008A6B01 /* AppointmentDAO.swift in Sources */,
 				E0A6AC9720629C8900CC45E0 /* PractitionerViewController.swift in Sources */,
@@ -479,6 +486,7 @@
 				E08151FE20611AB300A98DF6 /* Seeder.swift in Sources */,
 				E0B0F1FC2063F56700A22BC7 /* TodoLaterTableViewController.swift in Sources */,
 				E09EACE22062C139008A6B01 /* ExerciseDAO.swift in Sources */,
+				E032EE9A2064EF2700BDB87E /* AddExerciseDoneController.swift in Sources */,
 				E016042C2061101300E6EB08 /* CDDAO.swift in Sources */,
 				BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */,
 				E016041F206104E100E6EB08 /* PractitionerDAO.swift in Sources */,
