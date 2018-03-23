@@ -64,7 +64,7 @@ class CDExerciseDAO: CDDAO, ExerciseDAO {
     
     func getAllExercisesDone() throws -> [ExerciseDone?] {
         var exercisesDone: [ExerciseDone] = []
-        let request: NSFetchRequest<ExercisesDone> = NSFetchRequest(entityName: "ExerciseDone")
+        let request: NSFetchRequest<ExerciseDone> = NSFetchRequest(entityName: "ExerciseDone")
         do {
             exercisesDone = try self.context.fetch(request)
         } catch let error {

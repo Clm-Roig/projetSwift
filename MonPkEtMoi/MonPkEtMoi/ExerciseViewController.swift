@@ -47,14 +47,14 @@ class ExerciseViewController : UIViewController {
         }
         
         // Construct table view controller
-        tableViewProgramCtrl = ProgramTableViewController()
+        tableViewProgramCtrl = ProgramTableViewController(tableView: programTableView, programs: programs)
         self.programTableView.dataSource = self.tableViewProgramCtrl
         self.programTableView.delegate = self.tableViewProgramCtrl
         
         
-        tableViewExDoneCtrl = ExerciseDoneTableViewController()
-        self.exerciseDoneTableView.dataSource = self.ExerciseDoneTableViewController
-        self.exerciseDoneTableView.delegate = self.ExerciseDoneTableViewController
+        tableViewExDoneCtrl = ExerciseDoneTableViewController(tableView: exerciseDoneTableView, exercisesDone: exercisesDone)
+        self.exerciseDoneTableView.dataSource = self.tableViewExDoneCtrl
+        self.exerciseDoneTableView.delegate = self.tableViewExDoneCtrl
     }
     
     

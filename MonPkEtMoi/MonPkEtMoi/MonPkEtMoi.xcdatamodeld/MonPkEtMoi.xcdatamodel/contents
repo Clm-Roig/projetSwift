@@ -33,7 +33,7 @@
     <entity name="ExerciseDone" representedClassName="ExerciseDone" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="concerns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="isConcernedBy" inverseEntity="Exercise" syncable="YES"/>
+        <relationship name="concerns" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="isConcernedBy" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <entity name="Medicine" representedClassName="Medicine" syncable="YES" codeGenerationType="class">
         <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
