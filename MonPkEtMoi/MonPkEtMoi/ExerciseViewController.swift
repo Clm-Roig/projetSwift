@@ -57,5 +57,9 @@ class ExerciseViewController : UIViewController {
         self.exerciseDoneTableView.delegate = self.tableViewExDoneCtrl
     }
     
+    @IBAction func unwindToExercises(segue:UIStoryboardSegue) {
+        loadData()
+    }
+    
     
 }

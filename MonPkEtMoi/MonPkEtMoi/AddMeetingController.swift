@@ -85,7 +85,7 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
         self.travelTimeL.text = "0"
     }
     
-    @IBAction func goBackToOneButtonTapped(_ sender: Any) {
+    @IBAction func goBack(_ sender: Any) {
         performSegue(withIdentifier: "unwindSegueToAgenda", sender: self)
     }
     

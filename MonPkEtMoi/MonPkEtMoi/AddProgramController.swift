@@ -44,9 +44,11 @@ class AddProgramController: UIViewController {
             newExercise.wording = activityTF.text
             newProgram.isComposedBy = newExercise
             newProgram.duration = Int16(duration.text!)!
+            newProgram.frequency = Int16(frequency.text!)!
             
             do {
                 try exerciseDAO.save()
+                performSegue(withIdentifier: "unwindSegueToExercises", sender: self)
             } catch {
                 AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du programme.")
             }
@@ -58,12 +60,13 @@ class AddProgramController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         frequency.text = "1"
         duration.text = "5"
         
     }
+    
+    
     
 }
