@@ -9,7 +9,8 @@
 import UIKit
 
 class ProgramTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
-    
+    let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
+
     var programs : [Program?] = []
     var tableView : UITableView
     
@@ -36,7 +37,21 @@ class ProgramTableViewController: NSObject, UITableViewDataSource, UITableViewDe
         cell.frequencyL.text = String(frequency) + " fois par jour"
         
         return cell
-        
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            exerciseDAO.deleteProgram(prog: programs[indexPath.row]!)
+            do {
+                try exerciseDAO.save()
+            } catch {
+                fatalError("Erreur à la suppression du programme.")
+            }
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            programs.remove(at: indexPath.row)
+            tableView.endUpdates()
+        }
     }
 
 }

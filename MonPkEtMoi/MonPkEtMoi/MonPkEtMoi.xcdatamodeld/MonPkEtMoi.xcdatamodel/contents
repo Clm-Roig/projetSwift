@@ -83,8 +83,8 @@
         <element name="EvaluationType" positionX="153" positionY="-352" width="128" height="73"/>
         <element name="Event" positionX="-63" positionY="-699" width="128" height="88"/>
         <element name="EventType" positionX="117" positionY="-714" width="128" height="88"/>
-        <element name="Exercise" positionX="-351" positionY="-756" width="128" height="88"/>
-        <element name="ExerciseDone" positionX="-585" positionY="-612" width="128" height="88"/>
+        <element name="Exercise" positionX="-351" positionY="-756" width="128" height="90"/>
+        <element name="ExerciseDone" positionX="-585" positionY="-612" width="128" height="90"/>
         <element name="Medicine" positionX="-9" positionY="-207" width="128" height="73"/>
         <element name="Patient" positionX="-749" positionY="-666" width="128" height="88"/>
         <element name="Person" positionX="-747" positionY="-387" width="126" height="135"/>
