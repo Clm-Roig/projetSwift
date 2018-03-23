@@ -75,6 +75,12 @@ class AgendaViewController : UIViewController {
          }
          */
         
+        appointmentsToday = []
+        appointmentsLater = []
+        programsToday = []
+        programsLater = []
+        treatmentsToday = []
+        treatmentsLater = []
         
         // Separate today's TODOs and later's TODOs
         if (self.appointments.count > 0) {
