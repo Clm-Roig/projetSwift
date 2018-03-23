@@ -52,4 +52,25 @@ class CDExerciseDAO: CDDAO, ExerciseDAO {
         return programs
     }
     
+    // ==========================================
+    // EXERCISES DONE
+    func createExerciseDone() throws -> ExerciseDone {
+        return ExerciseDone(context: self.context)
+    }
+    
+    func deleteExerciseDone(exerciseDone: ExerciseDone) {
+        self.context.delete(exerciseDone)
+    }
+    
+    func getAllExercisesDone() throws -> [ExerciseDone?] {
+        var exercisesDone: [ExerciseDone] = []
+        let request: NSFetchRequest<ExercisesDone> = NSFetchRequest(entityName: "ExerciseDone")
+        do {
+            exercisesDone = try self.context.fetch(request)
+        } catch let error {
+            throw error
+        }
+        return exercisesDone
+    }
+    
 }
