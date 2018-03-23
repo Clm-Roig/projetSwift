@@ -56,17 +56,12 @@ class AddProgramController: UIViewController {
         else {
             AlertHelper.alertWarning(view: self, warningMessage: "Veuillez renseigner une activité.")
         }
-        
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         frequency.text = "1"
         duration.text = "5"
-        
     }
-    
-    
     
 }

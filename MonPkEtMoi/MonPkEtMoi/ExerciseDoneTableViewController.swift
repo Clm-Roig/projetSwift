@@ -28,7 +28,14 @@ class ExerciseDoneTableViewController: NSObject, UITableViewDataSource, UITableV
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "exerciseDoneCell", for: indexPath) as! ExerciseDoneTableViewCell
         let exerciseDone = self.exercisesDone[indexPath.row]
         
-        cell.dateL.text = String(describing: exerciseDone?.date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.init(identifier: "fr_FR")
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        let date: NSDate = exerciseDone!.date!
+        let day = dateFormatter.string(from: date as Date)
+
+        cell.dateL.text = day
         cell.activityL.text = exerciseDone?.concerns?.wording
         let duration = Int((exerciseDone?.duration)!)
         cell.durationL.text = String(duration) + " min"

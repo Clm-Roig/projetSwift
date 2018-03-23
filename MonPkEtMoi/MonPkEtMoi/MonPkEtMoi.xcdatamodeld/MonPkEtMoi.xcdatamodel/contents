@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Appointment" representedClassName="Appointment" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="travelTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="askFor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Survey" inverseName="isAskedBy" inverseEntity="Survey" syncable="YES"/>
         <relationship name="proposedBy" maxCount="1" deletionRule="Nullify" destinationEntity="Practitioner" inverseName="propose" inverseEntity="Practitioner" syncable="YES"/>
@@ -31,7 +31,7 @@
         <relationship name="isConcernedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseDone" inverseName="concerns" inverseEntity="ExerciseDone" syncable="YES"/>
     </entity>
     <entity name="ExerciseDone" representedClassName="ExerciseDone" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="concerns" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="isConcernedBy" inverseEntity="Exercise" syncable="YES"/>
     </entity>
