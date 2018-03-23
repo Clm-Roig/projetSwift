@@ -10,10 +10,37 @@ import Foundation
 
 class Seeder {
     func seed() {
+        
+        // Specialisms 
+        let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
+        let specialisms = ["kinésithérapeute","infirmier","orthophoniste","infirmier", "psychologue clinicien","neuropsychologue","médecine généraliste","psychiatre","neurochirurgien"]
+        
+        for spe in specialisms {
+            var newSpe = Specialism()
+            do {
+                newSpe = try specialismDAO.create()
+                newSpe.wording = spe
+            } catch {
+                print("error creating specialism")
+            }
+        }
+        do {
+            try specialismDAO.save()
+        } catch {
+            print("Error saving specialisms seeds")
+        }
+        
+        
         // Practitioner
         let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
-        let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
         
+        var spe:[Specialism] = []
+        do {
+            spe = try specialismDAO.getAll() as! [Specialism]
+        } catch {
+            print("error creating getting all specialisms")
+        }
+
         var practitioner1 = Practitioner()
         do {
             practitioner1 = try practitionerDAO.create()
@@ -23,15 +50,7 @@ class Seeder {
         practitioner1.firstName = "Michel"
         practitioner1.lastName = "Dupond"
         practitioner1.city = "Montpellier"
-        
-        var spe1 = Specialism()
-        do {
-            spe1 = try specialismDAO.create()
-        } catch {
-            print("error creating specialism 1")
-        }
-        spe1.setValue("neurologue", forKey: "wording")
-        practitioner1.setValue(spe1, forKey: "master")
+        practitioner1.master = spe[0]
         
         var practitioner2 = Practitioner()
         do {
@@ -42,15 +61,19 @@ class Seeder {
         practitioner2.firstName = "Marie"
         practitioner2.lastName = "Monroe"
         practitioner2.city = "Castelnau Le Lez"
+        practitioner2.master = spe[1]
         
-        var spe2 = Specialism()
+        var practitioner3 = Practitioner()
         do {
-            spe2 = try specialismDAO.create()
+            practitioner3 = try practitionerDAO.create()
         } catch {
-            print("error creating specialism 2")
+            print("error creating practitioner3")
         }
-        spe2.setValue("kinésithérapeute", forKey: "wording")
-        practitioner2.setValue(spe2, forKey: "master")
+        practitioner3.firstName = "Olivier"
+        practitioner3.lastName = "Lambert"
+        practitioner3.city = "Montpellier"
+        practitioner3.master = spe[1]
+        
         do {
             try practitionerDAO.save()
         } catch {
