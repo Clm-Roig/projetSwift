@@ -13,7 +13,7 @@ class Seeder {
         
         // Specialisms 
         let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
-        let specialisms = ["kinésithérapeute","infirmier","orthophoniste","infirmier", "psychologue clinicien","neuropsychologue","médecine généraliste","psychiatre","neurochirurgien"]
+        let specialisms = ["kinésithérapeute","infirmier","orthophoniste", "psychologue clinicien","neuropsychologue","médecine généraliste","psychiatre","neurochirurgien"]
         
         for spe in specialisms {
             var newSpe = Specialism()

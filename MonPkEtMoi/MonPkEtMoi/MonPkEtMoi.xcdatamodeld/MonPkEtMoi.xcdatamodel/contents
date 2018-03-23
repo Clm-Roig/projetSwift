@@ -57,12 +57,12 @@
         <relationship name="propose" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Appointment" inverseName="proposedBy" inverseEntity="Appointment" syncable="YES"/>
     </entity>
     <entity name="Program" representedClassName="Program" syncable="YES" codeGenerationType="class">
-        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="frequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="duration" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frequency" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="isComposedBy" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="composes" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <entity name="Specialism" representedClassName="Specialism" syncable="YES" codeGenerationType="class">
-        <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wording" attributeType="String" syncable="YES"/>
         <relationship name="isMasteredBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Practitioner" inverseName="master" inverseEntity="Practitioner" syncable="YES"/>
     </entity>
     <entity name="Survey" representedClassName="Survey" syncable="YES" codeGenerationType="class">
@@ -89,8 +89,8 @@
         <element name="Patient" positionX="-749" positionY="-666" width="128" height="88"/>
         <element name="Person" positionX="-747" positionY="-387" width="126" height="135"/>
         <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="75"/>
-        <element name="Program" positionX="-585" positionY="-766" width="128" height="88"/>
-        <element name="Specialism" positionX="-486" positionY="-198" width="128" height="73"/>
+        <element name="Program" positionX="-585" positionY="-766" width="128" height="90"/>
+        <element name="Specialism" positionX="-486" positionY="-198" width="128" height="75"/>
         <element name="Survey" positionX="-56" positionY="-571" width="128" height="88"/>
         <element name="Treatment" positionX="-65" positionY="-432" width="128" height="120"/>
     </elements>

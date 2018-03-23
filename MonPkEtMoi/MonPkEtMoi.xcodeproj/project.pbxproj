@@ -54,6 +54,8 @@
 		E0FCAEB3203EF9A300F04470 /* MonPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEB2203EF9A300F04470 /* MonPkEtMoiUITests.swift */; };
 		E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */; };
 		F3093CAE206457350010ED39 /* GraphicalCharter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3093CAD206457350010ED39 /* GraphicalCharter.swift */; };
+		F3093CB02065AAFF0010ED39 /* TreatmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */; };
+		F3093CB22065AB860010ED39 /* CDTreatmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3093CB12065AB860010ED39 /* CDTreatmentDAO.swift */; };
 		F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +130,8 @@
 		E0FCAEB4203EF9A300F04470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0FCAEC2203F291600F04470 /* TreatmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentViewController.swift; sourceTree = "<group>"; };
 		F3093CAD206457350010ED39 /* GraphicalCharter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicalCharter.swift; sourceTree = "<group>"; };
+		F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentDAO.swift; sourceTree = "<group>"; };
+		F3093CB12065AB860010ED39 /* CDTreatmentDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDTreatmentDAO.swift; sourceTree = "<group>"; };
 		F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPatientDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +221,7 @@
 				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
 				E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */,
 				E08151FB206117F200A98DF6 /* CDSpecialismDAO.swift */,
+				F3093CB12065AB860010ED39 /* CDTreatmentDAO.swift */,
 			);
 			name = CoreDataDAO;
 			sourceTree = "<group>";
@@ -318,10 +323,11 @@
 				E0160424206108FA00E6EB08 /* Factories */,
 				E0788762205BC4B100F9E499 /* CoreDateConnection.swift */,
 				E01604202061050900E6EB08 /* DAO.swift */,
-				E096031E20603FDE00E4F5C4 /* PatientDAO.swift */,
-				E09EACE12062C139008A6B01 /* ExerciseDAO.swift */,
-				E016041E206104E100E6EB08 /* PractitionerDAO.swift */,
 				E09EACE52062C449008A6B01 /* AppointmentDAO.swift */,
+				E09EACE12062C139008A6B01 /* ExerciseDAO.swift */,
+				E096031E20603FDE00E4F5C4 /* PatientDAO.swift */,
+				F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */,
+				E016041E206104E100E6EB08 /* PractitionerDAO.swift */,
 				E08151F92061178000A98DF6 /* SpecialismDAO.swift */,
 				E08151FD20611AB300A98DF6 /* Seeder.swift */,
 			);
@@ -487,6 +493,7 @@
 				E0D99C0C2061203200CF2508 /* AddPractitionerViewController.swift in Sources */,
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */,
+				F3093CB02065AAFF0010ED39 /* TreatmentDAO.swift in Sources */,
 				E02535E02064F34600A480EF /* ExerciseDoneTableViewCell.swift in Sources */,
 				E08151FC206117F200A98DF6 /* CDSpecialismDAO.swift in Sources */,
 				E0FCAE98203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld in Sources */,
@@ -501,6 +508,7 @@
 				E016042820610A0100E6EB08 /* CDPractitionerDAO.swift in Sources */,
 				E08151FE20611AB300A98DF6 /* Seeder.swift in Sources */,
 				E0B0F1FC2063F56700A22BC7 /* TodoLaterTableViewController.swift in Sources */,
+				F3093CB22065AB860010ED39 /* CDTreatmentDAO.swift in Sources */,
 				E09EACE22062C139008A6B01 /* ExerciseDAO.swift in Sources */,
 				E032EE9A2064EF2700BDB87E /* AddExerciseDoneController.swift in Sources */,
 				E016042C2061101300E6EB08 /* CDDAO.swift in Sources */,
