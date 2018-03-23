@@ -56,11 +56,17 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
             
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale.init(identifier: "fr_FR")
-            dateFormatter.dateFormat = "dd/MM/yyyy"
-            let day = dateFormatter.string(from: todoApp.date! as Date)
-            let hour = Calendar.current.component(.hour, from: todoApp.date! as Date)
-            let minute = Calendar.current.component(.minute, from: todoApp.date! as Date)
+            let date: NSDate = todoApp.date!
             
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let day = dateFormatter.string(from: date as Date)
+            
+            dateFormatter.dateFormat = "mm"
+            let minute = dateFormatter.string(from: date as Date)
+            
+            dateFormatter.dateFormat = "HH"
+            let hour = dateFormatter.string(from: date as Date)
+                        
             cell.dateL.text = day + " " + String(hour) + "h" + String(minute)
         }
         

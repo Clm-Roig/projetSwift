@@ -14,7 +14,7 @@ class ExerciseDoneTableViewController: NSObject, UITableViewDataSource, UITableV
     var tableView : UITableView
     
     init(tableView: UITableView, exercisesDone: [ExerciseDone?]) {
-        self.exercisesDone = exercisesDone
+        self.exercisesDone = exercisesDone        
         self.tableView = tableView
         super.init()
     }
