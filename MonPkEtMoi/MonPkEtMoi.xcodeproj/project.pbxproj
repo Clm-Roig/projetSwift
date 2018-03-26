@@ -329,9 +329,9 @@
 				E09EACE52062C449008A6B01 /* AppointmentDAO.swift */,
 				E09EACE12062C139008A6B01 /* ExerciseDAO.swift */,
 				E096031E20603FDE00E4F5C4 /* PatientDAO.swift */,
-				F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */,
 				E016041E206104E100E6EB08 /* PractitionerDAO.swift */,
 				E08151F92061178000A98DF6 /* SpecialismDAO.swift */,
+				F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */,
 				E08151FD20611AB300A98DF6 /* Seeder.swift */,
 			);
 			name = Data;
