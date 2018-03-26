@@ -56,6 +56,7 @@
 		F3093CAE206457350010ED39 /* GraphicalCharter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3093CAD206457350010ED39 /* GraphicalCharter.swift */; };
 		F3093CB02065AAFF0010ED39 /* TreatmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */; };
 		F3093CB22065AB860010ED39 /* CDTreatmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3093CB12065AB860010ED39 /* CDTreatmentDAO.swift */; };
+		F3093CB42065ADE20010ED39 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3093CB32065ADE20010ED39 /* DateHelper.swift */; };
 		F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		F3093CAD206457350010ED39 /* GraphicalCharter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicalCharter.swift; sourceTree = "<group>"; };
 		F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentDAO.swift; sourceTree = "<group>"; };
 		F3093CB12065AB860010ED39 /* CDTreatmentDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDTreatmentDAO.swift; sourceTree = "<group>"; };
+		F3093CB32065ADE20010ED39 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPatientDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				E09603212060441500E4F5C4 /* AlertHelper.swift */,
+				F3093CB32065ADE20010ED39 /* DateHelper.swift */,
 				F3093CAD206457350010ED39 /* GraphicalCharter.swift */,
 			);
 			name = Helpers;
@@ -493,6 +496,7 @@
 				E0D99C0C2061203200CF2508 /* AddPractitionerViewController.swift in Sources */,
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */,
+				F3093CB42065ADE20010ED39 /* DateHelper.swift in Sources */,
 				F3093CB02065AAFF0010ED39 /* TreatmentDAO.swift in Sources */,
 				E02535E02064F34600A480EF /* ExerciseDoneTableViewCell.swift in Sources */,
 				E08151FC206117F200A98DF6 /* CDSpecialismDAO.swift in Sources */,

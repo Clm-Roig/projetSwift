@@ -20,7 +20,10 @@ class PractitionerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadData()
+    }
+    
+    func loadData() {
         do {
             try self.practitioners = practitionerDAO.getAll()
         } catch {
@@ -33,6 +36,10 @@ class PractitionerViewController: UIViewController {
         
         practitionerTableView.dataSource = self.practitionerViewCtrl
         practitionerTableView.delegate = self.practitionerViewCtrl
-        
     }
+    
+    @IBAction func unwindToPractitionners(segue:UIStoryboardSegue) {
+        loadData()
+    }
+    
 }

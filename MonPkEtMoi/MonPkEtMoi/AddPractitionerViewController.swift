@@ -44,7 +44,7 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
             
             do {
                 try practitionerDAO.save()
-                self.navigationController?.popViewController(animated: true)
+                self.goBackAfterAddingPractitionner(self)
             } catch {
                 AlertHelper.alertError(view: self, errorMessage: "Impossible d'ajouter un médecin.")
             }
@@ -67,6 +67,10 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
         self.specialisms = self.specialisms.sorted {
             $0.wording! < $1.wording!
         }
+    }
+    
+    @IBAction func goBackAfterAddingPractitionner(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSegueToPractitionners", sender: self)
     }
     
     //MARK: Picker functions
