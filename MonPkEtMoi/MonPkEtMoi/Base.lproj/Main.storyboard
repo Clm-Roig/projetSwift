@@ -1062,7 +1062,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="SU1-j3-VWG" id="hNv-Ku-kX5"/>
+                                    <outlet property="dataSource" destination="SU1-j3-VWG" id="2VL-vq-fhR"/>
                                     <outlet property="delegate" destination="SU1-j3-VWG" id="8ws-AJ-1dF"/>
                                 </connections>
                             </tableView>

@@ -75,7 +75,7 @@
         <attribute name="endingDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="hours" optional="YES" attributeType="Transformable" customClassName="[NSDate]" syncable="YES"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="need" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="isLinkedTo" inverseEntity="Medicine" syncable="YES"/>
+        <relationship name="need" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="isLinkedTo" inverseEntity="Medicine" syncable="YES"/>
     </entity>
     <elements>
         <element name="Appointment" positionX="-315" positionY="-601" width="128" height="103"/>

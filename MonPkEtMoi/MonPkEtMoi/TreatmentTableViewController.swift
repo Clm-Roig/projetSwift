@@ -15,8 +15,9 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
     var treatmentTableView: UITableView
     
     init(treatmentTableView: UITableView, treatments: [Treatment?]) {
-        self.treatmentTableView = treatmentTableView
         self.treatments = treatments
+        self.treatmentTableView = treatmentTableView
+        super.init()
     }
     
     //MARK: UITVDelegate and DataSource functions
@@ -38,8 +39,6 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
             }
         }
          */
-        
-        
         return cell
     }
     
@@ -48,6 +47,7 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         return true;
     }
     
+    // TODO : delete not complete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.deleteRows(at: [indexPath], with: .fade)

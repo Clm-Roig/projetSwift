@@ -9,7 +9,7 @@
 import UIKit
 
 class TreatmentViewController: UIViewController {
-    
+    let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
   
     var medicineLabel: [String] = ["Matrix"]
     var quantityLabel: [String] = ["1 pilule rouge et 1 pilule bleue"]
@@ -24,13 +24,7 @@ class TreatmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        // TODO : Call the DAO 
-        
-        let tableViewCtrl = TreatmentTableViewController(treatmentTableView: self.treatmentsList, treatments: self.treatments)
-        self.treatmentsList.delegate = tableViewCtrl
-        self.treatmentsList.dataSource = tableViewCtrl
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,16 +32,18 @@ class TreatmentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loadData() {
+        do {
+            self.treatments = try treatmentDAO.getAll()
+        } catch {
+            fatalError("Erreur lors de l'obtention des traitements.")
+        }
+        
+        if(self.treatments.count > 0) {
+            let tableViewCtrl = TreatmentTableViewController(treatmentTableView: self.treatmentsList, treatments: self.treatments)
+            self.treatmentsList.delegate = tableViewCtrl
+            self.treatmentsList.dataSource = tableViewCtrl
+        }
     }
-    */
 
 }

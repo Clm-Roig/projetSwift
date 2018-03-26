@@ -131,6 +131,8 @@ class Seeder {
         } catch {
             print("Error saving exercises seeds")
         }
+        
+        
 
     }
 }

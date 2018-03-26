@@ -56,7 +56,6 @@ class AgendaViewController : UIViewController {
     }
     
     func loadData() {
-        // Get Data
         do {
             self.appointments = try appointmentDAO.getAll()
         } catch {
