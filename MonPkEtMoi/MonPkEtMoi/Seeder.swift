@@ -132,7 +132,40 @@ class Seeder {
             print("Error saving exercises seeds")
         }
         
+        // Medicine 
+        let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatment()
+        let medicines = ["Modopar 62,5","Modopar 125","Modopar 250","Modopar LP 125", "Modopar dispersible 125", "Sinemet 100", "Sinemet 250", "Sinemet LP 100","Sinemet LP 200", "Stalevo 50"]
         
+        for med in medicines {
+            var newMed = Medicine()
+            do {
+                newMed = try treatmentDAO.create()
+                newMed.wording = med
+            } catch {
+                print("error creating medicine")
+            }
+        }
+        do {
+            try treatmentDAO.save()
+        } catch {
+            print("Error saving medicines seeds")
+        }
+        
+        // Treatments 
+        var treatment1 = Treatment()
+        do {
+            treatment1 = try treatmentDAO.create()
+        } catch {
+            print("error creating treatment1")
+        }
+        treatment1.quantity = "2 pilules"
+        
+        do {
+            try treatmentDAO.save()
+        } catch {
+            print("Error saving treatments seeds")
+        }
+ 
 
     }
 }
