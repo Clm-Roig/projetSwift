@@ -40,6 +40,7 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
             newPractitioner.firstName = firstNameTF.text
             newPractitioner.address = addressTF.text
             newPractitioner.postalCode = postalCodeTF.text
+            newPractitioner.city = cityTF.text
             newPractitioner.master = specialisms[specialismsPicker.selectedRow(inComponent: 0)]
             
             do {

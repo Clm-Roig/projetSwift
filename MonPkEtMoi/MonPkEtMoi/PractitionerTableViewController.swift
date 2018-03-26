@@ -31,7 +31,7 @@ class PractitionerTableViewController: NSObject, UITableViewDataSource, UITableV
         cell.nameSpecialismL.text = practitioner.lastName
         cell.nameSpecialismL.text = cell.nameSpecialismL.text! + " - "
         cell.nameSpecialismL.text = cell.nameSpecialismL.text! + (practitioner.master?.wording!)!
-        cell.cityL.text = self.practitioners[indexPath.row].city
+        cell.cityL.text = practitioner.city
         
         return cell
     }
