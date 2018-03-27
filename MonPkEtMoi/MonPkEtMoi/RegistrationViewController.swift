@@ -60,7 +60,9 @@ class RegistrationViewController : UIViewController {
             newPatient.address = addressTF.text
             newPatient.city = cityTF.text
             newPatient.postalCode = postalCodeTF.text
-            
+            newPatient.beginningEvaluationHour = Int16(10)
+            newPatient.endingEvaluationHour = Int16(20)
+            newPatient.timePeparation = Int16(30)            
             
             print(newPatient)
             // Save the patient

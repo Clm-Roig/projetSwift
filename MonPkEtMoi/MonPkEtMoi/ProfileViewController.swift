@@ -27,16 +27,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var preparationTimeStepper: UIStepper!
     
     @IBAction func beginningHourStepperPressed(_ sender: UIStepper) {
-        self.beginningHourL.text = String(Int(sender.value))
+        self.beginningHourL.text = String(Int(beginningHourStepper.value))
     }
 
     @IBAction func endingHourStepperPressed(_ sender: UIStepper) {
-        self.endingHourL.text = String(Int(sender.value))
+        self.endingHourL.text = String(Int(endingHourStepper.value))
     }
  
     
     @IBAction func preparationTimeStepperPressed(_ sender: UIStepper) {
-        self.preparationTimeL.text = String(Int(sender.value))
+        self.preparationTimeL.text = String(Int(preparationTimeStepper.value))
     }
     
     
@@ -66,6 +66,8 @@ class ProfileViewController: UIViewController {
         self.beginningHourStepper.value = Double(patient.beginningEvaluationHour)
         self.endingHourL.text = String(patient.endingEvaluationHour)
         self.endingHourStepper.value = Double(patient.endingEvaluationHour)
+        self.preparationTimeL.text = String(patient.timePeparation)
+        self.preparationTimeStepper.value = Double(patient.timePeparation)
         
         print(patient)
     }
