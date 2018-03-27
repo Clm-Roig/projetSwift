@@ -1393,7 +1393,7 @@
         <!--Ajout traitement-->
         <scene sceneID="chb-uy-vAc">
             <objects>
-                <viewController storyboardIdentifier="AddTreatmentView" title="Ajout traitement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zfc-Im-Rv0" customClass="AddTreatmentViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTreatmentView" title="Ajout traitement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zfc-Im-Rv0" customClass="AddTreatmentView1Controller" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfW-4M-HyS"/>
                         <viewControllerLayoutGuide type="bottom" id="amw-Rq-PDa"/>
@@ -1449,6 +1449,9 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Cu4-md-HFB">
                                 <rect key="frame" x="86" y="325" width="94" height="29"/>
+                                <connections>
+                                    <action selector="frequencyStepperPressed:" destination="zfc-Im-Rv0" eventType="valueChanged" id="CXM-Cy-Spq"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heures de(s) prise(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2j7-6Q-u8h">
                                 <rect key="frame" x="16" y="370" width="343" height="21"/>
@@ -1479,6 +1482,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Saisir dates"/>
                                 <connections>
+                                    <action selector="addDates:" destination="zfc-Im-Rv0" eventType="touchUpInside" id="pns-rF-ucH"/>
                                     <segue destination="gC1-Wi-Wox" kind="show" id="Qir-WM-LIz"/>
                                 </connections>
                             </button>
@@ -1514,6 +1518,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Traitement" image="medicine-25" id="6ip-Cu-IeN"/>
+                    <connections>
+                        <outlet property="frequencyL" destination="6SV-St-gQD" id="rEP-ZN-M11"/>
+                        <outlet property="frequencyStepper" destination="Cu4-md-HFB" id="CtV-Vd-nQQ"/>
+                        <outlet property="medicinePicker" destination="F29-Px-6nV" id="e6v-Pk-h6E"/>
+                        <outlet property="quantityTF" destination="0Jf-f1-v5V" id="wFm-It-r3e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KE6-FH-SIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1522,7 +1532,7 @@
         <!--Dates Nouveau Traitement-->
         <scene sceneID="Pev-c8-Eus">
             <objects>
-                <viewController title="Dates Nouveau Traitement" id="gC1-Wi-Wox" customClass="AddTreatmentViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dates Nouveau Traitement" id="gC1-Wi-Wox" customClass="AddTreatmentView2Controller" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Boc-Uv-Qsc"/>
                         <viewControllerLayoutGuide type="bottom" id="4Ey-gv-4mo"/>

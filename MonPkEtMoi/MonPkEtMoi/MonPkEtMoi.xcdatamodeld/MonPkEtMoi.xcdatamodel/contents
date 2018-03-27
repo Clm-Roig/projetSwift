@@ -36,7 +36,7 @@
         <relationship name="concerns" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="isConcernedBy" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <entity name="Medicine" representedClassName="Medicine" syncable="YES" codeGenerationType="class">
-        <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wording" attributeType="String" syncable="YES"/>
         <relationship name="isLinkedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Treatment" inverseName="need" inverseEntity="Treatment" syncable="YES"/>
     </entity>
     <entity name="Patient" representedClassName="Patient" parentEntity="Person" syncable="YES" codeGenerationType="class">
@@ -85,7 +85,7 @@
         <element name="EventType" positionX="117" positionY="-714" width="128" height="88"/>
         <element name="Exercise" positionX="-351" positionY="-756" width="128" height="90"/>
         <element name="ExerciseDone" positionX="-585" positionY="-612" width="128" height="90"/>
-        <element name="Medicine" positionX="-9" positionY="-207" width="128" height="73"/>
+        <element name="Medicine" positionX="-9" positionY="-207" width="128" height="75"/>
         <element name="Patient" positionX="-749" positionY="-666" width="128" height="88"/>
         <element name="Person" positionX="-747" positionY="-387" width="126" height="135"/>
         <element name="Practitioner" positionX="-333" positionY="-369" width="128" height="75"/>

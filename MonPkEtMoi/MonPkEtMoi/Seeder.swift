@@ -38,7 +38,7 @@ class Seeder {
         do {
             spe = try specialismDAO.getAll() as! [Specialism]
         } catch {
-            print("error creating getting all specialisms")
+            print("error getting all specialisms")
         }
 
         var practitioner1 = Practitioner()
