@@ -16,8 +16,9 @@ class TreatmentViewController: UIViewController {
     var hoursLabel: [String] = ["10h ; 18h","12h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h"]
   
     var treatments: [Treatment?] = []
+    var tableViewCtrl: TreatmentTableViewController?
     
-    @IBOutlet weak var treatmentsList: UITableView!
+    @IBOutlet weak var treatmentsTableView: UITableView!
     @IBAction func addTreatment(_ sender: Any) {
         
     }
@@ -41,9 +42,9 @@ class TreatmentViewController: UIViewController {
         
         print(treatments)
         
-        let tableViewCtrl = TreatmentTableViewController(treatmentTableView: self.treatmentsList, treatments: self.treatments)
-        self.treatmentsList.delegate = tableViewCtrl
-        self.treatmentsList.dataSource = tableViewCtrl
+        self.tableViewCtrl = TreatmentTableViewController(treatmentTableView: self.treatmentsTableView, treatments: self.treatments)
+        self.treatmentsTableView.delegate = self.tableViewCtrl
+        self.treatmentsTableView.dataSource = self.tableViewCtrl
         
     }
 

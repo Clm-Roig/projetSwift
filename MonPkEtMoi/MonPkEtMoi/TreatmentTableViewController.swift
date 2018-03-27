@@ -22,6 +22,7 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
     
     //MARK: UITVDelegate and DataSource functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(treatments.count)
         return self.treatments.count
     }
     
