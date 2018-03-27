@@ -13,11 +13,13 @@ class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIP
     let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
     var medicines: [Medicine?] = []
     var newTreatment: Treatment?
+    var hoursTableViewCtrl: AddTreatmentHourTableViewController?
     
     @IBOutlet weak var medicinePicker: UIPickerView!
     @IBOutlet weak var quantityTF: UITextField!
     @IBOutlet weak var frequencyL: UILabel!
     @IBOutlet weak var frequencyStepper: UIStepper!
+    @IBOutlet weak var hoursTableView: UITableView!
     
     @IBAction func frequencyStepperPressed(_ sender: UIStepper) {
         self.frequencyL.text = String(Int(sender.value))
@@ -52,6 +54,11 @@ class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIP
                 return false
             }
         }
+        
+        self.hoursTableViewCtrl = AddTreatmentHourTableViewController(tableView: hoursTableView)
+        
+        self.hoursTableView.dataSource = hoursTableViewCtrl
+        self.hoursTableView.delegate = hoursTableViewCtrl
        
     }
     

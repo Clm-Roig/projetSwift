@@ -10,7 +10,6 @@ import UIKit
 
 class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    // TODO : use [Object] instead of [String]
     var appointments: [Appointment?] = []
     var treatments: [Treatment?] = []
     var programs: [Program?] = []
