@@ -20,7 +20,7 @@ class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIP
     @IBOutlet weak var frequencyStepper: UIStepper!
     
     @IBAction func frequencyStepperPressed(_ sender: UIStepper) {
-        
+        self.frequencyL.text = String(Int(sender.value))
     }
     
     @IBAction func addDates(_ sender: Any) {
@@ -34,7 +34,7 @@ class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.frequencyL.text = "1"
         do {
             self.medicines = try treatmentDAO.getAllMedicines()
         } catch {

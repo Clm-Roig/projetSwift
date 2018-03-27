@@ -1451,7 +1451,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Cu4-md-HFB">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cu4-md-HFB">
                                 <rect key="frame" x="86" y="325" width="94" height="29"/>
                                 <connections>
                                     <action selector="frequencyStepperPressed:" destination="zfc-Im-Rv0" eventType="valueChanged" id="CXM-Cy-Spq"/>
