@@ -133,17 +133,19 @@ class Seeder {
         }
         
         // Medicine 
-        let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatment()
-        let medicines = ["Modopar 62,5","Modopar 125","Modopar 250","Modopar LP 125", "Modopar dispersible 125", "Sinemet 100", "Sinemet 250", "Sinemet LP 100","Sinemet LP 200", "Stalevo 50"]
+        let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
+        var medicines: [Medicine?] = []
+        let medicinesWording = ["Modopar 62,5","Modopar 125","Modopar 250","Modopar LP 125", "Modopar dispersible 125", "Sinemet 100", "Sinemet 250", "Sinemet LP 100","Sinemet LP 200", "Stalevo 50"]
         
-        for med in medicines {
+        for med in medicinesWording {
             var newMed = Medicine()
             do {
-                newMed = try treatmentDAO.create()
+                newMed = try treatmentDAO.createMedicine()
                 newMed.wording = med
             } catch {
                 print("error creating medicine")
             }
+            medicines.append(newMed)
         }
         do {
             try treatmentDAO.save()
@@ -159,6 +161,7 @@ class Seeder {
             print("error creating treatment1")
         }
         treatment1.quantity = "2 pilules"
+        treatment1.need = medicines[0]
         
         do {
             try treatmentDAO.save()
