@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
-    
+    let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
+
     var treatments: [Treatment?] = []
     var treatmentTableView: UITableView
     
@@ -22,7 +23,6 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
     
     //MARK: UITVDelegate and DataSource functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(treatments.count)
         return self.treatments.count
     }
     
@@ -31,14 +31,20 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         cell.medicineLabel.text = self.treatments[indexPath.row]?.need?.wording
         cell.quantityLabel.text = self.treatments[indexPath.row]?.quantity
        
-        /*
+        var firstHour = true;
         let hoursTable = self.treatments[indexPath.row]?.hours
         if let hours = hoursTable {
             for hour in hours {
-                cell.hoursLabel.text = cell.hoursLabel.text! + String(Calendar.current.component(.hour, from: hour as Date))
+                if(firstHour) {
+                    cell.hoursLabel.text = String(Calendar.current.component(.hour, from: hour as Date)) + "h" + String(Calendar.current.component(.minute, from: hour as Date))
+                    firstHour = false
+                }
+                else {
+                    cell.hoursLabel.text = cell.hoursLabel.text! + " - " + String(Calendar.current.component(.hour, from: hour as Date)) + "h" + String(Calendar.current.component(.minute, from: hour as Date))
+                }
+                
             }
         }
-         */
         return cell
     }
     
@@ -47,10 +53,18 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         return true;
     }
     
-    // TODO : delete not complete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            treatmentTableView.beginUpdates()
+            treatmentDAO.delete(obj: treatments[indexPath.row]!)
+            do {
+                try treatmentDAO.save()
+            } catch {
+                fatalError("Erreur à la suppression du traitement.")
+            }
+            treatmentTableView.deleteRows(at: [indexPath], with: .fade)
+            treatments.remove(at: indexPath.row)
+            treatmentTableView.endUpdates()
         }
     }
     

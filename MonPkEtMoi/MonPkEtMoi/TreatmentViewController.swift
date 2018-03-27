@@ -39,9 +39,7 @@ class TreatmentViewController: UIViewController {
         } catch {
             fatalError("Erreur lors de l'obtention des traitements.")
         }
-        
-        print(treatments)
-        
+                
         self.tableViewCtrl = TreatmentTableViewController(treatmentTableView: self.treatmentsTableView, treatments: self.treatments)
         self.treatmentsTableView.delegate = self.tableViewCtrl
         self.treatmentsTableView.dataSource = self.tableViewCtrl
