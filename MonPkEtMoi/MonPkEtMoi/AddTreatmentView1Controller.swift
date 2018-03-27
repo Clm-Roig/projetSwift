@@ -40,6 +40,7 @@ class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIP
         } catch {
             fatalError("Erreur lors de l'obtention des médicaments.")
         }
+        print(medicines)
     }
     
     

@@ -1413,6 +1413,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="VLC-ec-n3L"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="zfc-Im-Rv0" id="QIt-bk-hA8"/>
+                                    <outlet property="delegate" destination="zfc-Im-Rv0" id="B7b-bd-yyt"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posologie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE1-gu-zf4">
                                 <rect key="frame" x="16" y="243" width="87" height="21"/>
