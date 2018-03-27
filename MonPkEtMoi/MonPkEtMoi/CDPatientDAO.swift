@@ -13,9 +13,9 @@ class CDPatientDAO: CDDAO, PatientDAO {
     
     func create() throws -> Patient {
         let newPatient = Patient(context: self.context)
-        newPatient.beginningEvaluationHour = 10
-        newPatient.endingEvaluationHour = 20
-        newPatient.timePeparation = 30
+        newPatient.beginningEvaluationHour = Int16(10)
+        newPatient.endingEvaluationHour = Int16(20)
+        newPatient.timePeparation = Int16(30)
         return Patient(context: self.context)
     }
     

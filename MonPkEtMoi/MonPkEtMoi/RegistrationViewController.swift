@@ -61,6 +61,8 @@ class RegistrationViewController : UIViewController {
             newPatient.city = cityTF.text
             newPatient.postalCode = postalCodeTF.text
             
+            
+            print(newPatient)
             // Save the patient
             do {
                 try patientDAO.save()
