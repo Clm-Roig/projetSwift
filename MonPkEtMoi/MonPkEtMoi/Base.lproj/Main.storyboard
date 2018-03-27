@@ -1393,7 +1393,7 @@
         <!--Ajout traitement-->
         <scene sceneID="chb-uy-vAc">
             <objects>
-                <viewController storyboardIdentifier="AddTreatmentView" title="Ajout traitement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zfc-Im-Rv0" customClass="AddTreatmentView1Controller" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTreatmentView" title="Ajout traitement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zfc-Im-Rv0" customClass="AddTreatmentViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfW-4M-HyS"/>
                         <viewControllerLayoutGuide type="bottom" id="amw-Rq-PDa"/>
@@ -1440,8 +1440,11 @@
                                 <rect key="frame" x="16" y="569" width="343" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Ajouter traitement"/>
+                                <connections>
+                                    <action selector="addTreatment:" destination="zfc-Im-Rv0" eventType="touchUpInside" id="dgH-HK-abj"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-92-pVc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-92-pVc">
                                 <rect key="frame" x="16" y="321" width="22" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -1453,8 +1456,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" maximumValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="ImU-eE-rYs">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" value="12" maximumValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="ImU-eE-rYs">
                                 <rect key="frame" x="72" y="318" width="94" height="29"/>
+                                <connections>
+                                    <action selector="hourStepperPressed:" destination="zfc-Im-Rv0" eventType="valueChanged" id="MUD-LM-anG"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYu-ZW-USD">
                                 <rect key="frame" x="200" y="321" width="25.5" height="23"/>
@@ -1462,8 +1468,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="59" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-U4-zj5">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" maximumValue="55" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-U4-zj5">
                                 <rect key="frame" x="265" y="318" width="94" height="29"/>
+                                <connections>
+                                    <action selector="minuteStepperPressed:" destination="zfc-Im-Rv0" eventType="valueChanged" id="Xs7-SD-ZMX"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de fin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1k-WR-rkM">
                                 <rect key="frame" x="16" y="363" width="88.5" height="21"/>
@@ -1478,6 +1487,9 @@
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="543852426.33161604">
                                     <!--2018-03-27 14:07:06 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="536497200">
+                                    <!--2018-01-01 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                             </datePicker>
@@ -1520,7 +1532,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Traitement" image="medicine-25" id="6ip-Cu-IeN"/>
                     <connections>
+                        <outlet property="datePicker" destination="miW-E1-A8K" id="TqA-ac-P8J"/>
+                        <outlet property="hourLabel" destination="WZp-92-pVc" id="rxZ-7k-JEb"/>
                         <outlet property="medicinePicker" destination="F29-Px-6nV" id="e6v-Pk-h6E"/>
+                        <outlet property="minuteLabel" destination="ZYu-ZW-USD" id="lP4-0x-9cK"/>
                         <outlet property="quantityTF" destination="0Jf-f1-v5V" id="wFm-It-r3e"/>
                     </connections>
                 </viewController>
