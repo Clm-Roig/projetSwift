@@ -1,5 +1,5 @@
 //
-//  AddTreatmentView1Controller.swift
+//  AddTreatmentViewController.swift
 //  MonPkEtMoi
 //
 //  Created by Clement ROIG on 27/03/2018.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
     var medicines: [Medicine?] = []
     var newTreatment: Treatment?
@@ -17,22 +17,7 @@ class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIP
     
     @IBOutlet weak var medicinePicker: UIPickerView!
     @IBOutlet weak var quantityTF: UITextField!
-    @IBOutlet weak var frequencyL: UILabel!
-    @IBOutlet weak var frequencyStepper: UIStepper!
-    @IBOutlet weak var hoursTableView: UITableView!
-    
-    @IBAction func frequencyStepperPressed(_ sender: UIStepper) {
-        self.frequencyL.text = String(Int(sender.value))
-    }
-    
-    @IBAction func addDates(_ sender: Any) {
-        if(quantityTF.text != "") {
-            self.newTreatment = Treatment()
-            self.newTreatment!.quantity = quantityTF.text
-            self.newTreatment!.hours = []
-            self.newTreatment!.need = medicines[medicinePicker.selectedRow(inComponent: 0)]
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,17 +47,6 @@ class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIP
        
     }
     
-    
-    /// Passes the new Treatment to the next view through the sergue
-    ///
-    /// - Parameters:
-    ///   - segue: <#segue description#>
-    ///   - sender: <#sender description#>
-    ///   - newTreatment: <#newTreatment description#>
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let view2Controller = segue.destination as! AddTreatmentView2Controller
-        view2Controller.treatmentPassed = self.newTreatment!
-    }
     
     // MARK: Picker functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
