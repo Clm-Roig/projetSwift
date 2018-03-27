@@ -51,6 +51,7 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
             
             do {
                 try treatmentDAO.save()
+                performSegue(withIdentifier: "unwindSegueToTreatments", sender: self)
             } catch {
                 AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du traitement.")
             }

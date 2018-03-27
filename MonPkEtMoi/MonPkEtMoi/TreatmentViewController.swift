@@ -43,7 +43,10 @@ class TreatmentViewController: UIViewController {
         self.tableViewCtrl = TreatmentTableViewController(treatmentTableView: self.treatmentsTableView, treatments: self.treatments)
         self.treatmentsTableView.delegate = self.tableViewCtrl
         self.treatmentsTableView.dataSource = self.tableViewCtrl
-        
+    }
+    
+    @IBAction func unwindToTreatments(segue:UIStoryboardSegue) {
+        loadData()
     }
 
 }
