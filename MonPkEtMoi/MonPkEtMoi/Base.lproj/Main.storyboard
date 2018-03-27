@@ -1393,7 +1393,7 @@
         <!--Ajout traitement-->
         <scene sceneID="chb-uy-vAc">
             <objects>
-                <viewController storyboardIdentifier="AddTreatmentView" title="Ajout traitement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zfc-Im-Rv0" customClass="TreatmentAddViewController" customModule="MonPkEtMoi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTreatmentView" title="Ajout traitement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zfc-Im-Rv0" customClass="AddTreatmentViewController" customModule="MonPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfW-4M-HyS"/>
                         <viewControllerLayoutGuide type="bottom" id="amw-Rq-PDa"/>
@@ -1409,7 +1409,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F29-Px-6nV">
-                                <rect key="frame" x="0.0" y="93" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="93" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="VLC-ec-n3L"/>
+                                </constraints>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

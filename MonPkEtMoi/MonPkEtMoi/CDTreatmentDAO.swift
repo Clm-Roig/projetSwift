@@ -39,7 +39,7 @@ class CDTreatmentDAO: CDDAO, TreatmentDAO {
         self.context.delete(obj)
     }
     
-    func getAll() throws -> [Medicine?] {
+    func getAllMedicines() throws -> [Medicine?] {
         var medicines: [Medicine] = []
         let request: NSFetchRequest<Medicine> = NSFetchRequest(entityName: "Medicine")
         do {
