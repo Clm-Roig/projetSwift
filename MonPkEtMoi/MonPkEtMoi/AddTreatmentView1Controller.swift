@@ -40,7 +40,19 @@ class AddTreatmentView1Controller: UIViewController, UIPickerViewDataSource, UIP
         } catch {
             fatalError("Erreur lors de l'obtention des médicaments.")
         }
-        print(medicines)
+        
+        if(medicines.count > 1) {
+            medicines = medicines.sorted {
+                if let str1 = $0?.wording {
+                    if let str2 = $1?.wording {
+                        return str1 < str2
+                    }
+                    return false
+                }
+                return false
+            }
+        }
+       
     }
     
     
