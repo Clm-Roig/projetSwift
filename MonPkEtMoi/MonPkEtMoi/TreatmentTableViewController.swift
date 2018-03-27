@@ -25,11 +25,10 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         return self.treatments.count
     }
     
-    //MARK: TableView functions
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.treatmentTableView.dequeueReusableCell(withIdentifier: "treatmentCell", for: indexPath) as! TreatmentTableViewCell
         cell.medicineLabel.text = self.treatments[indexPath.row]?.need?.wording
-        cell.quantityLabel.text = String(describing: self.treatments[indexPath.row]?.quantity)
+        cell.quantityLabel.text = self.treatments[indexPath.row]?.quantity
        
         /*
         let hoursTable = self.treatments[indexPath.row]?.hours
