@@ -186,6 +186,22 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
     }
     
     
+    /// Only appointments are editable (deletable precisely).
+    ///
+    /// - Parameters:
+    ///   - tableView: <#tableView description#>
+    ///   - indexPath: <#indexPath description#>
+    /// - Returns: <#return value description#>
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if(todosList[indexPath.row] is Appointment) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // We can only delete appointment
