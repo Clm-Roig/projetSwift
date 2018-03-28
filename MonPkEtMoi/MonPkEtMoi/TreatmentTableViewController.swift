@@ -33,14 +33,24 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
        
         var firstHour = true;
         let hoursTable = self.treatments[indexPath.row]?.hours
+        
+        // Everything is ready to manage [hours] even if we currently just 1 hour in the array
         if let hours = hoursTable {
             for hour in hours {
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "hh"
+                let hourToPrint = dateFormatter.string(from: hour as Date)
+                
+                dateFormatter.dateFormat = "mm"
+                let minuteToPrint = dateFormatter.string(from: hour as Date)
+                
                 if(firstHour) {
-                    cell.hoursLabel.text = String(Calendar.current.component(.hour, from: hour as Date)) + "h" + String(Calendar.current.component(.minute, from: hour as Date))
+                    cell.hoursLabel.text = hourToPrint + "h" + minuteToPrint
                     firstHour = false
                 }
                 else {
-                    cell.hoursLabel.text = cell.hoursLabel.text! + " - " + String(Calendar.current.component(.hour, from: hour as Date)) + "h" + String(Calendar.current.component(.minute, from: hour as Date))
+                    cell.hoursLabel.text = hourToPrint + "h" + minuteToPrint
                 }
                 
             }
