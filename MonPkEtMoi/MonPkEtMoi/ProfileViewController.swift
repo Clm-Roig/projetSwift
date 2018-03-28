@@ -26,6 +26,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var endingHourStepper: UIStepper!
     @IBOutlet weak var preparationTimeStepper: UIStepper!
     
+    @IBAction func switchTouched(_ sender: UISwitch) {
+        beginningHourStepper.isHidden = !beginningHourStepper.isHidden
+        endingHourStepper.isHidden = !endingHourStepper.isHidden
+        preparationTimeStepper.isHidden = !preparationTimeStepper.isHidden
+    }    
+    
     @IBAction func beginningHourStepperPressed(_ sender: UIStepper) {
         // Beginning hour can't be after ending hour
         if(endingHourStepper.value == beginningHourStepper.value) {

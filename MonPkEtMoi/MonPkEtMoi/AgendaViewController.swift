@@ -35,6 +35,10 @@ class AgendaViewController : UIViewController {
     @IBOutlet weak var laterLabel: UILabel!
     
     @IBOutlet weak var addButton: UIButton!
+    
+    @IBAction func switchTouched(_ sender: UISwitch) {
+        self.addButton.isHidden = !self.addButton.isHidden
+    }
 
     // ----------------------------------------------
     

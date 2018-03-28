@@ -11,17 +11,17 @@ import UIKit
 class TreatmentViewController: UIViewController {
     let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
   
-    var medicineLabel: [String] = ["Matrix"]
-    var quantityLabel: [String] = ["1 pilule rouge et 1 pilule bleue"]
-    var hoursLabel: [String] = ["10h ; 18h","12h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h","10h ; 14h ; 18h"]
-  
     var treatments: [Treatment?] = []
     var tableViewCtrl: TreatmentTableViewController?
     
     @IBOutlet weak var treatmentsTableView: UITableView!
-    @IBAction func addTreatment(_ sender: Any) {
-        
+    @IBOutlet weak var addTreatmentButton: MyUIButton!
+    
+    @IBAction func switchTouched(_ sender: UISwitch) {
+        self.addTreatmentButton.isHidden = !self.addTreatmentButton.isHidden
     }
+    
+    // =======================
     
     override func viewDidLoad() {
         super.viewDidLoad()

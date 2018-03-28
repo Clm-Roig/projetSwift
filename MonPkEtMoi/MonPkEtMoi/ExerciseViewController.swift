@@ -20,12 +20,19 @@ class ExerciseViewController : UIViewController {
     @IBOutlet weak var programTableView: UITableView!
     @IBOutlet weak var exerciseDoneTableView: UITableView!
     
+    @IBOutlet weak var addProgramButton: MyUIButton!
+    @IBOutlet weak var addExerciseButton: MyUIButton!
+    
+    @IBAction func switchTouched(_ sender: UISwitch) {
+        addProgramButton.isHidden = !addProgramButton.isHidden
+        addExerciseButton.isHidden = !addExerciseButton.isHidden
+    }
+    
+    // ========================    
     
     override internal func viewDidLoad() {
         super.viewDidLoad()
-        
         loadData()
-        
     }
     
     override internal func didReceiveMemoryWarning() {

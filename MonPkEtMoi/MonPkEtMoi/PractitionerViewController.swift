@@ -16,6 +16,12 @@ class PractitionerViewController: UIViewController {
     var practitioners: [Practitioner?] = []
     
     @IBOutlet weak var practitionerTableView: UITableView!
+    @IBOutlet weak var addPractitionerButton: UIButton!
+    
+    @IBAction func switchTouched(_ sender: UISwitch) {
+        addPractitionerButton.isHidden = !addPractitionerButton.isHidden
+    }    
+    
     // ===================================================
     
     override func viewDidLoad() {
