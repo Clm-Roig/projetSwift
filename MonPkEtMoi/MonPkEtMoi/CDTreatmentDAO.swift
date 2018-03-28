@@ -35,7 +35,7 @@ class CDTreatmentDAO: CDDAO, TreatmentDAO {
         return Medicine(context: self.context)
     }
     
-    func delete(obj: Medicine) {
+    func deleteMedicine(obj: Medicine) {
         self.context.delete(obj)
     }
     
