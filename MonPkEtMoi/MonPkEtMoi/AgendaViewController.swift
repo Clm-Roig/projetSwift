@@ -11,9 +11,7 @@ import UIKit
 class AgendaViewController : UIViewController {
     let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
     let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
-    
-    // TODO : wait for TreatmentDAO
-    //let treatmentDAO = CoreDataDAOFactory.getInstance().geTreatmentDAO()
+    let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
     
     var appointments: [Appointment?] = []
     var programs: [Program?] = []
@@ -66,13 +64,11 @@ class AgendaViewController : UIViewController {
         } catch {
             fatalError("Erreur lors de l'obtention des programmes.")
         }
-        /* TODO: wait for treatmentDAO
-         do {
-         self.treatments = try treatmentsDAO.getAll()
-         } catch {
-         fatalError("Erreur lors de l'obtention des traitements.")
-         }
-         */
+        do {
+            self.treatments = try treatmentDAO.getAll()
+        } catch {
+            fatalError("Erreur lors de l'obtention des traitements.")
+        }
         
         appointmentsToday = []
         appointmentsLater = []
@@ -97,6 +93,14 @@ class AgendaViewController : UIViewController {
             for prog in self.programs {
                 self.programsToday.append(prog)
                 self.programsLater.append(prog)
+            }
+        }
+        if (self.treatments.count > 0) {
+            for treatment in self.treatments {
+                if((treatment!.endingDate! as Date) > Date()) {
+                    self.treatmentsToday.append(treatment)
+                    self.treatmentsLater.append(treatment)
+                }
             }
         }
         

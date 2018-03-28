@@ -34,6 +34,65 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
                 self.todosList.append(treat)
             }
         }
+        // Sort the TODOs
+        self.todosList = self.todosList.sorted {
+            if($0 is Treatment && $1 is Treatment) {
+                let todo0 = $0 as! Treatment
+                let todo1 = $1 as! Treatment
+      
+                // Compare just hours and minutes
+                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.hours![0] as Date))
+                let minutes0 = Calendar.current.component(.minute, from: (todo0.hours![0] as Date))
+                
+                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.hours![0] as Date))
+                let minutes1 = Calendar.current.component(.minute, from: (todo1.hours![0] as Date))
+                
+                return (hour0 + minutes0) < (hour1 + minutes1)
+            }
+            if($0 is Treatment && $1 is Appointment) {
+                let todo0 = $0 as! Treatment
+                let todo1 = $1 as! Appointment
+                
+                // Compare just hours and minutes
+                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.hours![0] as Date))
+                let minutes0 = Calendar.current.component(.minute, from: (todo0.hours![0] as Date))
+                
+                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.date! as Date))
+                let minutes1 = Calendar.current.component(.minute, from: (todo1.date! as Date))
+                
+                return (hour0 + minutes0) < (hour1 + minutes1)
+            }
+            if($0 is Appointment && $1 is Treatment){
+                let todo0 = $0 as! Appointment
+                let todo1 = $1 as! Treatment
+                
+                // Compare just hours and minutes
+                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.date! as Date))
+                let minutes0 = Calendar.current.component(.minute, from: (todo0.date! as Date))
+                
+                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.hours![0] as Date))
+                let minutes1 = Calendar.current.component(.minute, from: (todo1.hours![0] as Date))
+                
+                return (hour0 + minutes0) < (hour1 + minutes1)
+            }
+            if($0 is Appointment && $1 is Appointment) {
+                let todo0 = $0 as! Appointment
+                let todo1 = $1 as! Appointment
+                
+                // Compare just hours and minutes
+                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.date! as Date))
+                let minutes0 = Calendar.current.component(.minute, from: (todo0.date! as Date))
+                
+                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.date! as Date))
+                let minutes1 = Calendar.current.component(.minute, from: (todo1.date! as Date))
+                
+                return (hour0 + minutes0) < (hour1 + minutes1)
+            }
+            return false
+        }
+        
+        
+        // Programs are inserted at the end of the list (no hour)
         if(self.programs.count > 0) {
             for prog in self.programs {
                 self.todosList.append(prog)
@@ -76,6 +135,25 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
             cell.todoL.text = cell.todoL.text! + " - " + String(todoProg.duration) + " min"
             cell.hourL.text = ""
         }
+        
+        // Treatment
+        if(todo is Treatment) {
+            let todoTreat: Treatment = todo as! Treatment
+            cell.todoL.text = (todoTreat.need?.wording)! + " : " + todoTreat.quantity!
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale.init(identifier: "fr_FR")
+            let date: NSDate = todoTreat.hours![0]
+            
+            dateFormatter.dateFormat = "mm"
+            let minute = dateFormatter.string(from: date as Date)
+            
+            dateFormatter.dateFormat = "HH"
+            let hour = dateFormatter.string(from: date as Date)
+            
+            cell.hourL.text = String(hour) + "h" + String(minute)
+        }
+        
         return cell
         
     }

@@ -85,6 +85,30 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
             let day = dateFormatter.string(from: date)
             cell.dateL.text = day
         }
+        
+        // Treatment
+        if(todo is Treatment) {
+            let todoTreat: Treatment = todo as! Treatment
+            cell.todoL.text = (todoTreat.need?.wording)! + " : " + todoTreat.quantity!
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale.init(identifier: "fr_FR")
+            
+            // Day = tomorrow
+            let date = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let day = dateFormatter.string(from: date as Date)
+            
+            // Hour = hours[0]
+            dateFormatter.dateFormat = "mm"
+            let minute = dateFormatter.string(from: todoTreat.hours![0] as Date)
+            
+            dateFormatter.dateFormat = "HH"
+            let hour = dateFormatter.string(from: todoTreat.hours![0] as Date)
+            
+            cell.dateL.text = day + " " + String(hour) + "h" + String(minute)
+        }
+        
         return cell
     }
     

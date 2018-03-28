@@ -33,6 +33,13 @@ class ProfileViewController: UIViewController {
         }
         else {
             self.beginningHourL.text = String(Int(beginningHourStepper.value))
+            
+            patient?.beginningEvaluationHour = Int16(beginningHourStepper.value)
+            do {
+                try patientDAO.save()
+            } catch {
+                AlertHelper.alertWarning(view: self, warningMessage: "Erreur à la sauvegarde de l'heure de début des évaluations.")
+            }
         }
     }
 
@@ -43,12 +50,26 @@ class ProfileViewController: UIViewController {
         }
         else {
             self.endingHourL.text = String(Int(endingHourStepper.value))
+            
+            patient?.endingEvaluationHour = Int16(endingHourStepper.value)
+            do {
+                try patientDAO.save()
+            } catch {
+                AlertHelper.alertWarning(view: self, warningMessage: "Erreur à la sauvegarde de l'heure de fin des évaluations.")
+            }
         }
     }
  
     
     @IBAction func preparationTimeStepperPressed(_ sender: UIStepper) {
         self.preparationTimeL.text = String(Int(preparationTimeStepper.value))
+        
+        patient?.timePeparation = Int16(preparationTimeStepper.value)
+        do {
+            try patientDAO.save()
+        } catch {
+            AlertHelper.alertWarning(view: self, warningMessage: "Erreur à la sauvegarde du temps de préparation.")
+        }
     }
     
     

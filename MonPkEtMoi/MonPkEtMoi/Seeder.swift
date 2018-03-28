@@ -97,7 +97,7 @@ class Seeder {
         } catch {
             print("error creating appointment 2")
         }
-        appointment2.date = Calendar.current.date(byAdding: .day, value: 1, to: Date())! as NSDate
+        appointment2.date = Calendar.current.date(byAdding: .day, value: 4, to: Date())! as NSDate
         appointment2.proposedBy = practitioner2
         
         do {
@@ -162,8 +162,8 @@ class Seeder {
         }
         treatment1.quantity = "2 pilules"
         treatment1.need = medicines[0]
-        treatment1.hours = [Calendar.current.date(byAdding: .day, value: 1, to: Date())! as NSDate]
-        
+        treatment1.hours = [Calendar.current.date(byAdding: .hour, value: 3, to: Date())! as NSDate]
+        treatment1.endingDate = Calendar.current.date(byAdding: .day, value: 14, to: Date())! as NSDate
         do {
             try treatmentDAO.save()
         } catch {
