@@ -166,8 +166,6 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
                 todosList.remove(at: indexPath.row)
                 tableView.endUpdates()
             }
-            
-          
         }
     }
     
