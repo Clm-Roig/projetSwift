@@ -27,11 +27,23 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var preparationTimeStepper: UIStepper!
     
     @IBAction func beginningHourStepperPressed(_ sender: UIStepper) {
-        self.beginningHourL.text = String(Int(beginningHourStepper.value))
+        // Beginning hour can't be after ending hour
+        if(endingHourStepper.value == beginningHourStepper.value) {
+            beginningHourStepper.value = beginningHourStepper.value - 1
+        }
+        else {
+            self.beginningHourL.text = String(Int(beginningHourStepper.value))
+        }
     }
 
     @IBAction func endingHourStepperPressed(_ sender: UIStepper) {
-        self.endingHourL.text = String(Int(endingHourStepper.value))
+        // Ending hour can't be before beginning hour
+        if(endingHourStepper.value == beginningHourStepper.value) {
+            endingHourStepper.value = endingHourStepper.value + 1
+        }
+        else {
+            self.endingHourL.text = String(Int(endingHourStepper.value))
+        }
     }
  
     
@@ -68,8 +80,7 @@ class ProfileViewController: UIViewController {
         self.endingHourStepper.value = Double(patient.endingEvaluationHour)
         self.preparationTimeL.text = String(patient.timePeparation)
         self.preparationTimeStepper.value = Double(patient.timePeparation)
-        
-        print(patient)
+
     }
     
     func loadData() {

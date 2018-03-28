@@ -1156,7 +1156,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" maximumValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="CVk-hY-FrH">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" maximumValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="CVk-hY-FrH">
                                 <rect key="frame" x="16" y="280.5" width="94" height="29"/>
                                 <connections>
                                     <action selector="beginningHourStepperPressed:" destination="B0M-2b-TY7" eventType="valueChanged" id="eEo-an-9Ix"/>
@@ -1168,10 +1168,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" maximumValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-2f-ccY">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" maximumValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-2f-ccY">
                                 <rect key="frame" x="140.5" y="280.5" width="94" height="29"/>
                                 <connections>
-                                    <action selector="EndingHourStepperPressed:" destination="B0M-2b-TY7" eventType="valueChanged" id="Y4G-wJ-jME"/>
                                     <action selector="endingHourStepperPressed:" destination="B0M-2b-TY7" eventType="valueChanged" id="eBV-R0-smI"/>
                                 </connections>
                             </stepper>
