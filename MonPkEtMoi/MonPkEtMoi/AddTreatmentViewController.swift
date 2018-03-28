@@ -33,12 +33,16 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     @IBAction func addTreatment(_ sender: Any) {
         if(self.quantityTF.text != "") {
-            var newTreatment = Treatment()
+            var treatment:Treatment?
             do {
-                newTreatment = try treatmentDAO.create()
+                treatment = try treatmentDAO.create()
             } catch {
                 AlertHelper.alertError(view: self, errorMessage: "Erreur à la création du nouveau traitement.")
             }
+            guard let newTreatment = treatment else {
+                fatalError()
+            }
+            
             newTreatment.beginningDate = Date() as NSDate
             newTreatment.endingDate = datePicker.date as NSDate
             
@@ -52,8 +56,9 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
             do {
                 try treatmentDAO.save()
                 performSegue(withIdentifier: "unwindSegueToTreatments", sender: self)
-            } catch {
-                AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du traitement.")
+            } catch let error {
+                print(error)
+                fatalError("Erreur à la sauvegarde d'un traitement")
             }
             
         }

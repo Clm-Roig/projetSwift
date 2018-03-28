@@ -37,7 +37,7 @@
     </entity>
     <entity name="Medicine" representedClassName="Medicine" syncable="YES" codeGenerationType="class">
         <attribute name="wording" attributeType="String" syncable="YES"/>
-        <relationship name="isLinkedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Treatment" inverseName="need" inverseEntity="Treatment" syncable="YES"/>
+        <relationship name="isLinkedTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Treatment" inverseName="need" inverseEntity="Treatment" syncable="YES"/>
     </entity>
     <entity name="Patient" representedClassName="Patient" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <attribute name="beginningEvaluationHour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
