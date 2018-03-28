@@ -124,7 +124,7 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
         // Appointment
         if(todo is Appointment) {
             let todoApp: Appointment = todo as! Appointment
-            cell.todoL.text = "RDV : Docteur " + (todoApp.proposedBy?.lastName)!
+            cell.todoL.text = "RDV : " + (todoApp.proposedBy?.lastName)!
             
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale.init(identifier: "fr_FR")
