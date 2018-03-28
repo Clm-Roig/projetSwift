@@ -9,7 +9,8 @@
 import UIKit
 
 class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
-    
+    let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
+
     var appointments: [Appointment?] = []
     var treatments: [Treatment?] = []
     var programs: [Program?] = []
@@ -150,15 +151,24 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
         
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // We can only delete appointment
+            if todosList[indexPath.row] is Appointment {
+                todosTableView.beginUpdates()
+                appointmentDAO.delete(obj: todosList[indexPath.row] as! Appointment)
+                do {
+                    try appointmentDAO.save()
+                } catch {
+                    fatalError("Erreur à la suppression du rendez-vous.")
+                }
+                todosTableView.deleteRows(at: [indexPath], with: .fade)
+                todosList.remove(at: indexPath.row)
+                tableView.endUpdates()
+            }
+            
+          
+        }
+    }
     
 }
