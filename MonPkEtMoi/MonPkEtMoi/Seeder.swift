@@ -106,7 +106,7 @@ class Seeder {
             print("Error saving practitioner seeds")
         }
         
-        // Exercises
+        // Programs
         let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
         var program1 = Program()
         do {
