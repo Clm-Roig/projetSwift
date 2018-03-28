@@ -64,8 +64,12 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
         super.viewDidLoad()
         
         self.dayPicker.minimumDate = Date()
+        self.travelTimeL.text = "0"
         
-        
+        loadData()
+    }
+    
+    func loadData() {
         // Get Data
         do {
             self.practitioners = try practitionerDAO.getAll()
@@ -81,13 +85,12 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
                 return ($0?.master?.wording)! < ($1?.master?.wording)!
             }
         }
-        
-        self.travelTimeL.text = "0"
     }
     
     @IBAction func goBack(_ sender: Any) {
         performSegue(withIdentifier: "unwindSegueToAgenda", sender: self)
     }
+    
     
     // MARK: Picker functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

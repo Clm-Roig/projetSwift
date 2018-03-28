@@ -26,6 +26,7 @@ class PractitionerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addPractitionerButton.isHidden = true
         loadData()
     }
     

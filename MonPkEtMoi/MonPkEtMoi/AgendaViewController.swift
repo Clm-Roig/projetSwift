@@ -54,6 +54,8 @@ class AgendaViewController : UIViewController {
         self.todayLabel.text = "Aujourd'hui " + dateString
         self.laterLabel.text = "A venir"
         
+        self.addButton.isHidden = true
+        
         loadData()
     }
     
@@ -129,9 +131,6 @@ class AgendaViewController : UIViewController {
         
     }
     
-    @IBAction func switchChanged(_ sender: Any) {
-        
-    }
     
     @IBAction func unwindToAgenda(segue:UIStoryboardSegue) {
         loadData()

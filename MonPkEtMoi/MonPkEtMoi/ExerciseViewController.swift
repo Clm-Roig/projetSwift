@@ -32,6 +32,10 @@ class ExerciseViewController : UIViewController {
     
     override internal func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.addProgramButton.isHidden = true;
+        self.addExerciseButton.isHidden = true;
+        
         loadData()
     }
     

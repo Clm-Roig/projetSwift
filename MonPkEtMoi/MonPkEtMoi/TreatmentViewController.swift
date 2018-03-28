@@ -25,6 +25,7 @@ class TreatmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addTreatmentButton.isHidden = true
         loadData()
     }
 

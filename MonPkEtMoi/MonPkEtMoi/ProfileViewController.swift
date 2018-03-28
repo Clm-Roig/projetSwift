@@ -84,6 +84,11 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.endingHourStepper.isHidden = true
+        self.beginningHourStepper.isHidden = true
+        self.preparationTimeStepper.isHidden = true;    
+        
         loadData()
         
         guard let patient = self.patient else {
