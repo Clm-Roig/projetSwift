@@ -53,6 +53,11 @@ class AgendaViewController : UIViewController {
         loadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
+    
     func loadData() {
         do {
             self.appointments = try appointmentDAO.getAll()

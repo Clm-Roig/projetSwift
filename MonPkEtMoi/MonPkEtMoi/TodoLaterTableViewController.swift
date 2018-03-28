@@ -34,6 +34,77 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
                 self.todosList.append(treat)
             }
         }
+        
+        // Sort the TODOs
+        // For the treatments, their day is today + 1 day
+        self.todosList = self.todosList.sorted {
+            if($0 is Treatment && $1 is Treatment) {
+                let todo0 = $0 as! Treatment
+                let todo1 = $1 as! Treatment
+                
+                // Treatments are shown the next day once : just compare the hour and minutes
+                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.hours![0] as Date))
+                let minutes0 = Calendar.current.component(.minute, from: (todo0.hours![0] as Date))
+                    
+                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.hours![0] as Date))
+                let minutes1 = Calendar.current.component(.minute, from: (todo1.hours![0] as Date))
+                    
+                return (hour0 + minutes0) < (hour1 + minutes1)
+            }
+            
+            if($0 is Treatment && $1 is Appointment) {
+                let todo0 = $0 as! Treatment
+                let todo1 = $1 as! Appointment
+                
+                let dayTreat = Calendar.current.date(byAdding: .day, value: 1, to: Date())
+                let day1 = todo1.date! as Date
+                
+                if(dayTreat == day1) {
+                    // Compare just hours and minutes
+                    let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.hours![0] as Date))
+                    let minutes0 = Calendar.current.component(.minute, from: (todo0.hours![0] as Date))
+                    
+                    let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.date! as Date))
+                    let minutes1 = Calendar.current.component(.minute, from: (todo1.date! as Date))
+                    
+                    return (hour0 + minutes0) < (hour1 + minutes1)
+                }
+                else {
+                    return dayTreat! < day1
+                }
+                
+            }
+            if($0 is Appointment && $1 is Treatment){
+                let todo0 = $0 as! Appointment
+                let todo1 = $1 as! Treatment
+                
+                let day0 = todo0.date! as Date
+                let dayTreat = Calendar.current.date(byAdding: .day, value: 1, to: Date())
+                
+                if(day0 == dayTreat) {
+                    // Compare just hours and minutes
+                    let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.date! as Date))
+                    let minutes0 = Calendar.current.component(.minute, from: (todo0.date! as Date))
+                    
+                    let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.hours![0] as Date))
+                    let minutes1 = Calendar.current.component(.minute, from: (todo1.hours![0] as Date))
+                    
+                    return (hour0 + minutes0) < (hour1 + minutes1)
+                }
+                else {
+                    return day0 < dayTreat!
+                }
+                
+            }
+            if($0 is Appointment && $1 is Appointment) {
+                let todo0 = $0 as! Appointment
+                let todo1 = $1 as! Appointment
+                return (todo0.date! as Date) < (todo1.date! as Date)
+            }
+            return false
+        }
+
+        // Programs are inserted at the beginning of the list
         if(self.programs.count > 0) {
             for prog in self.programs {
                 self.todosList.insert(prog, at:0)
@@ -71,7 +142,7 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
         }
         
         // Progam
-        // 1 reminder just for tomorrow
+        // 1 reminder
         if(todo is Program) {
             let todoProg: Program = todo as! Program
             cell.todoL.text = "Exercice : " + (todoProg.isComposedBy?.wording)!
@@ -87,6 +158,7 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
         }
         
         // Treatment
+        // 1 reminder
         if(todo is Treatment) {
             let todoTreat: Treatment = todo as! Treatment
             cell.todoL.text = (todoTreat.need?.wording)! + " : " + todoTreat.quantity!

@@ -78,15 +78,7 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
             if($0 is Appointment && $1 is Appointment) {
                 let todo0 = $0 as! Appointment
                 let todo1 = $1 as! Appointment
-                
-                // Compare just hours and minutes
-                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.date! as Date))
-                let minutes0 = Calendar.current.component(.minute, from: (todo0.date! as Date))
-                
-                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.date! as Date))
-                let minutes1 = Calendar.current.component(.minute, from: (todo1.date! as Date))
-                
-                return (hour0 + minutes0) < (hour1 + minutes1)
+                return (todo0.date! as Date) < (todo1.date! as Date)
             }
             return false
         }
