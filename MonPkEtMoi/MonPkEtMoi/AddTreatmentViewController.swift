@@ -29,8 +29,6 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
         self.minuteLabel.text = String(Int(sender.value))
     }
 
-    
-    
     @IBAction func addTreatment(_ sender: Any) {
         if(self.quantityTF.text != "") {
             var treatment:Treatment?
@@ -47,6 +45,7 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
             newTreatment.endingDate = datePicker.date as NSDate
             
             let formatter = DateFormatter()
+            formatter.locale = Locale(identifier:"fr_FR")
             formatter.dateFormat = "HH:mm"
             let hour = formatter.date(from: hourLabel.text! + ":" + minuteLabel.text!)
             newTreatment.hours = [hour! as NSDate];
@@ -55,6 +54,14 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
             
             do {
                 try treatmentDAO.save()
+                
+                // Notification creation
+                for hour in newTreatment.hours! {
+                    let notification = TreatmentNotification(treatment: newTreatment)
+                    let triggerDaily = Calendar.current.dateComponents([.hour,.minute], from: hour as Date)
+                    notification.setDateTrigger(dateComponents: triggerDaily, repeats: true)
+                }
+                
                 performSegue(withIdentifier: "unwindSegueToTreatments", sender: self)
             } catch let error {
                 print(error)

@@ -37,20 +37,18 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         // Everything is ready to manage [hours] even if we currently just 1 hour in the array
         if let hours = hoursTable {
             for hour in hours {
-                
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "hh"
+                dateFormatter.locale = Locale(identifier:"fr_FR")
+                dateFormatter.dateFormat = "HH'h'mm"
                 let hourToPrint = dateFormatter.string(from: hour as Date)
-                
-                dateFormatter.dateFormat = "mm"
-                let minuteToPrint = dateFormatter.string(from: hour as Date)
+                print(hourToPrint)
                 
                 if(firstHour) {
-                    cell.hoursLabel.text = hourToPrint + "h" + minuteToPrint
+                    cell.hoursLabel.text = hourToPrint
                     firstHour = false
                 }
                 else {
-                    cell.hoursLabel.text = hourToPrint + "h" + minuteToPrint
+                    cell.hoursLabel.text = "; " + hourToPrint
                 }
                 
             }

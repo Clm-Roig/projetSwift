@@ -15,11 +15,10 @@ class TreatmentNotification {
     let content: UNMutableNotificationContent
     let identifier: String
     
-    init(timeInterval: TimeInterval, repeats: Bool, title: String, body: String) {
+    init(treatment: Treatment) {
         content = UNMutableNotificationContent()
-
-        content.title = title
-        content.body = body
+        content.title = "Prise de médicament"
+        content.body = (treatment.need?.wording!)! + " : " + treatment.quantity!
         content.sound = UNNotificationSound.default()
         self.identifier = UUID().uuidString
     }

@@ -17,15 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // ======= NOTIFICATIONS ====== //
+        // ======= NOTIFICATIONS AUTHORIZATION ====== //
         let options: UNAuthorizationOptions = [.alert, .badge]
         let center = UNUserNotificationCenter.current();
-        
-        // Notification Authorization
         center.requestAuthorization(options: options) {
             (granted, error) in
             if !granted {
-                print("An error occured during the notification authorization process.")
+                print("Authorization not granted.")
             }
         }
         
