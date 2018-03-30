@@ -11,6 +11,7 @@
 		15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EF420583BDC00866455 /* AgendaViewController.swift */; };
 		15FE14652062C3C90094785B /* TreatmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE14642062C3C90094785B /* TreatmentTableViewController.swift */; };
 		75ACAF07206EBAA000E613FF /* TreatmentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */; };
+		75ACAF09206EDFF300E613FF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF08206EDFF300E613FF /* Notification.swift */; };
 		847C756B2062A3F100038449 /* PractitionerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C756A2062A3F100038449 /* PractitionerTableViewCell.swift */; };
 		847C756D2062A40C00038449 /* PractitionerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C756C2062A40C00038449 /* PractitionerTableViewController.swift */; };
 		BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B263D205E990E009BFE67 /* ProfileViewController.swift */; };
@@ -83,6 +84,7 @@
 		15723EF420583BDC00866455 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		15FE14642062C3C90094785B /* TreatmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTableViewController.swift; sourceTree = "<group>"; };
 		75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentNotification.swift; sourceTree = "<group>"; };
+		75ACAF08206EDFF300E613FF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		847C756A2062A3F100038449 /* PractitionerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerTableViewCell.swift; sourceTree = "<group>"; };
 		847C756C2062A40C00038449 /* PractitionerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerTableViewController.swift; sourceTree = "<group>"; };
 		BC7B263D205E990E009BFE67 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,15 @@
 			name = Agenda;
 			sourceTree = "<group>";
 		};
+		75ACAF0A206EE01500E613FF /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				75ACAF08206EDFF300E613FF /* Notification.swift */,
+				75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
 		BC7B2640205E991E009BFE67 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +292,6 @@
 				15723EF12058368800866455 /* Registration */,
 				E0FCAEC4203F292200F04470 /* Treatment */,
 				E0FCAE8F203EF9A300F04470 /* AppDelegate.swift */,
-				75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */,
 				E0FCAE93203EF9A300F04470 /* Main.storyboard */,
 				E0FCAE99203EF9A300F04470 /* Assets.xcassets */,
 				E0FCAE9B203EF9A300F04470 /* LaunchScreen.storyboard */,
@@ -289,6 +299,7 @@
 				E0FCAE96203EF9A300F04470 /* MonPkEtMoi.xcdatamodeld */,
 				F3F07C55205D2DA60089DC4D /* Data */,
 				E09603232060441800E4F5C4 /* Helpers */,
+				75ACAF0A206EE01500E613FF /* Notification */,
 			);
 			path = MonPkEtMoi;
 			sourceTree = "<group>";
@@ -498,6 +509,7 @@
 				E0D99C0C2061203200CF2508 /* AddPractitionerViewController.swift in Sources */,
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */,
+				75ACAF09206EDFF300E613FF /* Notification.swift in Sources */,
 				F3093CB42065ADE20010ED39 /* DateHelper.swift in Sources */,
 				F3093CB02065AAFF0010ED39 /* TreatmentDAO.swift in Sources */,
 				E02535E02064F34600A480EF /* ExerciseDoneTableViewCell.swift in Sources */,

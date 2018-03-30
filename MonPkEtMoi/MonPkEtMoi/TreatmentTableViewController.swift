@@ -64,6 +64,8 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             treatmentTableView.beginUpdates()
+            
+            Notification.delete(identifier: treatments[indexPath.row]!.objectID.uriRepresentation().absoluteString)
             treatmentDAO.delete(obj: treatments[indexPath.row]!)
             do {
                 try treatmentDAO.save()
@@ -72,6 +74,7 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
             }
             treatmentTableView.deleteRows(at: [indexPath], with: .fade)
             treatments.remove(at: indexPath.row)
+            
             treatmentTableView.endUpdates()
         }
     }

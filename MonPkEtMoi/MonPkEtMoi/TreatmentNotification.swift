@@ -9,55 +9,17 @@
 import Foundation
 import UserNotifications
 
-class TreatmentNotification {
-    let center = UNUserNotificationCenter.current()
-    var request: UNNotificationRequest?
-    let content: UNMutableNotificationContent
-    let identifier: String
+class TreatmentNotification: Notification {
     
+    /// Initialize the content of a new Treatment Notification with the name of the medicine and his quantity.
+    /// The identifier of the notifcation is the objectID.
+    ///
+    /// - Parameter treatment: <#treatment description#>
     init(treatment: Treatment) {
-        content = UNMutableNotificationContent()
+        super.init()
         content.title = "Prise de médicament"
         content.body = (treatment.need?.wording!)! + " : " + treatment.quantity!
-        content.sound = UNNotificationSound.default()
-        self.identifier = UUID().uuidString
+        self.identifier = treatment.objectID.uriRepresentation().absoluteString
     }
-    
-    /// Set the trigger of the request according to a DateComponents.
-    ///
-    /// - Parameter dateComponents: <#dateComponent description#>
-    func setDateTrigger(dateComponents: DateComponents, repeats:Bool) {
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: repeats)
-        self.request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        self.addNotificationToCenter()
-    }
-    
-    
-    /// Set the trigger of the request according to a TimeInterval and add it to the center.
-    ///
-    /// - Parameters:
-    ///   - timeInterval: <#timeInterval description#>
-    ///   - repeats: <#repeats description#>
-    func setTimeIntervalTrigger(timeInterval: TimeInterval, repeats: Bool) {
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: repeats)
-        self.request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        self.addNotificationToCenter()
-    }
-    
-    
-    /// Schedule a notification in the notification center.
-    /// The notification trigger must be correctly set.
-    ///
-    /// - Parameter notificationRequest: <#notificationRequest description#>
-    private func addNotificationToCenter() {
-        center.add(request!, withCompletionHandler: {
-            (error) in
-            if let error = error {
-                print("Error with the notification scheduling.")
-                print(error)
-            }
-        })
-    }
-    
     
 }
