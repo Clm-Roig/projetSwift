@@ -25,7 +25,7 @@ class AppointmentNotification: Notification {
         
         content.title = "Rendez-vous médical"
         content.body = "Vous avez rendez-vous avec M./Mme " + (appointment.proposedBy?.lastName)!
-        content.body += "à " + hourToPrint + "."
+        content.body += " à " + hourToPrint + "."
         self.identifier = appointment.objectID.uriRepresentation().absoluteString
     }
     
