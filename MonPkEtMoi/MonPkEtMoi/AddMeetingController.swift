@@ -12,6 +12,7 @@ import UIKit
 class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
     let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
+    let patientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
 
     var practitioners: [Practitioner?] = []
     
@@ -50,8 +51,24 @@ class AddMeetingController : UIViewController, UIPickerViewDataSource, UIPickerV
         newAppointment.proposedBy = practitioners[practitionerPicker.selectedRow(inComponent: 0)]
         newAppointment.travelTime = Int16(travelTimeL.text!)!
         
+        var patient: Patient?
+        do {
+            patient = try patientDAO.get()
+        } catch {
+            fatalError("Erreur à la lecture du temps de préparation.")
+        }
+        
         do {
             try appointmentDAO.save()
+            
+            // Notification
+            let notification = AppointmentNotification(appointment: newAppointment)
+            let dateTrigger = calendar.date(byAdding: .minute, value: Int(-(newAppointment.travelTime + (patient?.timePeparation)!)), to: newAppointment.date! as Date)
+            
+            if dateTrigger! > Date() {
+                notification.setTimeIntervalTrigger(timeInterval: (dateTrigger?.timeIntervalSinceNow)!, repeats: false)
+            }
+            
             self.performSegue(withIdentifier: "test", sender: self)
         } catch {
             AlertHelper.alertError(view: self, errorMessage: "Erreur à la sauvegarde du rendez-vous.")

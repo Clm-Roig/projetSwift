@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // Dismiss Keyboard
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
+        
         // ======= NOTIFICATIONS AUTHORIZATION ====== //
         let options: UNAuthorizationOptions = [.alert, .badge]
         let center = UNUserNotificationCenter.current();

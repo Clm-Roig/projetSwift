@@ -1,0 +1,32 @@
+//
+//  AppointmentNotification
+//  MonPkEtMoi
+//
+//  Created by Clément Roig on 30/03/2018.
+//  Copyright © 2018 Roig-Dye. All rights reserved.
+//
+
+import Foundation
+import UserNotifications
+
+class AppointmentNotification: Notification {
+    
+    /// Initialize the content of a new Meeting Notification with the name of the practitioner and the hour of the appointment.
+    /// The identifier of the notifcation is the objectID.
+    ///
+    /// - Parameter treatment: <#treatment description#>
+    init(appointment: Appointment) {
+        super.init()
+        // Get hour
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier:"fr_FR")
+        dateFormatter.dateFormat = "HH'h'mm"
+        let hourToPrint = dateFormatter.string(from: appointment.date! as Date)
+        
+        content.title = "Rendez-vous médical"
+        content.body = "Vous avez rendez-vous avec M./Mme " + (appointment.proposedBy?.lastName)!
+        content.body += "à " + hourToPrint + "."
+        self.identifier = appointment.objectID.uriRepresentation().absoluteString
+    }
+    
+}

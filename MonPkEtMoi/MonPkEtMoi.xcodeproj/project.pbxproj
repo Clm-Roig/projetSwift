@@ -12,6 +12,7 @@
 		15FE14652062C3C90094785B /* TreatmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE14642062C3C90094785B /* TreatmentTableViewController.swift */; };
 		75ACAF07206EBAA000E613FF /* TreatmentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */; };
 		75ACAF09206EDFF300E613FF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF08206EDFF300E613FF /* Notification.swift */; };
+		75ACAF0C206EE6FF00E613FF /* AppointmentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF0B206EE6FF00E613FF /* AppointmentNotification.swift */; };
 		847C756B2062A3F100038449 /* PractitionerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C756A2062A3F100038449 /* PractitionerTableViewCell.swift */; };
 		847C756D2062A40C00038449 /* PractitionerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C756C2062A40C00038449 /* PractitionerTableViewController.swift */; };
 		BC7B263E205E990E009BFE67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B263D205E990E009BFE67 /* ProfileViewController.swift */; };
@@ -85,6 +86,7 @@
 		15FE14642062C3C90094785B /* TreatmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTableViewController.swift; sourceTree = "<group>"; };
 		75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentNotification.swift; sourceTree = "<group>"; };
 		75ACAF08206EDFF300E613FF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		75ACAF0B206EE6FF00E613FF /* AppointmentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentNotification.swift; sourceTree = "<group>"; };
 		847C756A2062A3F100038449 /* PractitionerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerTableViewCell.swift; sourceTree = "<group>"; };
 		847C756C2062A40C00038449 /* PractitionerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PractitionerTableViewController.swift; sourceTree = "<group>"; };
 		BC7B263D205E990E009BFE67 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				75ACAF08206EDFF300E613FF /* Notification.swift */,
+				75ACAF0B206EE6FF00E613FF /* AppointmentNotification.swift */,
 				75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */,
 			);
 			name = Notification;
@@ -506,6 +509,7 @@
 				E096031F20603FDE00E4F5C4 /* PatientDAO.swift in Sources */,
 				E09EACE42062C1AD008A6B01 /* CDExerciseDAO.swift in Sources */,
 				E0FCAE90203EF9A300F04470 /* AppDelegate.swift in Sources */,
+				75ACAF0C206EE6FF00E613FF /* AppointmentNotification.swift in Sources */,
 				E0D99C0C2061203200CF2508 /* AddPractitionerViewController.swift in Sources */,
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */,
