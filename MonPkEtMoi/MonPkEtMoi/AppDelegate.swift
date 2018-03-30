@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        // ======= NOTIFICATIONS ====== //
+        let options: UNAuthorizationOptions = [.alert, .badge]
+        let center = UNUserNotificationCenter.current();
+        
+        // Notification Authorization
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("An error occured during the notification authorization process.")
+            }
+        }
         
         // ====== SEEDERS ====== //
         let seeded = UserDefaults.standard.bool(forKey:"seeded")
