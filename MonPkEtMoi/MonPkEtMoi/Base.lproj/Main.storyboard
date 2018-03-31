@@ -1060,22 +1060,78 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suivi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIT-NH-Upe">
                                 <rect key="frame" x="16" y="336" width="343" height="24"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ED9-Hc-FfG">
+                                <rect key="frame" x="0.0" y="368" width="375" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medicationIntakeCell" id="BUU-Tg-cZd" customClass="MedicationIntakeTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUU-Tg-cZd" id="O52-Cc-XnE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kES-WI-Th0">
+                                                    <rect key="frame" x="348" y="12" width="12" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedicineWording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhY-ed-C5S">
+                                                    <rect key="frame" x="15" y="1" width="126" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXhYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VI-ct-dXS">
+                                                    <rect key="frame" x="15" y="23.5" width="49.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LhY-ed-C5S" firstAttribute="top" secondItem="O52-Cc-XnE" secondAttribute="top" constant="1" id="MqP-2d-ANV"/>
+                                                <constraint firstItem="LhY-ed-C5S" firstAttribute="leading" secondItem="O52-Cc-XnE" secondAttribute="leading" constant="15" id="RzR-V1-9le"/>
+                                                <constraint firstItem="kES-WI-Th0" firstAttribute="trailing" secondItem="O52-Cc-XnE" secondAttribute="trailingMargin" id="jcP-FP-43T"/>
+                                                <constraint firstAttribute="bottom" secondItem="9VI-ct-dXS" secondAttribute="bottom" constant="1" id="m1U-3f-6tK"/>
+                                                <constraint firstItem="kES-WI-Th0" firstAttribute="bottom" secondItem="O52-Cc-XnE" secondAttribute="bottomMargin" id="m4g-63-dpe"/>
+                                                <constraint firstItem="kES-WI-Th0" firstAttribute="top" secondItem="O52-Cc-XnE" secondAttribute="topMargin" constant="1" id="u6C-NK-U0X"/>
+                                                <constraint firstItem="9VI-ct-dXS" firstAttribute="leading" secondItem="O52-Cc-XnE" secondAttribute="leading" constant="15" id="zzc-h3-Kyb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="delayL" destination="kES-WI-Th0" id="rkb-kd-l2w"/>
+                                            <outlet property="medicineWordingL" destination="LhY-ed-C5S" id="TZj-4I-Urn"/>
+                                            <outlet property="treatmentHourL" destination="9VI-ct-dXS" id="fyj-ka-qYH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SU1-j3-VWG" id="fqs-pc-KNb"/>
+                                    <outlet property="delegate" destination="SU1-j3-VWG" id="HEi-dv-PMv"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ED9-Hc-FfG" secondAttribute="trailing" id="0os-XG-hBz"/>
+                            <constraint firstItem="ED9-Hc-FfG" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leading" id="1V6-CE-wbb"/>
                             <constraint firstItem="G1Y-xV-7pC" firstAttribute="top" secondItem="Ddh-OF-Y0E" secondAttribute="bottom" constant="8" id="2Ui-Fv-QRU"/>
                             <constraint firstItem="YIT-NH-Upe" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leadingMargin" id="FgE-v9-LOH"/>
                             <constraint firstItem="G1Y-xV-7pC" firstAttribute="trailing" secondItem="W4A-26-ckg" secondAttribute="trailingMargin" id="Oc1-mJ-WeU"/>
+                            <constraint firstItem="Lkj-jb-dco" firstAttribute="top" secondItem="ED9-Hc-FfG" secondAttribute="bottom" id="PMX-aw-53D"/>
                             <constraint firstAttribute="trailing" secondItem="Ddh-OF-Y0E" secondAttribute="trailing" id="QcT-oO-YVm"/>
                             <constraint firstItem="G1Y-xV-7pC" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leadingMargin" id="U2d-RL-488"/>
                             <constraint firstItem="Ddh-OF-Y0E" firstAttribute="leading" secondItem="W4A-26-ckg" secondAttribute="leading" id="VRx-eW-Ert"/>
                             <constraint firstItem="Ddh-OF-Y0E" firstAttribute="top" secondItem="Phf-Iq-XWc" secondAttribute="bottom" id="nlR-E9-3Lu"/>
                             <constraint firstItem="YIT-NH-Upe" firstAttribute="trailing" secondItem="W4A-26-ckg" secondAttribute="trailingMargin" id="ntr-4L-CFn"/>
                             <constraint firstItem="YIT-NH-Upe" firstAttribute="top" secondItem="G1Y-xV-7pC" secondAttribute="bottom" constant="8" id="qxk-YJ-4fq"/>
+                            <constraint firstItem="ED9-Hc-FfG" firstAttribute="top" secondItem="YIT-NH-Upe" secondAttribute="bottom" constant="8" id="vlc-2i-1eb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Traitement" id="5ab-bZ-uFM">
@@ -1091,6 +1147,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addTreatmentButton" destination="G1Y-xV-7pC" id="4vT-gc-cLB"/>
+                        <outlet property="medicationIntakesTableView" destination="ED9-Hc-FfG" id="7Qt-LE-0Xg"/>
                         <outlet property="treatmentsTableView" destination="Ddh-OF-Y0E" id="v0X-NR-6Lj"/>
                     </connections>
                 </viewController>

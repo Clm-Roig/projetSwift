@@ -56,16 +56,15 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
                 try treatmentDAO.save()
                 
                 // Notification creation
-                for hour in newTreatment.hours! {
-                    // Currently, the medicine-taken delay after the supposed hour is 0.
-                    var dataDict = Dictionary<String, Int>()
-                    
-                    let notification = TreatmentNotification(treatment: newTreatment, data: dataDict)
-                    
-                    dataDict["delay"] = 0
-                    let triggerDaily = Calendar.current.dateComponents([.hour,.minute], from: hour as Date)
-                    notification.setDateTrigger(dateComponents: triggerDaily, repeats: true)
-                }
+                // Currently, the medicine-taken delay after the supposed hour is 0.
+                var data = Dictionary<String, Any>()
+                data["wording"] = newTreatment.need?.wording
+                data["delay"] = 0
+
+                let notification = TreatmentNotification(treatment: newTreatment, data: data)
+                
+                let triggerDaily = Calendar.current.dateComponents([.hour,.minute], from: newTreatment.hours![0] as Date)
+                notification.setDateTrigger(dateComponents: triggerDaily, repeats: true)
                 
                 performSegue(withIdentifier: "unwindSegueToTreatments", sender: self)
             } catch let error {

@@ -10,11 +10,16 @@ import UIKit
 
 class TreatmentViewController: UIViewController {
     let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
-  
+    let medicationIntakeDAO = CoreDataDAOFactory.getInstance().getMedicationIntakeDAO()
+
     var treatments: [Treatment?] = []
-    var tableViewCtrl: TreatmentTableViewController?
-    
+    var treatmentTableViewCtrl: TreatmentTableViewController?
     @IBOutlet weak var treatmentsTableView: UITableView!
+    
+    var medicationIntakes: [MedicationIntake?] = []
+    var medicationIntakeTableViewCtrl: MedicationIntakeTableViewController?
+    @IBOutlet weak var medicationIntakesTableView: UITableView!
+    
     @IBOutlet weak var addTreatmentButton: MyUIButton!
     
     @IBAction func switchTouched(_ sender: UISwitch) {
@@ -37,13 +42,30 @@ class TreatmentViewController: UIViewController {
     func loadData() {
         do {
             self.treatments = try treatmentDAO.getAll()
-        } catch {
+        } catch let error {
+            print(error)
             fatalError("Erreur lors de l'obtention des traitements.")
         }
+        
+        do {
+            medicationIntakes = try medicationIntakeDAO.getAll()
+        } catch let error {
+            print(error)
+            fatalError("Erreur lors de l'obtention des prises de médicaments.")
+        }
+        
+        
+        medicationIntakes = medicationIntakes.sorted {
+            $0!.date! as Date > $1!.date! as Date
+        }
                 
-        self.tableViewCtrl = TreatmentTableViewController(treatmentTableView: self.treatmentsTableView, treatments: self.treatments)
-        self.treatmentsTableView.delegate = self.tableViewCtrl
-        self.treatmentsTableView.dataSource = self.tableViewCtrl
+        treatmentTableViewCtrl = TreatmentTableViewController(treatmentTableView: treatmentsTableView, treatments: treatments)
+        treatmentsTableView.delegate = treatmentTableViewCtrl
+        treatmentsTableView.dataSource = treatmentTableViewCtrl
+        
+        medicationIntakeTableViewCtrl = MedicationIntakeTableViewController(medicationIntakeTableView: medicationIntakesTableView, medicationIntakes: medicationIntakes)
+        medicationIntakesTableView.delegate = medicationIntakeTableViewCtrl
+        medicationIntakesTableView.dataSource = medicationIntakeTableViewCtrl
     }
     
     @IBAction func unwindToTreatments(segue:UIStoryboardSegue) {

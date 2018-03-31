@@ -11,7 +11,7 @@ import Foundation
 class Seeder {
     func seed() {
         
-        // Specialisms 
+        //MARK: Specialisms
         let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
         let specialisms = ["kinésithérapeute","infirmier","orthophoniste", "psychologue clinicien","neuropsychologue","médecine généraliste","psychiatre","neurochirurgien"]
         
@@ -31,7 +31,7 @@ class Seeder {
         }
         
         
-        // Practitioner
+        //MARK: Practitioner
         let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
         
         var spe:[Specialism] = []
@@ -80,7 +80,7 @@ class Seeder {
             print("Error saving practitioner seeds")
         }
         
-        // Appointments
+        //MARK: Appointments
         let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
         var appointment1 = Appointment()
         do {
@@ -106,7 +106,7 @@ class Seeder {
             print("Error saving practitioner seeds")
         }
         
-        // Programs
+        //MARK: Programs
         let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
         var program1 = Program()
         do {
@@ -132,7 +132,7 @@ class Seeder {
             print("Error saving exercises seeds")
         }
         
-        // Medicine 
+        //MARK: Medicine
         let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
         var medicines: [Medicine?] = []
         let medicinesWording = ["Modopar 62,5","Modopar 125","Modopar 250","Modopar LP 125", "Modopar dispersible 125", "Sinemet 100", "Sinemet 250", "Sinemet LP 100","Sinemet LP 200", "Stalevo 50"]
@@ -153,7 +153,7 @@ class Seeder {
             print("Error saving medicines seeds")
         }
         
-        // Treatments 
+        //MARK: Treatments
         var treatment1 = Treatment()
         do {
             treatment1 = try treatmentDAO.create()
@@ -169,7 +169,61 @@ class Seeder {
         } catch {
             print("Error saving treatments seeds")
         }
- 
+        
+        //MARK: Medication Intake
+        let medicationIntakeDAO = CoreDataDAOFactory.getInstance().getMedicationIntakeDAO()
+        
+        var medicationIntake: MedicationIntake?
+        do {
+            medicationIntake = try medicationIntakeDAO.create()
+        } catch let error {
+            print("Erreur à la création de la prise de médicament.")
+            print(error)
+        }
+        guard let newMedicationIntake = medicationIntake else {
+            return
+        }
+        medicationIntake = newMedicationIntake
+        medicationIntake?.date = Date() as NSDate
+        medicationIntake?.delay = -1
+        medicationIntake?.wording = "Agent Chimique X (pas pris ou +1h)"
+        
+        var medicationIntake2: MedicationIntake?
+        do {
+            medicationIntake2 = try medicationIntakeDAO.create()
+        } catch let error {
+            print("Erreur à la création de la prise de médicament.")
+            print(error)
+        }
+        guard let newMedicationIntake2 = medicationIntake2 else {
+            return
+        }
+        medicationIntake2 = newMedicationIntake2
+        medicationIntake2?.date = Calendar.current.date(byAdding: .day, value: -8, to: Date())! as NSDate
+        medicationIntake2?.delay = 5
+        medicationIntake2?.wording = "Médicament pris à temps (-30min)"
+        
+        var medicationIntake3: MedicationIntake?
+        do {
+            medicationIntake3 = try medicationIntakeDAO.create()
+        } catch let error {
+            print("Erreur à la création de la prise de médicament.")
+            print(error)
+        }
+        guard let newMedicationIntake3 = medicationIntake3 else {
+            return
+        }
+        medicationIntake3 = newMedicationIntake3
+        medicationIntake3?.date = Calendar.current.date(byAdding: .day, value: -3, to: Date())! as NSDate
+        medicationIntake3?.delay = 35
+        medicationIntake3?.wording = "Médicament retard (+ 30-60min)"
+        
+        do {
+            try medicationIntakeDAO.save()
+        } catch let error {
+            print("Erreur à la sauvegarde de la prise de médicament")
+            print(error)
+        }
 
     }
 }

@@ -1,19 +1,20 @@
 //
-//  TreatmentTableViewCell.swift
+//  MedicationIntakeTableViewCell.swift
 //  MonPkEtMoi
 //
-//  Created by Clement ROIG on 22/02/2018.
+//  Created by Clément Roig on 31/03/2018.
 //  Copyright © 2018 Roig-Dye. All rights reserved.
 //
+
 import Foundation
 import UIKit
 
-class TreatmentTableViewCell: UITableViewCell {
+class MedicationIntakeTableViewCell: UITableViewCell {
     
-
-    @IBOutlet weak var medicineLabel: UILabel!
-    @IBOutlet weak var quantityLabel: UILabel!
-    @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var medicineWordingL: UILabel!
+    @IBOutlet weak var treatmentHourL: UILabel!
+    @IBOutlet weak var delayL: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +23,7 @@ class TreatmentTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+        // Configure the view for the selected
     }
-    
 }
+

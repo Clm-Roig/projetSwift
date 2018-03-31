@@ -20,6 +20,8 @@ class TreatmentNotification: Notification {
                                           actions: [medicationTakenAction,medicationReportAction],
                                           intentIdentifiers: [], options: [])
     
+    static let delayBetweenTakes = 5
+    
     /// Initialize the content of a new Treatment Notification with the name of the medicine and his quantity.
     /// The identifier of the notifcation is the objectID.
     ///
@@ -34,6 +36,18 @@ class TreatmentNotification: Notification {
         self.identifier = treatment.objectID.uriRepresentation().absoluteString
     }
     
-    
+    /// Initialize the content of a new Treatment Notification delayed.
+    /// The identifier of the notifcation is the objectID.
+    ///
+    /// - Parameter treatment: the treatment related to the notification
+    /// - data: dictionary with the key "delay"
+    init(body: String, data: Dictionary<String, Any>) {
+        super.init()
+        content.title = "Prise de médicament"
+        content.body = body
+        content.userInfo = data
+        content.categoryIdentifier = Notification.medicationIntakeCategoryName
+        self.identifier = "MedicationIntakeDelayed " + UUID().uuidString
+    }
     
 }

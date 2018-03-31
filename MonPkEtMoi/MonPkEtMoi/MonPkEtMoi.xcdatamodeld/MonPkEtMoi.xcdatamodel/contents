@@ -38,7 +38,7 @@
     <entity name="MedicationIntake" representedClassName="MedicationIntake" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="delay" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="takenFor" maxCount="1" deletionRule="Nullify" destinationEntity="Treatment" inverseName="occurs" inverseEntity="Treatment" syncable="YES"/>
+        <attribute name="wording" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Medicine" representedClassName="Medicine" syncable="YES" codeGenerationType="class">
         <attribute name="wording" attributeType="String" syncable="YES"/>
@@ -81,7 +81,6 @@
         <attribute name="hours" attributeType="Transformable" customClassName="[NSDate]" syncable="YES"/>
         <attribute name="quantity" attributeType="String" syncable="YES"/>
         <relationship name="need" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="isLinkedTo" inverseEntity="Medicine" syncable="YES"/>
-        <relationship name="occurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MedicationIntake" inverseName="takenFor" inverseEntity="MedicationIntake" syncable="YES"/>
     </entity>
     <elements>
         <element name="Appointment" positionX="-315" positionY="-601" width="128" height="105"/>
@@ -99,6 +98,6 @@
         <element name="Program" positionX="-585" positionY="-766" width="128" height="90"/>
         <element name="Specialism" positionX="-486" positionY="-198" width="128" height="75"/>
         <element name="Survey" positionX="-56" positionY="-571" width="128" height="88"/>
-        <element name="Treatment" positionX="-65" positionY="-432" width="128" height="135"/>
+        <element name="Treatment" positionX="-65" positionY="-432" width="128" height="120"/>
     </elements>
 </model>
