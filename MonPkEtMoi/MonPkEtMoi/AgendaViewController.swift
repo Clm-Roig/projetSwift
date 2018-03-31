@@ -91,7 +91,11 @@ class AgendaViewController : UIViewController {
         // Separate today's TODOs and later's TODOs
         if (self.appointments.count > 0) {
             for app in self.appointments {
-                if(Calendar.autoupdatingCurrent.isDateInToday(app!.date! as Date)) {
+                guard let app = app else {
+                    return
+                }
+                // Is it today ? And is it passed ?
+                if(Calendar.autoupdatingCurrent.isDateInToday(app.date! as Date) && app.date! as Date > Date()) {
                     self.appointmentsToday.append(app)
                 }
                 else {
@@ -108,9 +112,19 @@ class AgendaViewController : UIViewController {
         }
         if (self.treatments.count > 0) {
             for treatment in self.treatments {
-                if((treatment!.endingDate! as Date) > Date()) {
-                    self.treatmentsToday.append(treatment)
+                guard let treatment = treatment else {
+                    return
+                }
+                // Ending date passed ?
+                if((treatment.endingDate! as Date) > Date()) {
                     self.treatmentsLater.append(treatment)
+                    
+                    // Hour of medication intake passed ?
+                    // Displays a treatment during all the hour of the medication-intake hour (prevent the patient to forget).
+                    let hourNotPassed = Calendar.current.component(.hour, from: treatment.hours![0] as Date) > Calendar.current.component(.hour, from: Date())
+                    if hourNotPassed {
+                        self.treatmentsToday.append(treatment)
+                    }
                 }
             }
         }
