@@ -64,7 +64,6 @@ class RegistrationViewController : UIViewController {
             newPatient.endingEvaluationHour = Int16(20)
             newPatient.timePeparation = Int16(30)            
             
-            print(newPatient)
             // Save the patient
             do {
                 try patientDAO.save()

@@ -10,6 +10,8 @@
 		15723EED2058330F00866455 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EEC2058330F00866455 /* RegistrationViewController.swift */; };
 		15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15723EF420583BDC00866455 /* AgendaViewController.swift */; };
 		15FE14652062C3C90094785B /* TreatmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE14642062C3C90094785B /* TreatmentTableViewController.swift */; };
+		7556CEC3206FD55A00DEF8FB /* MedicationIntakeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7556CEC2206FD55A00DEF8FB /* MedicationIntakeDAO.swift */; };
+		7556CEC5206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7556CEC4206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift */; };
 		75ACAF07206EBAA000E613FF /* TreatmentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */; };
 		75ACAF09206EDFF300E613FF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF08206EDFF300E613FF /* Notification.swift */; };
 		75ACAF0C206EE6FF00E613FF /* AppointmentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF0B206EE6FF00E613FF /* AppointmentNotification.swift */; };
@@ -85,6 +87,8 @@
 		15723EEC2058330F00866455 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		15723EF420583BDC00866455 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		15FE14642062C3C90094785B /* TreatmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentTableViewController.swift; sourceTree = "<group>"; };
+		7556CEC2206FD55A00DEF8FB /* MedicationIntakeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationIntakeDAO.swift; sourceTree = "<group>"; };
+		7556CEC4206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMedicationIntakeDAO.swift; sourceTree = "<group>"; };
 		75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentNotification.swift; sourceTree = "<group>"; };
 		75ACAF08206EDFF300E613FF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		75ACAF0B206EE6FF00E613FF /* AppointmentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentNotification.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				E016042B2061101300E6EB08 /* CDDAO.swift */,
 				E09EACE72062C57A008A6B01 /* CDAppointmentDAO.swift */,
 				E09EACE32062C1AD008A6B01 /* CDExerciseDAO.swift */,
+				7556CEC4206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift */,
 				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
 				E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */,
 				E08151FB206117F200A98DF6 /* CDSpecialismDAO.swift */,
@@ -348,6 +353,7 @@
 				E01604202061050900E6EB08 /* DAO.swift */,
 				E09EACE52062C449008A6B01 /* AppointmentDAO.swift */,
 				E09EACE12062C139008A6B01 /* ExerciseDAO.swift */,
+				7556CEC2206FD55A00DEF8FB /* MedicationIntakeDAO.swift */,
 				E096031E20603FDE00E4F5C4 /* PatientDAO.swift */,
 				E016041E206104E100E6EB08 /* PractitionerDAO.swift */,
 				E08151F92061178000A98DF6 /* SpecialismDAO.swift */,
@@ -525,6 +531,7 @@
 				E08151FA2061178000A98DF6 /* SpecialismDAO.swift in Sources */,
 				E032EE9C2064EF3200BDB87E /* AddProgramController.swift in Sources */,
 				75ACAF07206EBAA000E613FF /* TreatmentNotification.swift in Sources */,
+				7556CEC3206FD55A00DEF8FB /* MedicationIntakeDAO.swift in Sources */,
 				847C756D2062A40C00038449 /* PractitionerTableViewController.swift in Sources */,
 				E02535DE2064F33700A480EF /* ProgramTableViewCell.swift in Sources */,
 				E09EACE62062C449008A6B01 /* AppointmentDAO.swift in Sources */,
@@ -544,6 +551,7 @@
 				E016041F206104E100E6EB08 /* PractitionerDAO.swift in Sources */,
 				15723EF520583BDC00866455 /* AgendaViewController.swift in Sources */,
 				E0FCAEC3203F291600F04470 /* TreatmentViewController.swift in Sources */,
+				7556CEC5206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift in Sources */,
 				15FE14652062C3C90094785B /* TreatmentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

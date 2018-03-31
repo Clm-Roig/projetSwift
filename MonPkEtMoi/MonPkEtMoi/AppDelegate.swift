@@ -14,6 +14,7 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let notificationDelegate = NotificationDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -31,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         Notification.registerCategories()
+        
+        // Set delegate
+        center.delegate = notificationDelegate
         
         // ====== SEEDERS ====== //
         let seeded = UserDefaults.standard.bool(forKey:"seeded")

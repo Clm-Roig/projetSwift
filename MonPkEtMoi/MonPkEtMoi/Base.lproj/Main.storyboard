@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="top" id="iDB-dW-Fkf"/>
                         <viewControllerLayoutGuide type="bottom" id="obr-ac-9c4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Nhq-qq-9MJ">
+                    <view key="view" contentMode="scaleToFill" id="Nhq-qq-9MJ" customClass="MyUIView" customModule="MonPkEtMoi" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

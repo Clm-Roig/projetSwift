@@ -38,6 +38,7 @@
     <entity name="MedicationIntake" representedClassName="MedicationIntake" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="delay" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="takenFor" maxCount="1" deletionRule="Nullify" destinationEntity="Treatment" inverseName="occurs" inverseEntity="Treatment" syncable="YES"/>
     </entity>
     <entity name="Medicine" representedClassName="Medicine" syncable="YES" codeGenerationType="class">
         <attribute name="wording" attributeType="String" syncable="YES"/>
@@ -80,6 +81,7 @@
         <attribute name="hours" attributeType="Transformable" customClassName="[NSDate]" syncable="YES"/>
         <attribute name="quantity" attributeType="String" syncable="YES"/>
         <relationship name="need" maxCount="1" deletionRule="Cascade" destinationEntity="Medicine" inverseName="isLinkedTo" inverseEntity="Medicine" syncable="YES"/>
+        <relationship name="occurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MedicationIntake" inverseName="takenFor" inverseEntity="MedicationIntake" syncable="YES"/>
     </entity>
     <elements>
         <element name="Appointment" positionX="-315" positionY="-601" width="128" height="105"/>
@@ -89,6 +91,7 @@
         <element name="EventType" positionX="117" positionY="-714" width="128" height="88"/>
         <element name="Exercise" positionX="-351" positionY="-756" width="128" height="90"/>
         <element name="ExerciseDone" positionX="-585" positionY="-612" width="128" height="90"/>
+        <element name="MedicationIntake" positionX="-549" positionY="-621" width="128" height="90"/>
         <element name="Medicine" positionX="-9" positionY="-207" width="128" height="75"/>
         <element name="Patient" positionX="-749" positionY="-666" width="128" height="90"/>
         <element name="Person" positionX="-747" positionY="-387" width="126" height="135"/>
@@ -96,7 +99,6 @@
         <element name="Program" positionX="-585" positionY="-766" width="128" height="90"/>
         <element name="Specialism" positionX="-486" positionY="-198" width="128" height="75"/>
         <element name="Survey" positionX="-56" positionY="-571" width="128" height="88"/>
-        <element name="Treatment" positionX="-65" positionY="-432" width="128" height="120"/>
-        <element name="MedicationIntake" positionX="-549" positionY="-621" width="128" height="75"/>
+        <element name="Treatment" positionX="-65" positionY="-432" width="128" height="135"/>
     </elements>
 </model>

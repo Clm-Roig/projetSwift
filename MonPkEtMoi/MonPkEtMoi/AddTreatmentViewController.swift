@@ -57,7 +57,12 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
                 
                 // Notification creation
                 for hour in newTreatment.hours! {
-                    let notification = TreatmentNotification(treatment: newTreatment)
+                    // Currently, the medicine-taken delay after the supposed hour is 0.
+                    var dataDict = Dictionary<String, Int>()
+                    
+                    let notification = TreatmentNotification(treatment: newTreatment, data: dataDict)
+                    
+                    dataDict["delay"] = 0
                     let triggerDaily = Calendar.current.dateComponents([.hour,.minute], from: hour as Date)
                     notification.setDateTrigger(dateComponents: triggerDaily, repeats: true)
                 }

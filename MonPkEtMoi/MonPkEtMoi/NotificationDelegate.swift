@@ -31,6 +31,8 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
             
         case Notification.medicationIntakeTakenName:
             print("Taken")
+            let medicationIntakeDAO = CoreDataDAOFactory.getInstance().getMedicationIntakeDAO()
+            
 
         default:
             print("Unknown action")

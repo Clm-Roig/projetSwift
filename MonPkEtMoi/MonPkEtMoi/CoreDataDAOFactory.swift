@@ -52,4 +52,8 @@ class CoreDataDAOFactory: AbstractDAOFactory {
     func getTreatmentDAO() -> CDTreatmentDAO {
         return CDTreatmentDAO()
     }
+    
+    func getMedicationIntakeDAO() -> CDMedicationIntakeDAO {
+        return CDMedicationIntakeDAO()
+    }
 }
