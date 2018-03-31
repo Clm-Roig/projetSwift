@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        Notification.registerCategories()
+        
         // ====== SEEDERS ====== //
         let seeded = UserDefaults.standard.bool(forKey:"seeded")
         if(!seeded) {

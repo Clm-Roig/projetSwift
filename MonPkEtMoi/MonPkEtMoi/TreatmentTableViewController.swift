@@ -41,7 +41,6 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
                 dateFormatter.locale = Locale(identifier:"fr_FR")
                 dateFormatter.dateFormat = "HH'h'mm"
                 let hourToPrint = dateFormatter.string(from: hour as Date)
-                print(hourToPrint)
                 
                 if(firstHour) {
                     cell.hoursLabel.text = hourToPrint
@@ -69,7 +68,8 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
             treatmentDAO.delete(obj: treatments[indexPath.row]!)
             do {
                 try treatmentDAO.save()
-            } catch {
+            } catch let error {
+                print(error)
                 fatalError("Erreur à la suppression du traitement.")
             }
             treatmentTableView.deleteRows(at: [indexPath], with: .fade)

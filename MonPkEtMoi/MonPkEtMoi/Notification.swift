@@ -10,6 +10,15 @@ import Foundation
 import UserNotifications
 
 class Notification {
+
+    // Custom actions names
+    static let medicationIntakeTakenName = "medicationTaken"
+    static let medicationIntakeReportedName = "medicationReported"
+    
+    // Custom categories names
+    static let medicationIntakeCategoryName = "medicationIntakeCategory"
+    
+    // Settings of a notification
     static var center = UNUserNotificationCenter.current()
     var request: UNNotificationRequest?
     var content: UNMutableNotificationContent
@@ -44,7 +53,6 @@ class Notification {
         center.removePendingNotificationRequests(withIdentifiers: [identifier])
     }
     
-    
     //MARK: Triggers
     /// Set the trigger of the request according to a DateComponents.
     ///
@@ -64,6 +72,13 @@ class Notification {
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: repeats)
         self.request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         self.addNotificationToCenter()
+    }
+    
+    /// Register all the categories of action created.
+    /// Currently registered :
+    /// - medicationIntake from TreatmentNotification
+    static func registerCategories() {
+        Notification.center.setNotificationCategories([TreatmentNotification.medicationIntakeCategory])
     }
     
 }
