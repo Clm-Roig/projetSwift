@@ -9,7 +9,7 @@
 import UIKit
 
 class AgendaViewController : UIViewController {
-    let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
+    let programDAO = CoreDataDAOFactory.getInstance().getProgramDAO()
     let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
     let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
     
@@ -71,7 +71,7 @@ class AgendaViewController : UIViewController {
             fatalError("Erreur lors de l'obtention des rendez-vous.")
         }
         do {
-            self.programs = try exerciseDAO.getAllPrograms()
+            self.programs = try programDAO.getAll()
         } catch {
             fatalError("Erreur lors de l'obtention des programmes.")
         }

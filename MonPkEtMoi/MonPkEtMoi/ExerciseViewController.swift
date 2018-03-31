@@ -10,6 +10,7 @@ import UIKit
 
 class ExerciseViewController : UIViewController {
     let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
+    let programDAO = CoreDataDAOFactory.getInstance().getProgramDAO()
 
     var programs: [Program?] = []
     var exercisesDone: [ExerciseDone?] = []
@@ -52,7 +53,7 @@ class ExerciseViewController : UIViewController {
             fatalError("Erreur lors de l'obtention des exercices effectués.")
         }
         do {
-            self.programs = try exerciseDAO.getAllPrograms()
+            self.programs = try programDAO.getAll()
         } catch {
             fatalError("Erreur lors de l'obtention des programmes.")
         }

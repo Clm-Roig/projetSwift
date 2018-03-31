@@ -59,7 +59,7 @@
     </entity>
     <entity name="Practitioner" representedClassName="Practitioner" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <relationship name="master" maxCount="1" deletionRule="Nullify" destinationEntity="Specialism" inverseName="isMasteredBy" inverseEntity="Specialism" syncable="YES"/>
-        <relationship name="propose" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Appointment" inverseName="proposedBy" inverseEntity="Appointment" syncable="YES"/>
+        <relationship name="propose" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Appointment" inverseName="proposedBy" inverseEntity="Appointment" syncable="YES"/>
     </entity>
     <entity name="Program" representedClassName="Program" syncable="YES" codeGenerationType="class">
         <attribute name="duration" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>

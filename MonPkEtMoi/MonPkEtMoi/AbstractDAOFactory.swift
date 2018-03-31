@@ -9,23 +9,26 @@
 import Foundation
 
 protocol AbstractDAOFactory {
-    associatedtype PatientDAO
-    associatedtype PractitionerDAO
-    associatedtype SpecialismDAO
-    associatedtype ExerciseDAO
+    
     associatedtype AppointmentDAO
-    associatedtype TreatmentDAO
+    associatedtype ExerciseDAO
     associatedtype MedicationIntakeDAO
     associatedtype MedicineDAO
+    associatedtype PatientDAO
+    associatedtype PractitionerDAO
+    associatedtype ProgramDAO
+    associatedtype SpecialismDAO
+    associatedtype TreatmentDAO
 
-    
     // MARK: DAOs
     func getAppointmentDAO() -> AppointmentDAO
     func getExerciseDAO() -> ExerciseDAO
-    func getPatientDAO() -> PatientDAO
-    func getPractitionerDAO() -> PractitionerDAO
-    func getSpecialismDAO() -> SpecialismDAO
-    func getTreatmentDAO() -> TreatmentDAO
     func getMedicationIntakeDAO() -> MedicationIntakeDAO
     func getMedicineDAO() -> MedicineDAO
+    func getPatientDAO() -> PatientDAO
+    func getPractitionerDAO() -> PractitionerDAO
+    func getProgramDAO() -> ProgramDAO
+    func getSpecialismDAO() -> SpecialismDAO
+    func getTreatmentDAO() -> TreatmentDAO
+    
 }

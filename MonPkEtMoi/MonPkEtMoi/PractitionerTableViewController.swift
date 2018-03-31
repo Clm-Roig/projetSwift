@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class PractitionerTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
-    
+    let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
+
     var practitioners: [Practitioner]
     var practitionerTableView: UITableView
     
@@ -34,5 +35,20 @@ class PractitionerTableViewController: NSObject, UITableViewDataSource, UITableV
         cell.cityL.text = practitioner.city
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            practitionerTableView.beginUpdates()
+            practitionerDAO.delete(obj: practitioners[indexPath.row])
+            do {
+                try practitionerDAO.save()
+            } catch {
+                fatalError("Erreur à la suppression du médecin.")
+            }
+            practitionerTableView.deleteRows(at: [indexPath], with: .fade)
+            practitioners.remove(at: indexPath.row)
+            practitionerTableView.endUpdates()
+        }
     }
 }

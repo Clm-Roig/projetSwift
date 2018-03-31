@@ -72,9 +72,5 @@ class TreatmentViewController: UIViewController {
     @IBAction func unwindToTreatments(segue:UIStoryboardSegue) {
         loadData()
     }
-    
 
-    override func viewDidAppear(_ animated: Bool) {
-        loadData()
-    }
 }

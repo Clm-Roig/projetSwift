@@ -1572,7 +1572,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" maximumValue="55" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-U4-zj5">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" wraps="YES" maximumValue="55" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-U4-zj5">
                                 <rect key="frame" x="265" y="318" width="94" height="29"/>
                                 <connections>
                                     <action selector="minuteStepperPressed:" destination="zfc-Im-Rv0" eventType="valueChanged" id="Xs7-SD-ZMX"/>
