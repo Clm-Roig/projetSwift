@@ -14,6 +14,8 @@
 		7556CEC5206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7556CEC4206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift */; };
 		757BB2FE206FFF8800936568 /* MedicationIntakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BB2FD206FFF8800936568 /* MedicationIntakeTableViewCell.swift */; };
 		757BB300207001C600936568 /* MedicationIntakeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BB2FF207001C600936568 /* MedicationIntakeTableViewController.swift */; };
+		757BB3022070296400936568 /* MedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BB3012070296400936568 /* MedicineDAO.swift */; };
+		757BB304207029AE00936568 /* CDMedicineDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BB303207029AE00936568 /* CDMedicineDAO.swift */; };
 		75ACAF07206EBAA000E613FF /* TreatmentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */; };
 		75ACAF09206EDFF300E613FF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF08206EDFF300E613FF /* Notification.swift */; };
 		75ACAF0C206EE6FF00E613FF /* AppointmentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACAF0B206EE6FF00E613FF /* AppointmentNotification.swift */; };
@@ -93,6 +95,8 @@
 		7556CEC4206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMedicationIntakeDAO.swift; sourceTree = "<group>"; };
 		757BB2FD206FFF8800936568 /* MedicationIntakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationIntakeTableViewCell.swift; sourceTree = "<group>"; };
 		757BB2FF207001C600936568 /* MedicationIntakeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationIntakeTableViewController.swift; sourceTree = "<group>"; };
+		757BB3012070296400936568 /* MedicineDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDAO.swift; sourceTree = "<group>"; };
+		757BB303207029AE00936568 /* CDMedicineDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMedicineDAO.swift; sourceTree = "<group>"; };
 		75ACAF06206EBA9F00E613FF /* TreatmentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentNotification.swift; sourceTree = "<group>"; };
 		75ACAF08206EDFF300E613FF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		75ACAF0B206EE6FF00E613FF /* AppointmentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentNotification.swift; sourceTree = "<group>"; };
@@ -199,6 +203,21 @@
 			name = Agenda;
 			sourceTree = "<group>";
 		};
+		757BB30520702A1C00936568 /* AbstractDAO */ = {
+			isa = PBXGroup;
+			children = (
+				F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */,
+				E09EACE52062C449008A6B01 /* AppointmentDAO.swift */,
+				E09EACE12062C139008A6B01 /* ExerciseDAO.swift */,
+				7556CEC2206FD55A00DEF8FB /* MedicationIntakeDAO.swift */,
+				E096031E20603FDE00E4F5C4 /* PatientDAO.swift */,
+				E016041E206104E100E6EB08 /* PractitionerDAO.swift */,
+				757BB3012070296400936568 /* MedicineDAO.swift */,
+				E08151F92061178000A98DF6 /* SpecialismDAO.swift */,
+			);
+			name = AbstractDAO;
+			sourceTree = "<group>";
+		};
 		75ACAF0A206EE01500E613FF /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +267,7 @@
 				E09EACE72062C57A008A6B01 /* CDAppointmentDAO.swift */,
 				E09EACE32062C1AD008A6B01 /* CDExerciseDAO.swift */,
 				7556CEC4206FD5DF00DEF8FB /* CDMedicationIntakeDAO.swift */,
+				757BB303207029AE00936568 /* CDMedicineDAO.swift */,
 				F3F07C5A205D3CBA0089DC4D /* CDPatientDAO.swift */,
 				E016042720610A0100E6EB08 /* CDPractitionerDAO.swift */,
 				E08151FB206117F200A98DF6 /* CDSpecialismDAO.swift */,
@@ -353,17 +373,11 @@
 		F3F07C55205D2DA60089DC4D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				757BB30520702A1C00936568 /* AbstractDAO */,
 				E09603202060407B00E4F5C4 /* CoreDataDAO */,
 				E0160424206108FA00E6EB08 /* Factories */,
 				E0788762205BC4B100F9E499 /* CoreDateConnection.swift */,
 				E01604202061050900E6EB08 /* DAO.swift */,
-				E09EACE52062C449008A6B01 /* AppointmentDAO.swift */,
-				E09EACE12062C139008A6B01 /* ExerciseDAO.swift */,
-				7556CEC2206FD55A00DEF8FB /* MedicationIntakeDAO.swift */,
-				E096031E20603FDE00E4F5C4 /* PatientDAO.swift */,
-				E016041E206104E100E6EB08 /* PractitionerDAO.swift */,
-				E08151F92061178000A98DF6 /* SpecialismDAO.swift */,
-				F3093CAF2065AAFF0010ED39 /* TreatmentDAO.swift */,
 				E08151FD20611AB300A98DF6 /* Seeder.swift */,
 			);
 			name = Data;
@@ -508,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01604212061050900E6EB08 /* DAO.swift in Sources */,
+				757BB3022070296400936568 /* MedicineDAO.swift in Sources */,
 				E02535DC2064F32C00A480EF /* ExerciseDoneTableViewController.swift in Sources */,
 				E0B0F1FA2063F53100A22BC7 /* TodoTodayTableViewController.swift in Sources */,
 				E09603222060441500E4F5C4 /* AlertHelper.swift in Sources */,
@@ -529,6 +544,7 @@
 				E0B02CB8205920B500841B32 /* TreatmentTableViewCell.swift in Sources */,
 				F3F07C5B205D3CBA0089DC4D /* CDPatientDAO.swift in Sources */,
 				75ACAF09206EDFF300E613FF /* Notification.swift in Sources */,
+				757BB304207029AE00936568 /* CDMedicineDAO.swift in Sources */,
 				F3093CB42065ADE20010ED39 /* DateHelper.swift in Sources */,
 				F3093CB02065AAFF0010ED39 /* TreatmentDAO.swift in Sources */,
 				E02535E02064F34600A480EF /* ExerciseDoneTableViewCell.swift in Sources */,

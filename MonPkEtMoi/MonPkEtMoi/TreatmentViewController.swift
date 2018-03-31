@@ -68,8 +68,13 @@ class TreatmentViewController: UIViewController {
         medicationIntakesTableView.dataSource = medicationIntakeTableViewCtrl
     }
     
+    
     @IBAction func unwindToTreatments(segue:UIStoryboardSegue) {
         loadData()
     }
+    
 
+    override func viewDidAppear(_ animated: Bool) {
+        loadData()
+    }
 }
