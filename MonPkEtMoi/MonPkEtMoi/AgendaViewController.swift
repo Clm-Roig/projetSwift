@@ -121,7 +121,7 @@ class AgendaViewController : UIViewController {
                     
                     // Hour of medication intake passed ?
                     // Displays a treatment during all the hour of the medication-intake hour (prevent the patient to forget).
-                    let hourNotPassed = Calendar.current.component(.hour, from: treatment.hours![0] as Date) >= Calendar.current.component(.hour, from: Date())
+                    let hourNotPassed = Calendar.current.component(.hour, from: treatment.hour! as Date) >= Calendar.current.component(.hour, from: Date())
                     if hourNotPassed {
                         self.treatmentsToday.append(treatment)
                     }

@@ -30,28 +30,14 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         let cell = self.treatmentTableView.dequeueReusableCell(withIdentifier: "treatmentCell", for: indexPath) as! TreatmentTableViewCell
         cell.medicineLabel.text = self.treatments[indexPath.row]?.need?.wording
         cell.quantityLabel.text = self.treatments[indexPath.row]?.quantity
-       
-        var firstHour = true;
-        let hoursTable = self.treatments[indexPath.row]?.hours
         
-        // Everything is ready to manage [hours] even if we currently just 1 hour in the array
-        if let hours = hoursTable {
-            for hour in hours {
-                let dateFormatter = DateFormatter()
-                dateFormatter.locale = Locale(identifier:"fr_FR")
-                dateFormatter.dateFormat = "HH'h'mm"
-                let hourToPrint = dateFormatter.string(from: hour as Date)
-                
-                if(firstHour) {
-                    cell.hoursLabel.text = hourToPrint
-                    firstHour = false
-                }
-                else {
-                    cell.hoursLabel.text = "; " + hourToPrint
-                }
-                
-            }
-        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier:"fr_FR")
+        dateFormatter.dateFormat = "HH'h'mm"
+        let hourToPrint = dateFormatter.string(from: treatments[indexPath.row]?.hour! as! Date)
+        
+        cell.hoursLabel.text = hourToPrint
+        
         return cell
     }
     

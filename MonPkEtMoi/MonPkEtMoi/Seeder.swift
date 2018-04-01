@@ -164,7 +164,7 @@ class Seeder {
         }
         treatment1.quantity = "2 pilules"
         treatment1.need = medicines[0]
-        treatment1.hours = [Calendar.current.date(byAdding: .hour, value: 3, to: Date())! as NSDate]
+        treatment1.hour = Calendar.current.date(byAdding: .hour, value: 3, to: Date())! as NSDate
         treatment1.endingDate = Calendar.current.date(byAdding: .day, value: 14, to: Date())! as NSDate
         do {
             try treatmentDAO.save()

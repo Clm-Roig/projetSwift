@@ -42,11 +42,11 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
                 let todo1 = $1 as! Treatment
       
                 // Compare just hours and minutes
-                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.hours![0] as Date))
-                let minutes0 = Calendar.current.component(.minute, from: (todo0.hours![0] as Date))
+                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.hour! as Date))
+                let minutes0 = Calendar.current.component(.minute, from: (todo0.hour! as Date))
                 
-                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.hours![0] as Date))
-                let minutes1 = Calendar.current.component(.minute, from: (todo1.hours![0] as Date))
+                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.hour! as Date))
+                let minutes1 = Calendar.current.component(.minute, from: (todo1.hour! as Date))
                 
                 return (hour0 + minutes0) < (hour1 + minutes1)
             }
@@ -55,8 +55,8 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
                 let todo1 = $1 as! Appointment
                 
                 // Compare just hours and minutes
-                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.hours![0] as Date))
-                let minutes0 = Calendar.current.component(.minute, from: (todo0.hours![0] as Date))
+                let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.hour! as Date))
+                let minutes0 = Calendar.current.component(.minute, from: (todo0.hour! as Date))
                 
                 let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.date! as Date))
                 let minutes1 = Calendar.current.component(.minute, from: (todo1.date! as Date))
@@ -71,8 +71,8 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
                 let hour0 = 60 * Calendar.current.component(.hour, from: (todo0.date! as Date))
                 let minutes0 = Calendar.current.component(.minute, from: (todo0.date! as Date))
                 
-                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.hours![0] as Date))
-                let minutes1 = Calendar.current.component(.minute, from: (todo1.hours![0] as Date))
+                let hour1 = 60 * Calendar.current.component(.hour, from: (todo1.hour! as Date))
+                let minutes1 = Calendar.current.component(.minute, from: (todo1.hour! as Date))
                 
                 return (hour0 + minutes0) < (hour1 + minutes1)
             }
@@ -136,7 +136,7 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
             
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale.init(identifier: "fr_FR")
-            let date: NSDate = todoTreat.hours![0]
+            let date: NSDate = todoTreat.hour!
             
             dateFormatter.dateFormat = "mm"
             let minute = dateFormatter.string(from: date as Date)

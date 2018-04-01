@@ -50,7 +50,7 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
             formatter.locale = Locale(identifier:"fr_FR")
             formatter.dateFormat = "HH:mm"
             let hour = formatter.date(from: hourLabel.text! + ":" + minuteLabel.text!)
-            newTreatment.hours = [hour! as NSDate];
+            newTreatment.hour = hour! as NSDate;
             newTreatment.quantity = quantityTF.text
             newTreatment.need = medicines[medicinePicker.selectedRow(inComponent: 0)]
             
@@ -65,7 +65,7 @@ class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPi
 
                 let notification = TreatmentNotification(treatment: newTreatment, data: data)
                 
-                let triggerDaily = Calendar.current.dateComponents([.hour,.minute], from: newTreatment.hours![0] as Date)
+                let triggerDaily = Calendar.current.dateComponents([.hour,.minute], from: newTreatment.hour! as Date)
                 notification.setDateTrigger(dateComponents: triggerDaily, repeats: true)
                 
                 performSegue(withIdentifier: "unwindSegueToTreatments", sender: self)

@@ -78,7 +78,7 @@
     <entity name="Treatment" representedClassName="Treatment" syncable="YES" codeGenerationType="class">
         <attribute name="beginningDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="endingDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="hours" attributeType="Transformable" customClassName="[NSDate]" syncable="YES"/>
+        <attribute name="hour" attributeType="Date" usesScalarValueType="NO" customClassName="[NSDate]" syncable="YES"/>
         <attribute name="quantity" attributeType="String" syncable="YES"/>
         <relationship name="need" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="isLinkedTo" inverseEntity="Medicine" syncable="YES"/>
     </entity>

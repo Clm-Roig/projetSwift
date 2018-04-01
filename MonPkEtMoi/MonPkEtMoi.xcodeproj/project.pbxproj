@@ -743,7 +743,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MonPkEtMoi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Polytech.MonPkEtMoi;
+				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Mon-Parkison-et-Moi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -760,7 +760,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MonPkEtMoi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Polytech.MonPkEtMoi;
+				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Mon-Parkison-et-Moi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
