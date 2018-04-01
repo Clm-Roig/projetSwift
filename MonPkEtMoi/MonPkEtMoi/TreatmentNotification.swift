@@ -19,7 +19,6 @@ class TreatmentNotification: Notification {
     static let medicationIntakeCategory = UNNotificationCategory(identifier: Notification.medicationIntakeCategoryName,
                                           actions: [medicationTakenAction,medicationReportAction],
                                           intentIdentifiers: [], options: [])
-    
     static let delayBetweenTakes = 5
     
     /// Initialize the content of a new Treatment Notification with the name of the medicine and his quantity.

@@ -54,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             nav = storyboard.instantiateViewController(withIdentifier: "registrationView")
         }
+        
         self.window?.rootViewController = nav
         
         return true

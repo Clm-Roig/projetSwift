@@ -11,6 +11,10 @@ import UserNotifications
 
 class AppointmentNotification: Notification {
     
+    static let appointmentCategory = UNNotificationCategory(identifier: Notification.appointmentCategoryName,
+                                                                actions: [],
+                                                                intentIdentifiers: [], options: [])
+    
     /// Initialize the content of a new Meeting Notification with the name of the practitioner and the hour of the appointment.
     /// The identifier of the notifcation is the objectID.
     ///
@@ -26,6 +30,7 @@ class AppointmentNotification: Notification {
         content.title = "Rendez-vous médical"
         content.body = "Vous avez rendez-vous avec M./Mme " + (appointment.proposedBy?.lastName)!
         content.body += " à " + hourToPrint + "."
+        content.categoryIdentifier = Notification.appointmentCategoryName
         self.identifier = appointment.objectID.uriRepresentation().absoluteString
     }
     

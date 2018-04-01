@@ -17,6 +17,7 @@ class Notification {
     
     // Custom categories names
     static let medicationIntakeCategoryName = "medicationIntakeCategory"
+    static let appointmentCategoryName = "appointmentCategory"
     
     // Settings of a notification
     static var center = UNUserNotificationCenter.current()
@@ -74,11 +75,12 @@ class Notification {
         self.addNotificationToCenter()
     }
     
-    /// Register all the categories of action created.
+    /// Register all the notification categories created.
     /// Currently registered :
     /// - medicationIntake from TreatmentNotification
+    /// - appointment from AppointmentNotification
     static func registerCategories() {
-        Notification.center.setNotificationCategories([TreatmentNotification.medicationIntakeCategory])
+        Notification.center.setNotificationCategories([TreatmentNotification.medicationIntakeCategory, AppointmentNotification.appointmentCategory])
     }
     
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AlertHelper {
+class AlertHelper: UIAlertController {
     
     class func alertError(view: UIViewController, errorMessage: String) {
         let title = "Erreur"
@@ -27,5 +27,16 @@ class AlertHelper {
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         view.present(alert, animated: true)
+    }
+    
+    class func getCurrentUIViewController() -> UIViewController {
+        var rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        if let navigationController = rootViewController as? UINavigationController {
+            rootViewController = navigationController.viewControllers.first
+        }
+        if let tabBarController = rootViewController as? UITabBarController {
+            rootViewController = tabBarController.selectedViewController
+        }
+        return rootViewController!
     }
 }

@@ -9,9 +9,9 @@
 import Foundation
 import UserNotifications
 import CoreData
+import UIKit
 
 class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
-    
     
     /// If the app is in the foreground and a notification appears, shows it.
     ///
@@ -42,8 +42,73 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
             
         case UNNotificationDismissActionIdentifier:
             print("Dismiss Action")
+            
+        // Notification tapped (open the app)
         case UNNotificationDefaultActionIdentifier:
-            print("Default")
+            print("Notification tapped")
+
+            // Determine type notification
+            switch response.notification.request.content.categoryIdentifier {
+            case Notification.medicationIntakeCategoryName:
+                print("Medication intake notification")
+                
+                // Retrieve data
+                guard var delay = response.notification.request.content.userInfo["delay"] as? Int else {
+                    return
+                }
+                guard let wording = response.notification.request.content.userInfo["wording"] as? String else {
+                    return
+                }
+                
+                let message = wording
+                // Display alert on the current view
+                // Create the alert controller
+                let alertController = UIAlertController(title: "Prise de médicament", message: message, preferredStyle: .alert)
+                
+                // Taken action
+                let takeAction = UIAlertAction(title: "Médicament pris", style: UIAlertActionStyle.default) {
+                    UIAlertAction in
+                    NSLog("Taken")
+                    
+                    self.saveMedicationIntake(delay: delay, wording: wording)
+                }
+                // Reported action
+                let reportAction = UIAlertAction(title: "Reporter (5min)", style: UIAlertActionStyle.default) {
+                    UIAlertAction in
+                    NSLog("reported")
+                    
+                    // Create a new notification
+                    var data = Dictionary<String, Any>()
+                    if let delay = response.notification.request.content.userInfo["delay"] as? Int {
+                        data["delay"] = delay + TreatmentNotification.delayBetweenTakes
+                    }
+                    if let wording = response.notification.request.content.userInfo["wording"] as? String {
+                        data["wording"] = wording
+                    }
+                    let body: String = response.notification.request.content.body
+                    let notification = TreatmentNotification(body: body, data: data)
+                    
+                    let triggerDate = Calendar.current.date(byAdding: .minute, value: TreatmentNotification.delayBetweenTakes, to: Date())!
+                    let timeInterval = triggerDate.timeIntervalSince(Date())
+                    
+                    notification.setTimeIntervalTrigger(timeInterval: timeInterval, repeats: false)
+                }
+                // Add the actions
+                alertController.addAction(takeAction)
+                alertController.addAction(reportAction)
+                
+                // Present the controller
+                AlertHelper.getCurrentUIViewController().present(alertController, animated: true)
+                
+                
+            case Notification.appointmentCategoryName:
+                print("Appointment notification")
+                // Navigate to Agenda View
+                
+            default:
+                print("Unknown notification")
+            }
+            
             
         //MARK: Medication intakes
         case Notification.medicationIntakeTakenName:
@@ -125,7 +190,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
             print("Erreur à la sauvegarde de la prise de médicament")
             print(error)
         }
-        
     }
     
 }
