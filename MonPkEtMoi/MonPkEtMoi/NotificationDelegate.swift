@@ -75,7 +75,7 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
                 // Reported action
                 let reportAction = UIAlertAction(title: "Reporter (5min)", style: UIAlertActionStyle.default) {
                     UIAlertAction in
-                    NSLog("reported")
+                    NSLog("Reported")
                     
                     // Create a new notification
                     var data = Dictionary<String, Any>()
