@@ -53,7 +53,7 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
                 print("Medication intake notification")
                 
                 // Retrieve data
-                guard var delay = response.notification.request.content.userInfo["delay"] as? Int else {
+                guard let delay = response.notification.request.content.userInfo["delay"] as? Int else {
                     return
                 }
                 guard let wording = response.notification.request.content.userInfo["wording"] as? String else {
@@ -79,12 +79,9 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
                     
                     // Create a new notification
                     var data = Dictionary<String, Any>()
-                    if let delay = response.notification.request.content.userInfo["delay"] as? Int {
-                        data["delay"] = delay + TreatmentNotification.delayBetweenTakes
-                    }
-                    if let wording = response.notification.request.content.userInfo["wording"] as? String {
-                        data["wording"] = wording
-                    }
+                    data["delay"] = delay + TreatmentNotification.delayBetweenTakes
+                    data["wording"] = wording
+                    
                     let body: String = response.notification.request.content.body
                     let notification = TreatmentNotification(body: body, data: data)
                     
