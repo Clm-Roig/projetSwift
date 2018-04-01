@@ -9,6 +9,10 @@
 import Foundation
 import UserNotifications
 
+
+/// Notification of a medication intake related to a treatment.
+/// Identifier (daily notification) : treatment.objectID.uriRepresentation().absoluteString
+/// Identifier (reported intake) : "MedicationIntakeDelayed " + UUID().uuidString
 class TreatmentNotification: Notification {
     
     // Static actions and categories registered by Notification.swift in the App Delegate
@@ -47,6 +51,14 @@ class TreatmentNotification: Notification {
         content.userInfo = data
         content.categoryIdentifier = Notification.medicationIntakeCategoryName
         self.identifier = "MedicationIntakeDelayed " + UUID().uuidString
+    }
+    
+    
+    /// Delete all the pending notifications with the treatment identifier.
+    /// Doesn't remove "delayed" medication intake notification.
+    /// - Parameter treatment:
+    class func deleteNotifications(treatment:Treatment) {
+        center.removePendingNotificationRequests(withIdentifiers: [treatment.objectID.uriRepresentation().absoluteString])
     }
     
 }

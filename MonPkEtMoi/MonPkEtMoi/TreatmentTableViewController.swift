@@ -64,7 +64,7 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         if editingStyle == .delete {
             treatmentTableView.beginUpdates()
             
-            Notification.delete(identifier: treatments[indexPath.row]!.objectID.uriRepresentation().absoluteString)
+            TreatmentNotification.deleteNotifications(treatment: treatments[indexPath.row]!)
             treatmentDAO.delete(obj: treatments[indexPath.row]!)
             do {
                 try treatmentDAO.save()

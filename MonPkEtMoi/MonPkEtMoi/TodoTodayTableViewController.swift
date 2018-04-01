@@ -172,6 +172,8 @@ class TodoTodayTableViewController: NSObject, UITableViewDataSource, UITableView
             // We can only delete appointment
             if todosList[indexPath.row] is Appointment {
                 todosTableView.beginUpdates()
+                
+                AppointmentNotification.deleteNotifications(appointment: todosList[indexPath.row] as! Appointment)
                 appointmentDAO.delete(obj: todosList[indexPath.row] as! Appointment)
                 do {
                     try appointmentDAO.save()
