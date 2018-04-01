@@ -29,29 +29,7 @@ class CDExerciseDAO: CDDAO, ExerciseDAO {
         }
         return exercises
     }
-    
-    // ==========================================
-    // PROGRAMS
-    
-    func createProgram() throws -> Program {
-        return Program(context: self.context)
-    }
-    
-    func deleteProgram(prog: Program) {
-        self.context.delete(prog)
-    }
-    
-    func getAllPrograms() throws -> [Program?] {
-        var programs: [Program] = []
-        let request: NSFetchRequest<Program> = NSFetchRequest(entityName: "Program")
-        do {
-            programs = try self.context.fetch(request)
-        } catch let error {
-            throw error
-        }
-        return programs
-    }
-    
+
     // ==========================================
     // EXERCISES DONE
     func createExerciseDone() throws -> ExerciseDone {

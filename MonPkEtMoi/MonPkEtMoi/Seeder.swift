@@ -107,16 +107,18 @@ class Seeder {
         }
         
         //MARK: Programs
-        let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
+        let programDAO = CoreDataDAOFactory.getInstance().getProgramDAO()
         var program1 = Program()
         do {
-            program1 = try exerciseDAO.createProgram()
+            program1 = try programDAO.create()
         } catch {
             print("error creating program 1")
         }
         program1.frequency = 2
         program1.duration = 30
         
+        let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
+
         var exercise1 = Exercise()
         do {
             exercise1 = try exerciseDAO.create()

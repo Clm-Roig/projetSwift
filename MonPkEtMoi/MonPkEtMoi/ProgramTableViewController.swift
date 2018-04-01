@@ -9,7 +9,7 @@
 import UIKit
 
 class ProgramTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
-    let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
+    let programDAO = CoreDataDAOFactory.getInstance().getProgramDAO()
 
     var programs : [Program?] = []
     var tableView : UITableView
@@ -42,9 +42,9 @@ class ProgramTableViewController: NSObject, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
-            exerciseDAO.deleteProgram(prog: programs[indexPath.row]!)
+            programDAO.delete(obj: programs[indexPath.row]!)
             do {
-                try exerciseDAO.save()
+                try programDAO.save()
             } catch {
                 fatalError("Erreur à la suppression du programme.")
             }

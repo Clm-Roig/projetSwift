@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class AddProgramController: UIViewController {
+    let programDAO = CoreDataDAOFactory.getInstance().getProgramDAO()
     let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
 
     @IBOutlet weak var activityTF: UITextField!
@@ -30,7 +31,7 @@ class AddProgramController: UIViewController {
             var newProgram = Program()
             var newExercise = Exercise()
             do {
-                newProgram = try exerciseDAO.createProgram()
+                newProgram = try programDAO.create()
             } catch {
                 AlertHelper.alertError(view: self, errorMessage: "Erreur à la création du programme.")
             }
