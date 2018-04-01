@@ -135,8 +135,8 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBj-te-F8E">
-                                <rect key="frame" x="309" y="552" width="50" height="50"/>
-                                <state key="normal" image="add-50"/>
+                                <rect key="frame" x="279" y="522" width="80" height="80"/>
+                                <state key="normal" image="add-80"/>
                                 <connections>
                                     <segue destination="Fyo-KO-kiL" kind="show" id="EsF-NT-uSY"/>
                                 </connections>
@@ -344,7 +344,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4It-Zp-Heq" customClass="MyUIButton" customModule="MonPkEtMoi" customModuleProvider="target">
-                                <rect key="frame" x="16" y="294" width="343" height="50"/>
+                                <rect key="frame" x="16" y="254.5" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Ajouter un programme" image="add-50">
@@ -355,10 +355,10 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dK4-Bn-Kth">
-                                <rect key="frame" x="0.0" y="106" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="106" width="375" height="140.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dK4-Bn-Kth" secondAttribute="height" multiplier="25:12" id="bsx-LT-jxl"/>
+                                    <constraint firstAttribute="width" secondItem="dK4-Bn-Kth" secondAttribute="height" multiplier="32:12" id="bsx-LT-jxl"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="programCell" id="YiI-Hx-TmJ" customClass="ProgramTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
@@ -417,13 +417,13 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercices effectués" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRs-AP-DX0">
-                                <rect key="frame" x="16" y="352" width="343" height="26.5"/>
+                                <rect key="frame" x="16" y="312.5" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-Cf-rlX" customClass="MyUIButton" customModule="MonPkEtMoi" customModuleProvider="target">
-                                <rect key="frame" x="16" y="574" width="343" height="50"/>
+                                <rect key="frame" x="16" y="560" width="343" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Ajouter un exercice effectué" image="add-50">
@@ -434,11 +434,8 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Vk-Vg-fmn">
-                                <rect key="frame" x="0.0" y="386" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="346.5" width="375" height="205.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="9Vk-Vg-fmn" secondAttribute="height" multiplier="25:12" id="HhS-Vb-c8f"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exerciseDoneCell" id="Klj-Ub-DP2" customClass="ExerciseDoneTableViewCell" customModule="MonPkEtMoi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -506,15 +503,16 @@
                             <constraint firstItem="EZB-Yc-69q" firstAttribute="top" secondItem="VbQ-v8-IbE" secondAttribute="bottom" constant="8" id="JCv-AO-Rsk"/>
                             <constraint firstItem="dK4-Bn-Kth" firstAttribute="leading" secondItem="lXz-jC-BUm" secondAttribute="leading" id="LsB-3T-Y3D"/>
                             <constraint firstItem="9Vk-Vg-fmn" firstAttribute="top" secondItem="WRs-AP-DX0" secondAttribute="bottom" constant="8" id="PwP-gd-hhB"/>
-                            <constraint firstItem="wp7-Cf-rlX" firstAttribute="top" secondItem="9Vk-Vg-fmn" secondAttribute="bottom" constant="8" id="QIY-mi-IVt"/>
                             <constraint firstItem="EZB-Yc-69q" firstAttribute="leading" secondItem="lXz-jC-BUm" secondAttribute="leadingMargin" id="RX4-u6-MbH"/>
                             <constraint firstAttribute="trailing" secondItem="9Vk-Vg-fmn" secondAttribute="trailing" id="YpD-iz-8P6"/>
                             <constraint firstItem="9Vk-Vg-fmn" firstAttribute="leading" secondItem="lXz-jC-BUm" secondAttribute="leading" id="Yzl-Hg-tuz"/>
                             <constraint firstItem="4It-Zp-Heq" firstAttribute="leading" secondItem="lXz-jC-BUm" secondAttribute="leadingMargin" id="cMi-9R-V4F"/>
                             <constraint firstItem="WRs-AP-DX0" firstAttribute="trailing" secondItem="lXz-jC-BUm" secondAttribute="trailingMargin" id="dBC-dW-ccv"/>
+                            <constraint firstItem="wp7-Cf-rlX" firstAttribute="top" secondItem="9Vk-Vg-fmn" secondAttribute="bottom" constant="8" id="dnZ-mC-g2U"/>
                             <constraint firstAttribute="trailing" secondItem="dK4-Bn-Kth" secondAttribute="trailing" id="noR-j9-In7"/>
                             <constraint firstItem="dK4-Bn-Kth" firstAttribute="top" secondItem="EZB-Yc-69q" secondAttribute="bottom" constant="8" id="rYb-5b-0HS"/>
                             <constraint firstItem="WRs-AP-DX0" firstAttribute="top" secondItem="4It-Zp-Heq" secondAttribute="bottom" constant="8" id="uaT-KW-fWz"/>
+                            <constraint firstItem="PHZ-Cd-M3V" firstAttribute="top" secondItem="wp7-Cf-rlX" secondAttribute="bottom" constant="8" id="vG7-2M-kdV"/>
                             <constraint firstItem="4It-Zp-Heq" firstAttribute="centerX" secondItem="lXz-jC-BUm" secondAttribute="centerX" id="w7h-lC-VhL"/>
                             <constraint firstItem="4It-Zp-Heq" firstAttribute="trailing" secondItem="lXz-jC-BUm" secondAttribute="trailingMargin" id="yIu-dQ-fTc"/>
                         </constraints>
@@ -1438,17 +1436,6 @@
                                     <outlet property="delegate" destination="e8I-OS-Qj9" id="9g1-Su-NV5"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Z-Vg-WqW">
-                                <rect key="frame" x="319" y="558" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dCb-S2-KMf"/>
-                                    <constraint firstAttribute="width" constant="50" id="s3t-Yf-noI"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="add-50"/>
-                                <connections>
-                                    <segue destination="Jy6-dd-QOE" kind="show" id="SPU-Vl-EHd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Médecins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9k-fm-ENg" customClass="MyBlueLabel" customModule="MonPkEtMoi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="30"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1459,18 +1446,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Z-Vg-WqW">
+                                <rect key="frame" x="279" y="522" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="AFx-F8-btk"/>
+                                    <constraint firstAttribute="height" constant="80" id="tJa-1E-xeU"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="add-80"/>
+                                <connections>
+                                    <segue destination="Jy6-dd-QOE" kind="show" id="SPU-Vl-EHd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gh2-a1-hvY" secondAttribute="trailing" id="2iI-Yk-m4S"/>
                             <constraint firstItem="GaD-wp-yRb" firstAttribute="top" secondItem="gh2-a1-hvY" secondAttribute="bottom" id="4RC-eV-Bp8"/>
-                            <constraint firstItem="GaD-wp-yRb" firstAttribute="top" secondItem="22Z-Vg-WqW" secondAttribute="bottom" constant="10" id="Bim-Zn-4ff"/>
-                            <constraint firstItem="22Z-Vg-WqW" firstAttribute="trailing" secondItem="PYW-bi-FZ7" secondAttribute="trailingMargin" constant="10" id="ELw-DC-HLS"/>
                             <constraint firstAttribute="trailing" secondItem="Q9k-fm-ENg" secondAttribute="trailing" id="KA5-pp-YH9"/>
-                            <constraint firstItem="GaD-wp-yRb" firstAttribute="top" secondItem="22Z-Vg-WqW" secondAttribute="bottom" constant="10" id="XD1-vc-Uto"/>
                             <constraint firstItem="Q9k-fm-ENg" firstAttribute="top" secondItem="n1L-e7-5f2" secondAttribute="bottom" id="YL5-cx-thu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="22Z-Vg-WqW" secondAttribute="bottom" constant="16" id="cdQ-LF-LmT"/>
                             <constraint firstItem="gh2-a1-hvY" firstAttribute="leading" secondItem="PYW-bi-FZ7" secondAttribute="leading" id="iFg-5i-4Of"/>
                             <constraint firstItem="Q9k-fm-ENg" firstAttribute="leading" secondItem="PYW-bi-FZ7" secondAttribute="leading" id="k4l-zO-HKN"/>
+                            <constraint firstAttribute="trailing" secondItem="22Z-Vg-WqW" secondAttribute="trailing" constant="16" id="pio-DG-LRr"/>
                             <constraint firstItem="gh2-a1-hvY" firstAttribute="top" secondItem="Q9k-fm-ENg" secondAttribute="bottom" id="sHi-6Q-OZo"/>
                         </constraints>
                     </view>
@@ -2035,6 +2032,7 @@
     <resources>
         <image name="account-25" width="25" height="25"/>
         <image name="add-50" width="50" height="50"/>
+        <image name="add-80" width="80" height="80"/>
         <image name="calendar-25" width="25" height="25"/>
         <image name="exercise-25" width="25" height="25"/>
         <image name="info-25" width="25" height="25"/>
