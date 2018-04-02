@@ -9,9 +9,7 @@
 import Foundation
 
 class Seeder {
-    func seed() {
-        
-        //MARK: Specialisms
+    func seedSpecialisms() {
         let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
         let specialisms = ["kinésithérapeute","infirmier","orthophoniste", "psychologue clinicien","neuropsychologue","médecine généraliste","psychiatre","neurochirurgien"]
         
@@ -29,9 +27,10 @@ class Seeder {
         } catch {
             print("Error saving specialisms seeds")
         }
-        
-        
-        //MARK: Practitioner
+    }
+    
+    func seedPractitionersAndAppointments() {
+        let specialismDAO = CoreDataDAOFactory.getInstance().getSpecialismDAO()
         let practitionerDAO = CoreDataDAOFactory.getInstance().getPractitionerDAO()
         
         var spe:[Specialism] = []
@@ -40,7 +39,7 @@ class Seeder {
         } catch {
             print("error getting all specialisms")
         }
-
+        
         var practitioner1 = Practitioner()
         do {
             practitioner1 = try practitionerDAO.create()
@@ -80,7 +79,7 @@ class Seeder {
             print("Error saving practitioner seeds")
         }
         
-        //MARK: Appointments
+        // Appointments
         let appointmentDAO = CoreDataDAOFactory.getInstance().getAppointmentDAO()
         var appointment1 = Appointment()
         do {
@@ -105,8 +104,9 @@ class Seeder {
         } catch {
             print("Error saving practitioner seeds")
         }
-        
-        //MARK: Programs
+    }
+    
+    func seedProgramsAndExercices() {
         let programDAO = CoreDataDAOFactory.getInstance().getProgramDAO()
         var program1 = Program()
         do {
@@ -116,9 +116,9 @@ class Seeder {
         }
         program1.frequency = 2
         program1.duration = 30
-        
+    
         let exerciseDAO = CoreDataDAOFactory.getInstance().getExerciseDAO()
-
+    
         var exercise1 = Exercise()
         do {
             exercise1 = try exerciseDAO.create()
@@ -127,37 +127,46 @@ class Seeder {
         }
         exercise1.wording = "Marche"
         exercise1.composes = program1
-        
+    
         do {
             try exerciseDAO.save()
         } catch {
             print("Error saving exercises seeds")
         }
-        
-        //MARK: Medicine
+    }
+    
+    func seedMedicines() {
         let medicineDAO = CoreDataDAOFactory.getInstance().getMedicineDAO()
         var medicines: [Medicine?] = []
-        let medicinesWording = ["Modopar 62,5","Modopar 125","Modopar 250","Modopar LP 125", "Modopar dispersible 125", "Sinemet 100", "Sinemet 250", "Sinemet LP 100","Sinemet LP 200", "Stalevo 50"]
-        
+        let medicinesWording = ["Modopar 62,5","Modopar 125","Modopar 250","Modopar LP 125", "Modopar dispersible 125", "Sinemet 100", "Sinemet 250", "Sinemet LP 100","Sinemet LP 200", "Stalevo 50", "Stalevo 75", "Stalevo 100", "Stalevo 125", "Stalevo 150", "Stalevo 175", "Stalevo 200", "Parlodel 2,5", "Parlodel 5", "Parlodel 10", "Trivastal 20", "Trivastal LP 50", "Sifrol 0,18", "Sifrol 0,7", "Sifrol LP 0,26", "Sifrol LP 0,52", "Sifrol LP 1,05", "Sifrol 2,1", "Requip 0,25", "Requip 0,5", "Requip 1", "Requip 2", "Requip 5"]
+    
         for med in medicinesWording {
-            var newMed = Medicine()
-            do {
-                newMed = try medicineDAO.create()
-                newMed.wording = med
-            } catch {
-                print("error creating medicine")
-            }
-            medicines.append(newMed)
+        var newMed = Medicine()
+        do {
+        newMed = try medicineDAO.create()
+        newMed.wording = med
+        } catch {
+        print("error creating medicine")
+        }
+        medicines.append(newMed)
         }
         do {
-            try medicineDAO.save()
+        try medicineDAO.save()
         } catch {
-            print("Error saving medicines seeds")
+        print("Error saving medicines seeds")
+        }
+    }
+    
+    func seedTreatmentsAndMedicationIntakes() {
+        let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
+        let medicineDAO = CoreDataDAOFactory.getInstance().getMedicineDAO()
+        var medicines: [Medicine?] = []
+        do {
+            medicines = try medicineDAO.getAll()
+        } catch {
+            print("error getting all medicines")
         }
         
-        //MARK: Treatments
-        let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
-
         var treatment1 = Treatment()
         do {
             treatment1 = try treatmentDAO.create()
@@ -174,7 +183,7 @@ class Seeder {
             print("Error saving treatments seeds")
         }
         
-        //MARK: Medication Intake
+        // Medication Intakes
         let medicationIntakeDAO = CoreDataDAOFactory.getInstance().getMedicationIntakeDAO()
         
         var medicationIntake: MedicationIntake?
@@ -228,6 +237,16 @@ class Seeder {
             print("Erreur à la sauvegarde de la prise de médicament")
             print(error)
         }
-
+    }
+    
+    func seed() {
+        // Essential seeds
+        seedSpecialisms()
+        seedMedicines()
+        
+        // Facultatives seeds
+        seedProgramsAndExercices()
+        seedPractitionersAndAppointments()
+        seedTreatmentsAndMedicationIntakes()
     }
 }

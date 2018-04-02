@@ -10,4 +10,9 @@ import Foundation
 
 protocol ExerciseDAO: DAO {
     typealias Object = Exercise
+    
+    func createExerciseDone() throws -> ExerciseDone
+    func deleteExerciseDone(exerciseDone: ExerciseDone)
+    func getAllExercisesDone() throws -> [ExerciseDone?]
+    
 }
