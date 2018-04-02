@@ -79,7 +79,6 @@ class ProfileViewController: UIViewController {
     }
     
     
-    
     // ==================================
     
     override func viewDidLoad() {
@@ -112,7 +111,6 @@ class ProfileViewController: UIViewController {
         self.endingHourStepper.value = Double(patient.endingEvaluationHour)
         self.preparationTimeL.text = String(patient.timePeparation)
         self.preparationTimeStepper.value = Double(patient.timePeparation)
-
     }
     
     func loadData() {

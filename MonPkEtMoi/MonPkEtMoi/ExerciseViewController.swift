@@ -42,7 +42,6 @@ class ExerciseViewController : UIViewController {
     
     override internal func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     func loadData() {
@@ -63,7 +62,6 @@ class ExerciseViewController : UIViewController {
         self.programTableView.dataSource = self.tableViewProgramCtrl
         self.programTableView.delegate = self.tableViewProgramCtrl
         
-        
         tableViewExDoneCtrl = ExerciseDoneTableViewController(tableView: exerciseDoneTableView, exercisesDone: exercisesDone)
         self.exerciseDoneTableView.dataSource = self.tableViewExDoneCtrl
         self.exerciseDoneTableView.delegate = self.tableViewExDoneCtrl
@@ -72,6 +70,5 @@ class ExerciseViewController : UIViewController {
     @IBAction func unwindToExercises(segue:UIStoryboardSegue) {
         loadData()
     }
-    
     
 }

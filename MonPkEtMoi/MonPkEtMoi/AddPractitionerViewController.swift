@@ -45,7 +45,7 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
             
             do {
                 try practitionerDAO.save()
-                self.goBackAfterAddingPractitionner(self)
+                performSegue(withIdentifier: "unwindSegueToPractitionners", sender: self)
             } catch {
                 AlertHelper.alertError(view: self, errorMessage: "Impossible d'ajouter un médecin.")
             }
@@ -59,7 +59,10 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadData()
+    }
+    
+    func loadData() {
         do {
             self.specialisms = try specialismDAO.getAll() as! [Specialism]
         } catch {
@@ -69,11 +72,7 @@ class AddPractitionerViewController: UIViewController, UIPickerViewDataSource, U
             $0.wording! < $1.wording!
         }
     }
-    
-    @IBAction func goBackAfterAddingPractitionner(_ sender: Any) {
-        performSegue(withIdentifier: "unwindSegueToPractitionners", sender: self)
-    }
-    
+ 
     //MARK: Picker functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

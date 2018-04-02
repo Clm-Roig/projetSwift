@@ -53,6 +53,7 @@ class AddExerciseController: UIViewController {
 
     }
     
+    // =======================================
     override func viewDidLoad() {
         super.viewDidLoad()
         durationL.text = "5"

@@ -11,6 +11,10 @@ import CoreData
 
 class RegistrationViewController : UIViewController {
     
+    let beginningEvaluationHourDEFAULT = 10
+    let endingEvaluationHourDEFAULT = 20
+    let preparationTimeDEFAULT = 30
+    
     let patientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
     
     @IBOutlet weak var lastNameTF: UITextField!
@@ -60,9 +64,9 @@ class RegistrationViewController : UIViewController {
             newPatient.address = addressTF.text
             newPatient.city = cityTF.text
             newPatient.postalCode = postalCodeTF.text
-            newPatient.beginningEvaluationHour = Int16(10)
-            newPatient.endingEvaluationHour = Int16(20)
-            newPatient.timePeparation = Int16(30)            
+            newPatient.beginningEvaluationHour = Int16(beginningEvaluationHourDEFAULT)
+            newPatient.endingEvaluationHour = Int16(endingEvaluationHourDEFAULT)
+            newPatient.timePeparation = Int16(preparationTimeDEFAULT)
             
             // Save the patient
             do {
@@ -88,14 +92,12 @@ class RegistrationViewController : UIViewController {
     override internal func viewDidLoad() {
         super.viewDidLoad();
         
-        self.birthDateDP.maximumDate = Date()
-        self.textIntro.isEditable = false
+        birthDateDP.maximumDate = Date()
+        textIntro.isEditable = false
     }
     
     override internal func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
-        
     }
-    
 
 }

@@ -59,6 +59,7 @@ class AddProgramController: UIViewController {
         }
     }
     
+    // =======================================
     override func viewDidLoad() {
         super.viewDidLoad()
         frequency.text = "1"
