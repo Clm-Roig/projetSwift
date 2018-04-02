@@ -34,7 +34,7 @@ class TreatmentTableViewController: NSObject, UITableViewDataSource, UITableView
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier:"fr_FR")
         dateFormatter.dateFormat = "HH'h'mm"
-        let hourToPrint = dateFormatter.string(from: treatments[indexPath.row]?.hour! as! Date)
+        let hourToPrint = dateFormatter.string(from: (treatments[indexPath.row]?.hour)! as Date)
         
         cell.hoursLabel.text = hourToPrint
         

@@ -46,7 +46,7 @@ class MedicationIntakeTableViewController: NSObject, UITableViewDataSource, UITa
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier:"fr_FR")
         dateFormatter.dateFormat = "dd/MM/yyyy HH'h'mm"
-        let hourToPrint = dateFormatter.string(from: (medicationIntakes[indexPath.row]?.date!) as! Date)
+        let hourToPrint = dateFormatter.string(from: (medicationIntakes[indexPath.row]?.date!)! as Date)
         
         cell.treatmentHourL.text = hourToPrint
         
