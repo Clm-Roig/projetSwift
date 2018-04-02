@@ -2,7 +2,7 @@
 //  Seeder.swift
 //  MonPkEtMoi
 //
-//  Created by Clement ROIG on 20/03/2018.
+//  Created by Matthieu Dye on 20/03/2018.
 //  Copyright © 2018 Roig-Dye. All rights reserved.
 //
 

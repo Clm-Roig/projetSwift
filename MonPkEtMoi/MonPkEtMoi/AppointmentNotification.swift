@@ -2,7 +2,7 @@
 //  AppointmentNotification
 //  MonPkEtMoi
 //
-//  Created by Clément Roig on 30/03/2018.
+//  Created by Matthieu Dye on 30/03/2018.
 //  Copyright © 2018 Roig-Dye. All rights reserved.
 //
 
