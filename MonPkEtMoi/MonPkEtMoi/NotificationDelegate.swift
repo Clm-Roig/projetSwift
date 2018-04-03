@@ -72,8 +72,18 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
                     
                     self.saveMedicationIntake(delay: delay, wording: wording)
                 }
+                
+                // Title of report action (depending of delay)
+                var title = ""
+                if delay == 55 {
+                    title = "Annuler"
+                }
+                else {
+                    title = "Reporter (5 min)"
+                }
+                
                 // Reported action
-                let reportAction = UIAlertAction(title: "Reporter (5min)", style: UIAlertActionStyle.default) {
+                let reportAction = UIAlertAction(title: title, style: UIAlertActionStyle.default) {
                     UIAlertAction in
                     NSLog("Reported")
                     
@@ -100,7 +110,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
                 
             case Notification.appointmentCategoryName:
                 print("Appointment notification")
-                // Navigate to Agenda View
                 
             default:
                 print("Unknown notification")
@@ -131,7 +140,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
                 // Medication intake missed, the delay is set to -1
                 delay = -1
                 saveMedicationIntake(delay: delay, wording: wording)
-                
             }
             else {
                 // Create a new notification
