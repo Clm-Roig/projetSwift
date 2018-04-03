@@ -12,7 +12,7 @@ import UIKit
 class AddTreatmentViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     let treatmentDAO = CoreDataDAOFactory.getInstance().getTreatmentDAO()
     let medicineDAO = CoreDataDAOFactory.getInstance().getMedicineDAO()
-
+    
     var medicines: [Medicine?] = []
     var newTreatment: Treatment?
     

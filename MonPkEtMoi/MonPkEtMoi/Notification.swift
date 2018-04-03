@@ -80,7 +80,7 @@ class Notification {
     /// - medicationIntake from TreatmentNotification
     /// - appointment from AppointmentNotification
     static func registerCategories() {
-        Notification.center.setNotificationCategories([TreatmentNotification.medicationIntakeCategory, AppointmentNotification.appointmentCategory])
+    Notification.center.setNotificationCategories([TreatmentNotification.medicationIntakeCategory, AppointmentNotification.appointmentCategory])
     }
     
 }
