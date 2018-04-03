@@ -513,7 +513,6 @@
                             <constraint firstItem="dK4-Bn-Kth" firstAttribute="top" secondItem="EZB-Yc-69q" secondAttribute="bottom" constant="8" id="rYb-5b-0HS"/>
                             <constraint firstItem="WRs-AP-DX0" firstAttribute="top" secondItem="4It-Zp-Heq" secondAttribute="bottom" constant="8" id="uaT-KW-fWz"/>
                             <constraint firstItem="PHZ-Cd-M3V" firstAttribute="top" secondItem="wp7-Cf-rlX" secondAttribute="bottom" constant="8" id="vG7-2M-kdV"/>
-                            <constraint firstItem="4It-Zp-Heq" firstAttribute="centerX" secondItem="lXz-jC-BUm" secondAttribute="centerX" id="w7h-lC-VhL"/>
                             <constraint firstItem="4It-Zp-Heq" firstAttribute="trailing" secondItem="lXz-jC-BUm" secondAttribute="trailingMargin" id="yIu-dQ-fTc"/>
                         </constraints>
                     </view>
@@ -1449,7 +1448,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Z-Vg-WqW">
                                 <rect key="frame" x="279" y="522" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="AFx-F8-btk"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="AFx-F8-btk"/>
                                     <constraint firstAttribute="height" constant="80" id="tJa-1E-xeU"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="add-80"/>
@@ -1940,7 +1939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66C-2J-IjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6269" y="731"/>
+            <point key="canvasLocation" x="6490" y="731"/>
         </scene>
         <!--Nav Treatment Controller-->
         <scene sceneID="6fo-ta-s6n">
