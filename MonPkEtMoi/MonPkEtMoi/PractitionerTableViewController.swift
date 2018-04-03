@@ -51,4 +51,8 @@ class PractitionerTableViewController: NSObject, UITableViewDataSource, UITableV
             practitionerTableView.endUpdates()
         }
     }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Supprimer"
+    }
 }

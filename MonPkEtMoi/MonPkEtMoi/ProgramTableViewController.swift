@@ -53,5 +53,9 @@ class ProgramTableViewController: NSObject, UITableViewDataSource, UITableViewDe
             tableView.endUpdates()
         }
     }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Supprimer"
+    }
 
 }

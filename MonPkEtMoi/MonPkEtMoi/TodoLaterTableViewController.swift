@@ -220,4 +220,8 @@ class TodoLaterTableViewController: NSObject, UITableViewDataSource, UITableView
         }
     }
     
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Supprimer"
+    }
+    
 }
