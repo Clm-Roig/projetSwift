@@ -95,12 +95,15 @@ class AgendaViewController : UIViewController {
                     return
                 }
                 // Is it today ? And is it passed ?
-                if(Calendar.autoupdatingCurrent.isDateInToday(app.date! as Date) && app.date! as Date > Date()) {
-                    self.appointmentsToday.append(app)
+                if(app.date! as Date > Date()){
+                    if(Calendar.autoupdatingCurrent.isDateInToday(app.date! as Date)) {
+                        self.appointmentsToday.append(app)
+                    }
+                    else {
+                        self.appointmentsLater.append(app)
+                    }
                 }
-                else {
-                    self.appointmentsLater.append(app)
-                }
+                
             }
         }
         if (self.programs.count > 0) {
